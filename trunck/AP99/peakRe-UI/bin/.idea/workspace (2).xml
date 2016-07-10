@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="22532167-5fac-4333-8e3e-ea2d657bce91" name="Default" comment="" />
+    <ignored path="peakRe-UI.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="peakRe-UI" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="revaluationBatchJob-layout.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-layout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="70" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="claimInformation-layout.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-layout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="277" column="65" selection-start-line="277" selection-start-column="65" selection-end-line="277" selection-end-column="65" />
+              <folding>
+                <marker date="1459220783666" expanded="true" signature="20:138240" placeholder="{...}" />
+                <marker date="1459220783666" expanded="true" signature="89579:89633" placeholder="{...}" />
+                <marker date="1459220783666" expanded="true" signature="89579:89729" placeholder="{...}" />
+                <marker date="1459220783666" expanded="true" signature="89579:89771" placeholder="{&quot;id&quot;: 'OriginalCurrency'...}" />
+                <marker date="1459220783666" expanded="true" signature="89579:89772" placeholder="[...]" />
+                <marker date="1459220783666" expanded="true" signature="89579:97516" placeholder="{&quot;centralId&quot;: 'reserveTable'...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="claimInformation-service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="237" column="22" selection-start-line="237" selection-start-column="22" selection-end-line="237" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exceptionReport-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="revaluationBatchJob-controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="73" column="39" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="revaluationBatchJob-service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statementQuery.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/html/Accounting/statementQuery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10674157">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="init.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/init.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.392857">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <marker date="1459223485300" expanded="true" signature="0:129" placeholder="{&quot;staticHtml&quot;: &quot;&quot;...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/html/js/common/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-76.31035">
+              <caret line="510" column="34" selection-start-line="510" selection-start-column="34" selection-end-line="510" selection-end-column="34" />
+              <folding>
+                <marker date="1459223497144" expanded="true" signature="63:28578" placeholder="{...}" />
+                <marker date="1459223497144" expanded="true" signature="24734:25013" placeholder="{...}" />
+                <marker date="1459223497144" expanded="true" signature="24734:25214" placeholder="{...}" />
+                <marker date="1459223497144" expanded="true" signature="25740:25954" placeholder="&lt;xml/&gt;" />
+                <marker date="1459223497144" expanded="true" signature="26171:26239" placeholder="&lt;xml/&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-model.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementSummary/statementSummary-model.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementSummary/statementSummary-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-model.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementView/statementView-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementView/statementView-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/custComponent/ContractIDSeach.jsx" />
+        <option value="$PROJECT_DIR$/src/html/js/Treaty/section/section-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementSummary/statementSummary-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/Accounting/newStatement.html" />
+        <option value="$PROJECT_DIR$/src/html/Accounting/statementInput.html" />
+        <option value="$PROJECT_DIR$/src/html/Accounting/batchJobTrigger.html" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-model.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/batchJobTrigger/batchJobTrigger-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/batchJobTrigger/batchJobTrigger-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/batchJobTrigger/batchJobTrigger-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/Accounting/revaluationView.html" />
+        <option value="$PROJECT_DIR$/src/html/js/custComponent/EntryItemSearch.jsx" />
+        <option value="$PROJECT_DIR$/src/html/js/custComponent/CodeSearch.jsx" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationView/exceptionReport-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/common/codetable.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementView/statementView-model.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-model.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-validate.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-validate.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-validate.js" />
+        <option value="$PROJECT_DIR$/src/html/Accounting/exceptionReport.html" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementView/statementView-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/common/menu.jsx" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/Accounting/revaluationBatchJob.html" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-controller.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-layout.js" />
+        <option value="$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-service.js" />
+        <option value="$PROJECT_DIR$/src/html/js/common/init.json" />
+        <option value="$PROJECT_DIR$/src/html/init.json" />
+        <option value="$PROJECT_DIR$/src/html/js/common/common.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peakRe-UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peakRe-UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peakRe-UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peakRe-UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peakRe-UI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="FullScreen" value="false" />
+    <property name="JavaScriptLanguageLevel" value="JSX" />
+    <property name="SearchEverywhereHistoryKey" value="common.js&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/common/common.js&#10;init.&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/common/init.json&#10;jquery.&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/ThirdParty/jquery/jquery.js&#10;comm&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/common/common.js&#10;com&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/common/common.js&#10;menu.&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/common/menu.jsx&#10;bpCreationForCompany.html&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/BusinessPartner/bpCreationForCompany.html&#10;menu&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/common/menu.jsx&#10;closingSetting.html&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/Accounting/closingSetting.html&#10;newstatement&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/Accounting/newStatement.html&#10;section&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/Treaty/section/section-validate.js&#10;newStatement-validate.js&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/Accounting/newStatement/newStatement-validate.js&#10;$pt.ComponentConstants.Check&#9;null&#9;null&#10;reversalFlag&#9;null&#9;null&#10;nest-p&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/js/ThirdParty/parrot/js/nest-parrot.js&#10;section.h&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/Treaty/section.html&#10;statementInput&#9;FILE&#9;file://D:/SVN/peakreinsure/trunk/peakRe-UI/src/html/Accounting/statementInput.html&#10;Coverage Definition&#9;null&#9;null&#10;SEARCH_URL&#9;null&#9;null&#10;ADVANCED_SEARCH_URL&#9;null&#9;null" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SVN\peakreinsure\trunk\peakRe-UI\src\html" />
+      <recent name="D:\SVN\peakreinsure\trunk\peakRe-UI\src\html\js\Accounting\revaluationBatchJob" />
+      <recent name="D:\SVN\peakreinsure\trunk\peakRe-UI\src\html\js\Accounting\exceptionReport" />
+      <recent name="D:\SVN\peakreinsure\trunk\peakRe-UI\src\html\js\Accounting\revaluationView" />
+      <recent name="D:\SVN\peakreinsure\trunk\peakRe-UI\src\html\js\Accounting\batchJobTrigger" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\sema.xu\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="22532167-5fac-4333-8e3e-ea2d657bce91" name="Default" comment="" />
+      <created>1451385916605</created>
+      <option name="number" value="Default" />
+      <updated>1451385916605</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26319444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20963542" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.234375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="7.022472E-4" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.234375" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29722223" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="7.022472E-4" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26953125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-layout.js</url>
+          <line>26</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-layout.js</url>
+          <line>29</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReportView/exceptionReportView-layout.js</url>
+          <line>11</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-layout.js</url>
+          <line>8</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-controller.js</url>
+          <line>86</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="35" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/html/js/common/codetable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20405406">
+          <caret line="1335" column="24" selection-start-line="1335" selection-start-column="24" selection-end-line="1335" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Treaty/contractQuery/contractQuery-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.137931">
+          <caret line="267" column="68" selection-start-line="267" selection-start-column="47" selection-end-line="267" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/BusinessPartner/bpCreationForCompany/bpCreationForCompany-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="71" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/BusinessPartner/bpCreationForCompany/bpCreationForCompany-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4864865">
+          <caret line="246" column="8" selection-start-line="246" selection-start-column="8" selection-end-line="246" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/BusinessPartner/bpCreationForCompany/bpCreationForCompany-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4135021">
+          <caret line="866" column="67" selection-start-line="866" selection-start-column="67" selection-end-line="866" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/BusinessPartner/bpCreationForCompany.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15405406">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/Accounting/exceptionReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7205056">
+          <caret line="67" column="88" selection-start-line="67" selection-start-column="88" selection-end-line="67" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34864864">
+          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Treaty/contractHome/contractHome-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.862069">
+          <caret line="530" column="45" selection-start-line="530" selection-start-column="40" selection-end-line="530" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/StatementView/statementView-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.4827585">
+          <caret line="91" column="136" selection-start-line="91" selection-start-column="136" selection-end-line="91" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="661" column="68" selection-start-line="661" selection-start-column="68" selection-end-line="661" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.780488">
+          <caret line="43" column="17" selection-start-line="32" selection-start-column="22" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6689189">
+          <caret line="30" column="81" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/newStatement/newStatement-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.025675675">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/StatementSummary/statementSummary-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3864865">
+          <caret line="55" column="34" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/ThirdParty/react/babel-browser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47453085">
+          <caret line="61917" column="25" selection-start-line="61917" selection-start-column="25" selection-end-line="61917" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/common/menu.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="46" selection-start-line="116" selection-start-column="46" selection-end-line="116" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/Accounting/batchJobTrigger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06354515">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="69" selection-start-line="44" selection-start-column="61" selection-end-line="44" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.862069">
+          <caret line="512" column="81" selection-start-line="512" selection-start-column="31" selection-end-line="512" selection-end-column="81" />
+          <folding>
+            <element signature="e#133#3988#0" expanded="false" />
+            <element signature="e#251#3558#0" expanded="false" />
+            <element signature="e#822#1340#0" expanded="false" />
+            <element signature="e#1471#2606#0" expanded="false" />
+            <element signature="e#3595#3841#0" expanded="false" />
+            <element signature="e#3903#3982#0" expanded="false" />
+            <element signature="e#6453#10388#0" expanded="false" />
+            <element signature="e#7215#7628#0" expanded="false" />
+            <element signature="e#7660#10376#0" expanded="false" />
+            <element signature="e#10444#11033#0" expanded="false" />
+            <element signature="e#10778#10907#0" expanded="false" />
+            <element signature="e#10967#11021#0" expanded="false" />
+            <element signature="e#11071#11245#0" expanded="false" />
+            <element signature="e#11277#12016#0" expanded="false" />
+            <element signature="e#12082#12165#0" expanded="false" />
+            <element signature="e#12241#12985#0" expanded="false" />
+            <element signature="e#13059#13150#0" expanded="false" />
+            <element signature="e#13190#13677#0" expanded="false" />
+            <element signature="e#13725#14495#0" expanded="false" />
+            <element signature="e#14569#14660#0" expanded="false" />
+            <element signature="e#14742#14841#0" expanded="false" />
+            <element signature="e#14891#15301#0" expanded="false" />
+            <element signature="e#15358#15790#0" expanded="false" />
+            <element signature="e#16272#16497#0" expanded="false" />
+            <element signature="e#16594#16821#0" expanded="false" />
+            <element signature="e#16921#17160#0" expanded="false" />
+            <element signature="e#17174#17259#0" expanded="false" />
+            <element signature="e#17631#17882#0" expanded="false" />
+            <element signature="e#17981#18214#0" expanded="false" />
+            <element signature="e#18319#18550#0" expanded="false" />
+            <element signature="e#18661#18895#0" expanded="false" />
+            <element signature="e#19040#19274#0" expanded="false" />
+            <element signature="e#19899#20124#0" expanded="false" />
+            <element signature="e#20221#20448#0" expanded="false" />
+            <element signature="e#20547#20775#0" expanded="false" />
+            <element signature="e#20870#21096#0" expanded="false" />
+            <element signature="e#21205#21438#0" expanded="false" />
+            <element signature="e#21537#21770#0" expanded="false" />
+            <element signature="e#21875#22106#0" expanded="false" />
+            <element signature="e#22217#22451#0" expanded="false" />
+            <element signature="e#22550#22778#0" expanded="false" />
+            <element signature="e#28601#30320#0" expanded="false" />
+            <element signature="e#30364#31880#0" expanded="false" />
+            <element signature="e#32836#34273#0" expanded="false" />
+            <element signature="e#34309#35601#0" expanded="false" />
+            <element signature="e#35938#35951#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/StatementInput/statementInput-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4536741">
+          <caret line="125" column="96" selection-start-line="125" selection-start-column="70" selection-end-line="125" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/batchJobTrigger/batchJobTrigger-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="66" selection-start-line="56" selection-start-column="66" selection-end-line="56" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="899" column="33" selection-start-line="899" selection-start-column="33" selection-end-line="899" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationView/revaluationView-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="6" selection-start-line="43" selection-start-column="4" selection-end-line="51" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-validate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="72" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/exceptionReport/exceptionReport-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/batchJobTrigger/batchJobTrigger-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21243523">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="39" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/batchJobTrigger/batchJobTrigger-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40932643">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="277" column="65" selection-start-line="277" selection-start-column="65" selection-end-line="277" selection-end-column="65" />
+          <folding>
+            <marker date="1459220783666" expanded="true" signature="20:138240" placeholder="{...}" />
+            <marker date="1459220783666" expanded="true" signature="89579:89633" placeholder="{...}" />
+            <marker date="1459220783666" expanded="true" signature="89579:89729" placeholder="{...}" />
+            <marker date="1459220783666" expanded="true" signature="89579:89771" placeholder="{&quot;id&quot;: 'OriginalCurrency'...}" />
+            <marker date="1459220783666" expanded="true" signature="89579:89772" placeholder="[...]" />
+            <marker date="1459220783666" expanded="true" signature="89579:97516" placeholder="{&quot;centralId&quot;: 'reserveTable'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="222" column="64" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/statementQuery/statementQuery-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Claim/claimInformation/claimInformation-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="237" column="22" selection-start-line="237" selection-start-column="22" selection-end-line="237" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="70" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/Accounting/revaluationBatchJob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10674157">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/Accounting/revaluationBatchJob/revaluationBatchJob-service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/common/init.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026685392">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/ThirdParty/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.172414">
+          <caret line="2834" column="4" selection-start-line="2834" selection-start-column="0" selection-end-line="2834" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/init.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.392857">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1459223485300" expanded="true" signature="0:129" placeholder="{&quot;staticHtml&quot;: &quot;&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/js/common/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-76.31035">
+          <caret line="510" column="34" selection-start-line="510" selection-start-column="34" selection-end-line="510" selection-end-column="34" />
+          <folding>
+            <marker date="1459223497144" expanded="true" signature="63:28578" placeholder="{...}" />
+            <marker date="1459223497144" expanded="true" signature="24734:25013" placeholder="{...}" />
+            <marker date="1459223497144" expanded="true" signature="24734:25214" placeholder="{...}" />
+            <marker date="1459223497144" expanded="true" signature="25740:25954" placeholder="&lt;xml/&gt;" />
+            <marker date="1459223497144" expanded="true" signature="26171:26239" placeholder="&lt;xml/&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/Accounting/statementQuery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10674157">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

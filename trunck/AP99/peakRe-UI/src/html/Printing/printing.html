@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text
+    /html;charset=utf-8" />
+    <title>Viewer Page</title>
+</head>
+<body onload="init( )">
+<div id="viewerpane">
+    <script type="text/javascript" language="JavaScript"
+            src="http://localhost:8700/iportal/jsapi"></script>
+
+    <script type="text/javascript" language="JavaScript">
+
+        function init( ){
+            actuate.load("viewer");
+            actuate.initialize( "http://localhost:8700/iportal", null, null, null, runReport);
+        }  function runReport( ) {
+            var viewer = new actuate.Viewer("viewerpane");
+            viewer.setReportName("my_report.rptdesign");
+            viewer.submit(callback);
+        }
+    </script>
+</div>
+</body>
+</html>

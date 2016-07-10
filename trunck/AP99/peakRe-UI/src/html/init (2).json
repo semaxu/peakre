@@ -1,0 +1,5 @@
+{
+  "staticHtml" : "/html",
+  "restServer" : "http://localhost:8080/peakre/restlet/v1",
+  "casUrl" : "http://172.25.11.112/cas"
+}

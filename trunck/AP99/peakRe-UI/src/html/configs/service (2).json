@@ -1,0 +1,9 @@
+{
+  "LOGIN_URL":"http://172.25.11.112/cas",
+  "SYS_SERVICE_URL":"http://localhost:8080/peakre/restlet/v1",
+  "PA_SERVICE_URL":"http://localhost:8080/peakre/restlet/v1",
+  "MAINTENANCE_HOME_URL":"/maintenance",
+  "PORTAL_HOME_URL":"/index.html",
+  "SCHEDULER_HOME_URL":"/scheduler",
+  "STATIC_HTML_CONTEXT":"/html"
+}

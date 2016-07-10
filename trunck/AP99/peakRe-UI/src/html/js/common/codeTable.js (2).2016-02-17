@@ -1,0 +1,5 @@
+(function (context) {
+var $page = $pt.getService(context, '$page');
+var codeTable = $pt.getService($page, 'codeTable');
+codeTable.CedentCountry = $pt.createCodeTable([{id:2,text:'北京市',children:[{id:11,text:'密云县'}]},{id:3,text:'广东省',children:[{id:5,text:'广州市',children:[{id:7,text:'海珠区'},{id:8,text:'天河区'}]},{id:6,text:'深圳市',children:[{id:9,text:'福田区'},{id:10,text:'南山区'}]}]},{id:4,text:'上海市',children:[{id:12,text:'浦东'}]}]);
+}(typeof window !== "undefined" ? window : this));

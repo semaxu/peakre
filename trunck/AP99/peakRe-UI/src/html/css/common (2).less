@@ -1,0 +1,571 @@
+@coverage-border-color: #ffffff;
+@coverage-title-color: #ffffff;
+@coverage-title-background-color: #2196f3;
+@coverage-normal-line-border-color: darken(@ct-bg-color, 20%);
+@coverage-category-color: #2196f3;
+@coverage-check-disabled-color: #2196f3;
+@coverage-disabled-color: #9f9f9f;
+
+@title-color: darken(#2196f3, 20%);
+@title-font-color: #ffffff;
+
+@ct-bg-color: #ffffff;
+@ct-border-color: #e0e0e0;
+@ct-disabled-color: #9f9f9f;
+@ct-row-height: 33px;
+
+@car-ct-title-color: #ffffff;
+@car-ct-title-font-color: darken(#2196f3, 20%);
+@car-ct-compare-title-bg-color: #f5f5f5;
+
+@color-success: #4caf50;
+
+@font-size: 14px;
+
+body {
+	font-family: "Roboto", 'Microsoft Jhenghei', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.generate-fa-size(@n, @i: 6) when (@i =< @n) {
+	span.n-label-@{i}x {
+		font-size: unit(@i, em)
+	}
+	.generate-fa-size(@n, (@i + 1));
+}
+
+.generate-fa-size(10);
+
+div.center {
+	text-align: center
+}
+
+.modal-backdrop.in {
+	opacity: 0.03;
+	filter: alpha(opacity=3);
+	-moz-opacity: 0.03;
+}
+
+span.icon-button {
+	color: #2196f3;
+	display: block;
+	cursor: pointer;
+}
+
+span.block-menu-link {
+	display: block;
+	> a:nth-child(n+2) {
+		margin-left: 10px;
+	}
+}
+
+div.index-menu-blocks {
+	@media (max-width: 767px) {
+		div.row.flex, div.flex {
+			display: block;
+		}
+	}
+}
+
+div.row.flex, div.flex {
+	display: flex;
+	> div.panel {
+		width: 100%;
+	}
+}
+
+div.n-form-cell.nest-cell {
+	div.n-form-cell {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	div.date-range-start {
+		padding-right: 0;
+		@media (max-width: 767px) {
+			padding-right: 15px;
+		}
+	}
+	div.date-range-link {
+		padding-left: 0;
+		padding-right: 0;
+		@media (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		> div {
+			display: table;
+			width: 100%;
+			> div.n-label {
+				text-align: center;
+			}
+		}
+	}
+	div.date-range-end {
+		padding-left: 0;
+		@media (max-width: 767px) {
+			padding-left: 15px;
+		}
+	}
+}
+
+div.panel.checklist-panel {
+	> div.panel-body {
+		height: 300px;
+		overflow-y: auto;
+	}
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+	background-color: @title-color;
+}
+
+div.n-text > div.input-group {
+	> span.input-group-addon:first-child {
+		padding-left: 0;
+	}
+	> span.input-group-addon:last-child {
+		padding-right: 0;
+	}
+}
+
+.n-checklist {
+	div.n-checkbox span.check-container {
+		top: 7px;
+	}
+}
+
+.panel-primary-darken > .panel-heading {
+	background-color: @title-color;
+	border-color: @title-color;
+	color: @title-font-color;
+}
+
+.policy-title {
+	.n-label span {
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+}
+
+.n-form-cell.coverages {
+	> div {
+		background-color: @ct-bg-color;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+		&:hover {
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+
+.n-form-cell.coverages-title,
+.n-form-cell.coverages-content {
+	padding-top: 0;
+	padding-bottom: 0;
+	> div {
+		padding-left: 15px;
+		padding-right: 15px;
+		> div {
+			&.n-checkbox {
+				span.check-container {
+					top: 4px;
+				}
+				span.check-label {
+					top: 2px;
+				}
+			}
+		}
+	}
+
+	&.first {
+		padding-right: 0;
+		&.additional {
+			> div {
+				padding-left: 40px;
+			}
+		}
+		&.only-two {
+		}
+		&.only-one {
+			padding-right: 15px;
+		}
+		@media (max-width: 767px) {
+			padding-right: 15px;
+		}
+	}
+	&.mid {
+		border-left: solid @ct-border-color 1px;
+		padding-left: 0;
+		padding-right: 0;
+		@media (max-width: 767px) {
+			border-left: 0;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	&.last {
+		border-left: solid @ct-border-color 1px;
+		padding-left: 0;
+		@media (max-width: 767px) {
+			border-left: 0;
+			padding-left: 15px;
+		}
+	}
+}
+
+.car-coverages .n-form-cell.coverages-content {
+	> div {
+		background-color: @car-ct-title-color;
+	}
+	&.title {
+		.n-label {
+			color: @car-ct-title-font-color;
+		}
+	}
+}
+
+.n-form-cell.coverages-title {
+	> div {
+		background-color: @title-color;
+		> .n-label {
+			color: @title-font-color;
+		}
+	}
+	&.first {
+		> div {
+			border-top-left-radius: 4px;
+			@media (max-width: 767px) {
+				border-top-right-radius: 4px;
+			}
+		}
+	}
+	&.last {
+		> div {
+			border-top-right-radius: 4px;
+			@media (max-width: 767px) {
+				border-top-right-radius: 0;
+			}
+		}
+	}
+}
+
+.n-form-cell.coverages-content {
+	> div {
+		border-top: solid @ct-border-color 1px;
+	}
+	&.first.only-one.summary {
+		> div {
+			border-top: 0;
+			> div {
+				border-top: solid @ct-border-color 1px;
+			}
+		}
+	}
+}
+
+.n-form-cell.clear-top-bottom-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.n-form-cell.white-border-top {
+	border-top: solid @ct-border-color 1px;
+}
+
+.n-form-cell.n-form-cell-disabled {
+	.n-label span {
+		color: @ct-disabled-color;
+	}
+}
+
+.premium-title {
+	font-size: 1.7em;
+	color: @color-success;
+	font-weight: bold;
+}
+
+.pull-down-3 {
+	padding-top: 3px;
+}
+
+// car coverages
+// .n-form-cell.car-coverages {
+// 	> div {
+// 	// 	background-color: #e0e0e0;
+// 		border-top-left-radius: 4px;
+// 		border-top-right-radius: 4px;
+// 		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+// 		&:hover {
+// 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+// 		}
+// 	}
+// }
+.car-coverage-plan {
+	.first {
+		padding-right: 0;
+		@media (max-width: 767px) {
+			padding-right: 15px;
+			border-right: solid 1px @ct-border-color;
+		}
+		> div {
+			border-left: solid 1px @ct-border-color;
+			&.additional {
+				padding-left: 40px;
+			}
+			span {
+				white-space: nowrap;
+			}
+			span.check-container {
+				top: 5px;
+			}
+			span.check-label {
+				top: 3px;
+			}
+		}
+	}
+	.mid {
+		padding-left: 0;
+		padding-right: 0;
+		border-left: solid 1px @ct-border-color;
+		@media (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+			border-right: solid 1px @ct-border-color;
+		}
+		&.input-name {
+			border-left: 0;
+			> div {
+				padding-top: 3px;
+				> span {
+					float: right;
+				}
+			}
+		}
+	}
+	.last {
+		padding-left: 0;
+		border-left: solid 1px @ct-border-color;
+		@media (max-width: 767px) {
+			padding-left: 0;
+		}
+		> div {
+			border-right: solid 1px @ct-border-color;
+		}
+	}
+	.first, .mid, .last {
+		> div {
+			padding-left: 15px;
+			padding-right: 15px;
+			border-top: solid 1px @ct-border-color;
+			height: 30px;
+			&.category {
+				padding-top: 3px;
+				color: @color-success;
+				.link {
+					cursor: pointer;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+			&.coverage {
+				> div {
+					margin-top: -1px;
+				}
+			}
+			.n-form-cell {
+				padding: 0;
+			}
+		}
+		&.inner {
+			> div {
+				border-top: 0;
+			}
+		}
+	}
+	.plan-active {
+		float: right;
+		top: 9px;
+	}
+	.wrapper {
+		min-height: 0px;
+	}
+	.bottom-border {
+		> div {
+			border-bottom: solid 1px @ct-border-color;
+		}
+	}
+}
+
+.car-coverage-compare {
+	.first {
+		padding-right: 0;
+		border-right: solid 1px @ct-border-color;
+		> div {
+			padding-left: 15px;
+			padding-right: 15px;
+			border-left: solid 1px @ct-border-color;
+		}
+		@media (max-width: 767px) {
+			padding-right: 15px;
+			border-right: 0;
+			> div {
+				border-right: solid 1px @ct-border-color;
+				border-left: solid 1px @ct-border-color;
+			}
+		}
+	}
+	.mid {
+		padding-right: 0;
+		padding-left: 0;
+		border-right: solid 1px @ct-border-color;
+		> div {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		@media (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+			border-right: 0;
+			> div {
+				border-right: solid 1px @ct-border-color;
+				border-left: solid 1px @ct-border-color;
+			}
+		}
+	}
+	.last {
+		padding-left: 0;
+		> div {
+			padding-left: 15px;
+			padding-right: 15px;
+			border-right: solid 1px @ct-border-color;
+		}
+		@media (max-width: 767px) {
+			padding-left: 15px;
+			> div {
+				border-left: solid 1px @ct-border-color;
+			}
+		}
+	}
+	> .title {
+		> div {
+			> div {
+				border-top: solid 1px @ct-border-color;
+			}
+		}
+	}
+	.plan-select {
+		min-height: @ct-row-height;
+		text-align: center;
+		background-color: @car-ct-compare-title-bg-color;
+	}
+	.title-toggle {
+		min-height: @ct-row-height;
+		background-color: @car-ct-compare-title-bg-color;
+		.n-toggle {
+			float: right;
+		}
+	}
+	.premium-title-label {
+		min-height: @ct-row-height;
+		text-align: right;
+		padding-top: 3px;
+		background-color: @car-ct-compare-title-bg-color;
+	}
+	.premium-title {
+		min-height: @ct-row-height;
+		text-align: center;
+		padding-top: 3px;
+		background-color: @car-ct-compare-title-bg-color;
+		color: @color-success;
+		font-size: 1em;
+		font-weight: normal;
+		.n-label {
+			display: inline;
+		}
+	}
+	.coverage-label {
+		min-height: @ct-row-height;
+		border-top: 1px solid @ct-border-color;
+		padding-top: 3px;
+		text-align: right;
+	}
+	.coverage {
+		min-height: @ct-row-height;
+		border-top: 1px solid @ct-border-color;
+		&.coverage-select {
+			text-align: center;
+			padding-top: 3px;
+			.selected {
+				color: #42A5F5;
+			}
+			.not-selected {
+				color: #EF5350;
+			}
+		}
+	}
+	.additional-coverage-wrapper {
+		min-height: 0;
+	}
+	.no-compare-plan {
+		> div > div {
+			text-align: center;
+			border-left: 1px solid @ct-border-color;
+			border-right: 1px solid @ct-border-color;
+			border-top: 1px solid @ct-border-color;
+			padding-top: 3px;
+			min-height: 30px;
+		}
+	}
+	.bottom-border {
+		> div {
+			border-bottom: solid 1px @ct-border-color;
+		}
+	}
+}
+
+// overwrite font-size
+.btn {
+	font-size: @font-size;
+}
+
+textarea,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=text].form-control,
+input[type=password].form-control,
+input[type=email].form-control,
+input[type=tel].form-control {
+	font-size: @font-size;
+}
+
+.panel {
+	.panel-heading {
+		h4.panel-title {
+			font-size: @font-size;
+			> a {
+				font-size: @font-size;
+			}
+		}
+	}
+}
+
+div.n-checkbox {
+	span.check-label {
+		font-size: @font-size;
+	}
+}
+
+div.n-radio {
+	span.radio-label {
+		font-size: @font-size;
+	}
+}

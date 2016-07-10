@@ -1,0 +1,192 @@
+(function (context, $, $pt) {
+    var $page = $pt.getService(context, "$page");
+
+    var EpiRevisionSection = React.createClass($pt.defineCellComponent({
+        statics: {},
+        propTypes: {
+            // model
+            model: React.PropTypes.object,
+            // CellLayout
+            layout: React.PropTypes.object
+        },
+        getPanelLayout: function () {
+            var _this = this;
+            return {
+                comp:{
+                    type:$pt.ComponentConstants.Panel,
+                    editLayout:{
+                        epiSection:{
+                            label: 'section Panel',
+                            comp:{
+                                type:$pt.ComponentConstants.ArrayPanel,
+                                itemTitle:{
+                                    when:function(item){
+                                        return item.get("sectionName");
+                                    }
+                                },
+                                editLayout:{
+                                    epiType:{
+                                        label:"EPI Type",
+                                        comp:{
+                                            type:$pt.ComponentConstants.Select
+                                        },
+                                        pos:{
+                                            row:1,
+                                            width:6
+                                        }
+                                    },
+                                    epiDefined:{
+                                        label:"EPI Defined",
+                                        comp:{
+                                            type:$pt.ComponentConstants.Select
+                                        },
+                                        pos:{
+                                            row:1,
+                                            width:6
+                                        }
+                                    },
+                                    epiRevision:{
+                                        label:"EPI Revision",
+                                        comp:{
+                                            type:$pt.ComponentConstants.Table,
+                                            searchable:false,
+                                            sortable:false,
+                                            addable:true,
+                                            columns:[
+                                                {
+                                                    title:"Date",
+                                                    data:"date",
+                                                    inline:"date",
+                                                    width:"20%"
+                                                },{
+                                                    title:"By",
+                                                    data:"by",
+                                                    inline:"text",
+                                                    width:"20%"
+                                                },{
+                                                    title:"Currency",
+                                                    data:"currency",
+                                                    codes:$page.codes.Currency,
+                                                    inline:"select",
+                                                    width:"20%"
+                                                },{
+                                                    title:"Amount 100%",
+                                                    data:"amount",
+                                                    inline:"percentage",
+                                                    width:"20%"
+                                                },{
+                                                    title:"Amount in Share",
+                                                    data:"amountInShare",
+                                                    inline:"text",
+                                                    width:"20%"
+                                                }
+                                            ],
+                                            addClick:function(model,item,layout){
+                                                model.add("epiRevision",item.getCurrentModel());
+                                            }
+                                        },
+                                        pos:{
+                                            row:2,
+                                            width:12
+                                        }
+                                    },
+                                    actionPanel:{
+                                        comp:{
+                                            type:$pt.ComponentConstants.ButtonFooter,
+                                            buttonLayout:{
+                                                right:[
+                                                    {
+                                                        text:"Exit",
+                                                        style:"warning"
+                                                    },{
+                                                        text:"Submit",
+                                                        style:"primary"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        pos:{
+                                            row:3,
+                                            width:12
+                                        }
+                                    },
+                                    history:{
+                                        label:"History",
+                                        comp:{
+                                            type:$pt.ComponentConstants.Table,
+                                            searchable:false,
+                                            sortable:false,
+                                            columns:[
+                                                {
+                                                    title:"Date",
+                                                    data:"date",
+                                                    width:"20%"
+                                                },{
+                                                    title:"By",
+                                                    data:"by",
+                                                    width:"20%"
+                                                },{
+                                                    title:"Currency",
+                                                    data:"currency",
+                                                    width:"20%"
+                                                },{
+                                                    title:"Amount 100%",
+                                                    data:"amount",
+                                                    width:"20%"
+                                                },{
+                                                    title:"Amount in Share",
+                                                    data:"amountInShare",
+                                                    width:"20%"
+                                                }
+                                            ]
+                                        },
+                                        pos:{
+                                            row:4,
+                                            width:12
+                                        }
+                                    }
+                                }
+                            },
+                            pos:{
+                                width:12
+                            }
+                        }
+                    }
+                },
+                pos:{
+                    width:12
+                }
+            }
+        },
+        getInitialState: function () {
+            return null;
+            //return {
+            //    showChecked: true
+            //};
+        },
+
+        render: function () {
+
+            var layout = $pt.createCellLayout(this.getDataId(), this.getPanelLayout());
+            //console.log("elvira");
+            //console.log(this.getModel());
+            //this.getModel().addPostChangeListener( "Amount", function(evt){
+            //    console.log(evt.model);
+            //    console.info(evt.model.get("Amount") + "|" + evt.model.get("ConvertedAmount"));
+            //});
+            //this.getModel().addPostChangeListener( "ConvertedAmount", function(evt){
+            //    console.info(evt.model.get("Amount") + "|" + evt.model.get("ConvertedAmount"));
+            //    /*if(evt.model.get("linkName") != evt.model.get("linkedNameSelect")){
+            //     evt.model.set("linkName",evt.model.get("linkedNameSelect"));
+            //     }*/
+            //});
+            return <NPanel model={this.getModel()} layout={layout} direction={this.props.direction}/>
+        }
+    }));
+    context.EpiRevisionSection = EpiRevisionSection;
+    NFormCell.registerComponentRenderer('EpiRevisionSection', function (model, layout, direction) {
+        return <EpiRevisionSection model={model} layout={layout} direction={direction}/>;
+    });
+    $pt.ComponentConstants.EpiRevisionSection = {type: 'EpiRevisionSection', label: false, popover: false};
+
+}(typeof window !== "undefined" ? window : this, jQuery, $pt));
