@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  	<changeSet author="generated" id="2016041901_T_RI_ACCT_RECAL_FORECAST">
+		<dropTable tableName="T_RI_ACCT_RECAL_FORECAST" />
+	</changeSet>
+  	<changeSet author="generated" id="2016041902_T_RI_ACCT_RECAL_FORECAST">
+    <createTable tableName="T_RI_ACCT_RECAL_FORECAST">
+      <column name="EVENT_ID" type="NUMBER(12, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="SECTION_ID" type="NUMBER(12, 0)"/>
+      <column name="SOA_ID" type="NUMBER(12, 0)"/>
+      <column name="EVENT_TYPE" type="NUMBER(1, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CALC_QUARTER" type="VARCHAR2(6)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="STATUS" type="NUMBER(1, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(12, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(12, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+        <constraints nullable="false"/>
+      </column>
+      <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="PK_T_RI_ACCT_RECAL_FORECAST">
+    <addPrimaryKey columnNames="EVENT_ID" constraintName="PK_T_RI_ACCT_RECAL_FORECAST" tableName="T_RI_ACCT_RECAL_FORECAST"/>
+  </changeSet>
+</databaseChangeLog>

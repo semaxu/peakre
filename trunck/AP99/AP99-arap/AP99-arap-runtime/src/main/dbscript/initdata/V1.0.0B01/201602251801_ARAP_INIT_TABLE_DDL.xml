@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_ARAP_TYPE">
+        <createTable remarks="Cash balance type of finance fee" tableName="T_RI_ARAP_TYPE">
+            <column name="TYPE" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_CFG_BANK">
+        <createTable remarks="Bank configuration" tableName="T_RI_BCP_CFG_BANK">
+            <column name="BANK_ID" remarks="Primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BANK_CODE" type="NVARCHAR2(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BANK_NAME" type="NVARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BANK_ADDRESS" type="VARCHAR2(4000)"/>
+            <column name="BENEFICIARY_NAME" type="VARCHAR2(1000)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_CFG_BANK_ACCOUNT">
+        <createTable remarks="Bank account definition" tableName="T_RI_BCP_CFG_BANK_ACCOUNT">
+            <column name="ACCOUNT_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACCOUNT_NO" remarks="Bank account number" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACCOUNT_NAME" remarks="Bank account name" type="VARCHAR2(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BANK_ID" remarks="Bank of account" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" remarks="Currency of account" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BRANCH_ID" remarks="The branch" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACCOUNT_TYPE" remarks="1 account for collection, 2 account for payment" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" remarks="1 valid, 0 inValid" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_CFG_EXCHANGE_RATE">
+        <createTable remarks="Currency exchange rate definition" tableName="T_RI_BCP_CFG_EXCHANGE_RATE">
+            <column name="RATE_ID" remarks="Primary key" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BASE_CURRENCY_CODE" remarks="Original currency" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EX_CURRENCY_CODE" remarks="Target currency to be exchanged" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE" remarks="Exchange rate" type="NUMBER(15, 9)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VALID_DATE" remarks="Effective date of the rate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EXPIRY_DATE" remarks="Expiry date of the rate" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RATE_TYPE" remarks="Refer to T_RI_BCP_EXCHANGE_RATE_TYPE" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" remarks="1 valid, 2 invalid" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_COLLECTION">
+        <createTable remarks="Collection information" tableName="T_RI_BCP_COLLECTION">
+            <column name="COLLECTION_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="Total collection amount" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" remarks="Collection currency" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="COLLECTION_DATE" remarks="Settlement date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PAYER_CODE" type="VARCHAR2(100)"/>
+            <column name="PAY_MODE" type="NUMBER(2, 0)"/>
+            <column name="BANK_ACCOUNT_NO" type="NVARCHAR2(25)"/>
+            <column name="BANK_CODE" type="VARCHAR2(50)"/>
+            <column name="CHEQUE_NO" type="VARCHAR2(500)"/>
+            <column name="CHEQUE_DATE" type="date"/>
+            <column name="CHEQUE_HOLDER_NAME" type="VARCHAR2(500)"/>
+            <column name="RECEIPT_NO" type="VARCHAR2(50)"/>
+            <column name="STATUS" remarks="1 normal, -1 reversal" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="TRANS_DATE" type="date"/>
+            <column name="BANK_CHARGE" type="NUMBER(20, 2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_EXCHANGE_RATE_TYPE">
+        <createTable tableName="T_RI_BCP_EXCHANGE_RATE_TYPE">
+            <column name="RATE_TYPE" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(500)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_FEE">
+        <createTable remarks="The base finance data from other business module, including ARAP and other GL detail" tableName="T_RI_BCP_FEE">
+            <column name="FEE_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENTRY_CODE" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ARAP_TYPE" remarks="Indicate the fee is ARAP or other no cash balance fee" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="Original amount" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BALANCE" remarks="Outstanding amount, It's absolute  value" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SIGN" remarks="Sign of balance" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CUR_PERIOD" remarks="Current installement of business fee in case of mulitple installments" type="NUMBER(2, 0)"/>
+            <column name="PARTNER_CODE" remarks="Partner information of the busness transaction" type="VARCHAR2(50)"/>
+            <column name="CONTRACT_CATE" remarks="1 Assumed, 2 Ceded" type="VARCHAR2(500)"/>
+            <column name="BIZ_TRANS_TYPE" remarks="Business transaction type" type="NUMBER(3, 0)"/>
+            <column name="BIZ_TRANS_NO" remarks="Business transaction number" type="VARCHAR2(100)"/>
+            <column name="CONTRACT_ID" type="NUMBER(22, 0)"/>
+            <column name="CURRENCY_CODE" remarks="Currency of original amount / balance" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DUE_DATE" remarks="Due data to be processed by settlement" type="date"/>
+            <column name="IS_ESTIMATION" remarks="0 No, 1 Yes, Indicate if it's estimation fee" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="NEED_POST" remarks="0 No, 1 Yes, Indicate if it needs to be post to general ledger" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="POST_STATUS" remarks="0 wait for posting, 1 posted, 2 extracted by GL mapping job" type="NUMBER(2, 0)"/>
+            <column name="STATUS" remarks="0 outstanding; 1 fullySettle" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="TOTAL_PERIOD" type="NUMBER(2, 0)"/>
+            <column name="TRANS_DATE" remarks="Generation date of BCP fee" type="date"/>
+            <column name="BIZ_TRANS_ID" remarks="Business transaction sequence" type="NUMBER(22, 0)"/>
+            <column name="POST_DATE" remarks="The date when posted to GL" type="date"/>
+            <column name="SPECIAL_SBUMT" remarks="0 No, 1 Yes, Indicate if it's special submit in cutoff period for posting GL immediately" type="NUMBER(1, 0)"/>
+            <column name="BIZ_REF_TYPE" remarks="Business reference type" type="NUMBER(2, 0)"/>
+            <column name="BIZ_REF_ID" remarks="Business reference ID" type="NUMBER(22, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_OFFSET">
+        <createTable remarks="Offset information" tableName="T_RI_BCP_OFFSET">
+            <column name="OFFSET_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="OFFSET_NO" type="VARCHAR2(50)"/>
+            <column name="STATUS" remarks="1 normal, -1 reversal" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="OFFSET_DATE" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="Absolute amount of offset" type="NUMBER(20, 2)"/>
+            <column name="CURRENCY_CODE" type="VARCHAR2(3)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_PAYEE">
+        <createTable remarks="Payee of payment transaction" tableName="T_RI_BCP_PAYEE">
+            <column name="PAYEE_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PARTNER_CODE" remarks="Payee information" type="VARCHAR2(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="Payment amount" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PAYMENT_ID" remarks="Payment reference seqence" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_PAYMENT">
+        <createTable remarks="Payment information" tableName="T_RI_BCP_PAYMENT">
+            <column name="PAYMENT_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="Total payment amount" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" remarks="Payment currency" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PAY_MODE" remarks="Pay method" type="NUMBER(2, 0)"/>
+            <column name="FROM_BANK_ACCOUNT_NO" type="NVARCHAR2(25)"/>
+            <column name="PAYMENT_NO" type="VARCHAR2(50)"/>
+            <column name="PAYMENT_DATE" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" remarks="1 normal, -1 reversal" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="TRANS_DATE" remarks="Settlment date" type="date"/>
+            <column name="BANK_CHARGE" type="NUMBER(20, 2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_PAY_MODE">
+        <createTable remarks="Payment method deinition" tableName="T_RI_BCP_PAY_MODE">
+            <column name="PAY_MODE" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PAY_MODE_NAME" type="VARCHAR2(100)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_REVERSE">
+        <createTable remarks="Settlement reverse information" tableName="T_RI_BCP_REVERSE">
+            <column name="REVERSE_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TRANS_NO" remarks="Settlement number reversed" type="VARCHAR2(50)"/>
+            <column name="TRANS_TYPE" remarks="Settlement type, 1 colletion, 2 payment, 3 internal offset" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TRANS_REF_ID" remarks="Settlement reference sequence / primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVERSE_REASON" type="NUMBER(10, 0)"/>
+            <column name="REQUEST_BY" type="NUMBER(22, 0)"/>
+            <column name="STATUS" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="REVERSE_DATE" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_REVERSE_REASON">
+        <createTable remarks="Reverse reason definition" tableName="T_RI_BCP_REVERSE_REASON">
+            <column name="REASON_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REASON_NAME" type="NVARCHAR2(500)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_SETLLE_EX_DETAIL">
+        <createTable remarks="Convert amount of finance settlement to new amount in other currency" tableName="T_RI_BCP_SETLLE_EX_DETAIL">
+            <column name="EXCHANGE_DETAIL_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOURCE_TYPE" remarks="Indicate data source from which data  model" type="NUMBER(3, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" remarks="Orininal currency" type="NVARCHAR2(1)"/>
+            <column name="AMOUNT" remarks="Oringinal amount" type="NUMBER(20, 2)"/>
+            <column name="CONVERT_CURRENCY_CODE" remarks="Target amount of converted" type="VARCHAR2(3)"/>
+            <column name="CONVERTED_AMOUNT" remarks="Target currency of converted" type="NUMBER(20, 2)"/>
+            <column name="EXCHANGE_RATE" remarks="Corresponding exchange rate" type="NUMBER(15, 9)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="SOURCE_ID" remarks="Primary key of specified data model" type="NUMBER(22, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+        <createTable remarks="Indicate what's the amount to be converted" tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" type="NUMBER(3, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOURCE_NAME" type="VARCHAR2(200)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_SETTLEMENT_DETAIL">
+        <createTable remarks="Detail fee / suspuse information related to corresponding settlement" tableName="T_RI_BCP_SETTLEMENT_DETAIL">
+            <column name="SETTLE_DETAIL_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FEE_ID" remarks="Related finance fee" type="NUMBER(20, 0)"/>
+            <column name="SUSPENSE_ID" remarks="Related suspense" type="NUMBER(22, 0)"/>
+            <column name="COLLECTION_ID" type="NUMBER(22, 0)"/>
+            <column name="PAYMENT_ID" type="NUMBER(22, 0)"/>
+            <column name="OFFSET_ID" type="NUMBER(22, 0)"/>
+            <column name="REVERSE_ID" type="NUMBER(22, 0)"/>
+            <column name="CURRENCY_CODE" remarks="Original currency" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="OUTSTANDING_AMOUNT" remarks="Outstanding balance of related finance fee" type="NUMBER(20, 2)"/>
+            <column name="MARK_OFF_AMOUNT" remarks="Mark off amount for the settlement" type="NUMBER(20, 2)"/>
+            <column name="AMOUNT_DIFF" remarks="sttle difference = outstanding amount - mark off amount" type="NUMBER(20, 2)"/>
+            <column name="SETTLE_GROUP_ID" remarks="Summary information of currency" type="NUMBER(22, 0)"/>
+            <column name="SETTLE_CURRENCY_CODE" remarks="collection / payment currency" type="VARCHAR2(3)"/>
+            <column name="SETTLE_AMOUNT" remarks="collected / payment amount" type="NUMBER(20, 2)"/>
+            <column name="NEED_POST" remarks="Indicate if need to be posted to GL" type="NUMBER(1, 0)"/>
+            <column name="POST_STATUS" remarks="0 wait for posting, 1 posted, 2 extracted by GL mapping job" type="NUMBER(2, 0)"/>
+            <column name="GAIN_LOSS" remarks="calculate base on fee generation date and actural collection / payment" type="NUMBER(20, 2)"/>
+            <column name="GAIN_LOSS_DIFF" remarks="calculate when reverse settlement" type="NUMBER(20, 2)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="FULLY_SETTLE" remarks="1 Yes, 0 No" type="NUMBER(1, 0)"/>
+            <column name="EXCHANGE_RATE" remarks="Exchange rate base on original currency and settlement currency" type="NUMBER(15, 9)"/>
+            <column name="SETTLE_DATE" remarks="Settlement date" type="date"/>
+            <column name="POST_DATE" remarks="The date when posted to GL" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_SETTLEMENT_GROUP">
+        <createTable remarks="Summary information of currency for finance settlement" tableName="T_RI_BCP_SETTLEMENT_GROUP">
+            <column name="SETTLE_GROUP_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" remarks="settlement(collection/payment) currency" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="amount in settlement currency" type="NUMBER(22, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONVERT_CURRENCY_CODE" remarks="original currency of finane fee" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONVERTED_AMOUNT" remarks="amount in original currency of corresponding fee" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EXCHANGE_RATE" remarks="coverted amount / settlement amount = original currency &gt; settlement currency" type="NUMBER(15, 9)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_SUSPENSE">
+        <createTable remarks="Suspense/Balance information" tableName="T_RI_BCP_SUSPENSE">
+            <column name="SUSPENSE_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SUSPENSE_TYPE" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONTRACT_ID" type="NUMBER(22, 0)"/>
+            <column name="PARTNER_CODE" type="VARCHAR2(100)"/>
+            <column name="BALANCE" remarks="Outstanding amount" type="NUMBER(20, 2)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_CODE" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" remarks="1 valid , 2 invalid" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BCP_SUSPENS_TYPE">
+        <createTable tableName="T_RI_BCP_SUSPENS_TYPE">
+            <column name="SUSPENS_TYPE" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SUSPENS_NAME" type="VARCHAR2(500)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BRANCH">
+        <createTable remarks="Branch list" tableName="T_RI_BRANCH">
+            <column name="BRANCH_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BRANCH_LEVEL" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FULL_BRANCH_CODE" type="NVARCHAR2(127)"/>
+            <column name="BRANCH_NAME" type="VARCHAR2(500)"/>
+            <column name="PARENT_ID" type="NUMBER(10, 0)"/>
+            <column name="STATUS" type="NUMBER(1, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CURRENCY">
+        <createTable tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" type="VARCHAR2(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY_NAME" type="VARCHAR2(500)"/>
+            <column name="SYMBOL" remarks="Default symbol of currency, used for displaying" type="VARCHAR2(50)"/>
+            <column name="PEPORTING_CURRENCY" remarks="0 No, 1 Yes, Indicate if it's reporting currency" type="NUMBER(1, 0)"/>
+            <column name="GL_CURRENCY" remarks="0 No, 1 Yes, Indicate if it's general ledger currency" type="NUMBER(1, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_ENTRY_CODE">
+        <createTable remarks="Entry code definition" tableName="T_RI_ENTRY_CODE">
+            <column name="ENTRY_CODE" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENTRY_CODE_NAME" type="VARCHAR2(1000)"/>
+            <column name="DESCRIPTION" type="VARCHAR2(4000)"/>
+            <column name="NEED_POST" remarks="0 no Need, 1 Need, Indicate if the fee can be post into general ledger" type="NUMBER(1, 0)"/>
+            <column name="SIGN" remarks="Default sign" type="NUMBER(1, 0)"/>
+            <column name="CASH_BALANCE" remarks="Indicate if the entry code is ARAP" type="NUMBER(1, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_TRANS_TYPE">
+        <createTable remarks="Business Transaction type table" tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" remarks="TRANS TYPE ID" type="NUMBER(5, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TRANS_TYPE_NAME" remarks="TRANS TYPE NAME" type="VARCHAR2(80)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODULE" remarks="MODULE" type="VARCHAR2(20)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_BCP_SETLLE_EX_SOURCE_TYPE">
+        <addPrimaryKey columnNames="SOURCE_TYPE" constraintName="PK_BCP_SETLLE_EX_SOURCE_TYPE" tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_ENTRY_CODE">
+        <addPrimaryKey columnNames="ENTRY_CODE" constraintName="PK_ENTRY_CODE" tableName="T_RI_ENTRY_CODE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_EXCHANGE_RATE_TYPE">
+        <addPrimaryKey columnNames="RATE_TYPE" constraintName="PK_EXCHANGE_RATE_TYPE" tableName="T_RI_BCP_EXCHANGE_RATE_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_CFG_BANK">
+        <addPrimaryKey columnNames="BANK_ID" constraintName="PK_RI_BCP_CFG_BANK" tableName="T_RI_BCP_CFG_BANK"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_CFG_BANK_ACC_ID">
+        <addPrimaryKey columnNames="ACCOUNT_ID" constraintName="PK_RI_BCP_CFG_BANK_ACC_ID" tableName="T_RI_BCP_CFG_BANK_ACCOUNT"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_CFG_EXCHANGE_RATE_ID">
+        <addPrimaryKey columnNames="RATE_ID" constraintName="PK_RI_BCP_CFG_EXCHANGE_RATE_ID" tableName="T_RI_BCP_CFG_EXCHANGE_RATE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_COLLECTION_ID">
+        <addPrimaryKey columnNames="COLLECTION_ID" constraintName="PK_RI_BCP_COLLECTION_ID" tableName="T_RI_BCP_COLLECTION"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_FEE_ARAP_TYPE">
+        <addPrimaryKey columnNames="TYPE" constraintName="PK_RI_BCP_FEE_ARAP_TYPE" tableName="T_RI_ARAP_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_FEE_ID">
+        <addPrimaryKey columnNames="FEE_ID" constraintName="PK_RI_BCP_FEE_ID" tableName="T_RI_BCP_FEE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_OFFSET_ID">
+        <addPrimaryKey columnNames="OFFSET_ID" constraintName="PK_RI_BCP_OFFSET_ID" tableName="T_RI_BCP_OFFSET"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_PAYEE_ID">
+        <addPrimaryKey columnNames="PAYEE_ID" constraintName="PK_RI_BCP_PAYEE_ID" tableName="T_RI_BCP_PAYEE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_PAYMENT_ID">
+        <addPrimaryKey columnNames="PAYMENT_ID" constraintName="PK_RI_BCP_PAYMENT_ID" tableName="T_RI_BCP_PAYMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_PAY_MODE">
+        <addPrimaryKey columnNames="PAY_MODE" constraintName="PK_RI_BCP_PAY_MODE" tableName="T_RI_BCP_PAY_MODE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_REVERSAL_ID">
+        <addPrimaryKey columnNames="REVERSE_ID" constraintName="PK_RI_BCP_REVERSAL_ID" tableName="T_RI_BCP_REVERSE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_REVERSE_REASON_ID">
+        <addPrimaryKey columnNames="REASON_ID" constraintName="PK_RI_BCP_REVERSE_REASON_ID" tableName="T_RI_BCP_REVERSE_REASON"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_SETLLE_EX_DETAIL">
+        <addPrimaryKey columnNames="EXCHANGE_DETAIL_ID" constraintName="PK_RI_BCP_SETLLE_EX_DETAIL" tableName="T_RI_BCP_SETLLE_EX_DETAIL"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_SETTLE_DETAIL_ID">
+        <addPrimaryKey columnNames="SETTLE_DETAIL_ID" constraintName="PK_RI_BCP_SETTLE_DETAIL_ID" tableName="T_RI_BCP_SETTLEMENT_DETAIL"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_SUSPENSE_ID">
+        <addPrimaryKey columnNames="SUSPENSE_ID" constraintName="PK_RI_BCP_SUSPENSE_ID" tableName="T_RI_BCP_SUSPENSE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_SUSPENSE_TYPE">
+        <addPrimaryKey columnNames="SUSPENS_TYPE" constraintName="PK_RI_BCP_SUSPENSE_TYPE" tableName="T_RI_BCP_SUSPENS_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BRANCH_ID">
+        <addPrimaryKey columnNames="BRANCH_ID" constraintName="PK_RI_BRANCH_ID" tableName="T_RI_BRANCH"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_CURRENCY_CODE">
+        <addPrimaryKey columnNames="CURRENCY_CODE" constraintName="PK_RI_CURRENCY_CODE" tableName="T_RI_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_SETTLE_GROUP_ID">
+        <addPrimaryKey columnNames="SETTLE_GROUP_ID" constraintName="PK_SETTLE_GROUP_ID" tableName="T_RI_BCP_SETTLEMENT_GROUP"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_TRANS_TYPE_ID">
+        <addPrimaryKey columnNames="TRANS_TYPE_ID" constraintName="PK_TRANS_TYPE_ID" tableName="T_RI_TRANS_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_BANK_ACCOUNT_BANK_ID">
+        <addForeignKeyConstraint baseColumnNames="BANK_ID" baseTableName="T_RI_BCP_CFG_BANK_ACCOUNT" constraintName="FK_BANK_ACCOUNT_BANK_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="BANK_ID" referencedTableName="T_RI_BCP_CFG_BANK"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_BANK_ACCOUNT_BRANCH_ID">
+        <addForeignKeyConstraint baseColumnNames="BRANCH_ID" baseTableName="T_RI_BCP_CFG_BANK_ACCOUNT" constraintName="FK_BANK_ACCOUNT_BRANCH_ID" deferrable="true" initiallyDeferred="true" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="BRANCH_ID" referencedTableName="T_RI_BRANCH"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_BANK_ACCOUNT_CURRENCY">
+        <addForeignKeyConstraint baseColumnNames="CURRENCY_CODE" baseTableName="T_RI_BCP_CFG_BANK_ACCOUNT" constraintName="FK_BANK_ACCOUNT_CURRENCY" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="CURRENCY_CODE" referencedTableName="T_RI_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_BCP_REVERSE_REASON">
+        <addForeignKeyConstraint baseColumnNames="REVERSE_REASON" baseTableName="T_RI_BCP_REVERSE" constraintName="FK_BCP_REVERSE_REASON" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="REASON_ID" referencedTableName="T_RI_BCP_REVERSE_REASON"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_COLLECTION_PAY_MODE">
+        <addForeignKeyConstraint baseColumnNames="PAY_MODE" baseTableName="T_RI_BCP_COLLECTION" constraintName="FK_RI_BCP_COLLECTION_PAY_MODE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="PAY_MODE" referencedTableName="T_RI_BCP_PAY_MODE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_EXCHANGE_RATE_TYPE">
+        <addForeignKeyConstraint baseColumnNames="RATE_TYPE" baseTableName="T_RI_BCP_CFG_EXCHANGE_RATE" constraintName="FK_RI_BCP_EXCHANGE_RATE_TYPE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="RATE_TYPE" referencedTableName="T_RI_BCP_EXCHANGE_RATE_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_FEE_ARAP_TYPE">
+        <addForeignKeyConstraint baseColumnNames="ARAP_TYPE" baseTableName="T_RI_BCP_FEE" constraintName="FK_RI_BCP_FEE_ARAP_TYPE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="TYPE" referencedTableName="T_RI_ARAP_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_FEE_CURRENCY">
+        <addForeignKeyConstraint baseColumnNames="CURRENCY_CODE" baseTableName="T_RI_BCP_FEE" constraintName="FK_RI_BCP_FEE_CURRENCY" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="CURRENCY_CODE" referencedTableName="T_RI_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_FEE_ENTRY_CODE">
+        <addForeignKeyConstraint baseColumnNames="ENTRY_CODE" baseTableName="T_RI_BCP_FEE" constraintName="FK_RI_BCP_FEE_ENTRY_CODE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ENTRY_CODE" referencedTableName="T_RI_ENTRY_CODE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_PAYEE_PAYMENT_ID">
+        <addForeignKeyConstraint baseColumnNames="PAYMENT_ID" baseTableName="T_RI_BCP_PAYEE" constraintName="FK_RI_BCP_PAYEE_PAYMENT_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="PAYMENT_ID" referencedTableName="T_RI_BCP_PAYMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SETTLE_BCP_FEE_ID">
+        <addForeignKeyConstraint baseColumnNames="FEE_ID" baseTableName="T_RI_BCP_SETTLEMENT_DETAIL" constraintName="FK_RI_BCP_SETTLE_BCP_FEE_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="FEE_ID" referencedTableName="T_RI_BCP_FEE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SETTLE_COLLECTION_ID">
+        <addForeignKeyConstraint baseColumnNames="COLLECTION_ID" baseTableName="T_RI_BCP_SETTLEMENT_DETAIL" constraintName="FK_RI_BCP_SETTLE_COLLECTION_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="COLLECTION_ID" referencedTableName="T_RI_BCP_COLLECTION"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SETTLE_GRAOUP">
+        <addForeignKeyConstraint baseColumnNames="SETTLE_GROUP_ID" baseTableName="T_RI_BCP_SETTLEMENT_DETAIL" constraintName="FK_RI_BCP_SETTLE_GRAOUP" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SETTLE_GROUP_ID" referencedTableName="T_RI_BCP_SETTLEMENT_GROUP"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SETTLE_OFFSET_ID">
+        <addForeignKeyConstraint baseColumnNames="OFFSET_ID" baseTableName="T_RI_BCP_SETTLEMENT_DETAIL" constraintName="FK_RI_BCP_SETTLE_OFFSET_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="OFFSET_ID" referencedTableName="T_RI_BCP_OFFSET"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SETTLE_PAYMENT_ID">
+        <addForeignKeyConstraint baseColumnNames="PAYMENT_ID" baseTableName="T_RI_BCP_SETTLEMENT_DETAIL" constraintName="FK_RI_BCP_SETTLE_PAYMENT_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="PAYMENT_ID" referencedTableName="T_RI_BCP_PAYMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SETTLE_REVERSE_ID">
+        <addForeignKeyConstraint baseColumnNames="REVERSE_ID" baseTableName="T_RI_BCP_SETTLEMENT_DETAIL" constraintName="FK_RI_BCP_SETTLE_REVERSE_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="REVERSE_ID" referencedTableName="T_RI_BCP_REVERSE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BCP_SUSPENSE_TYPE">
+        <addForeignKeyConstraint baseColumnNames="SUSPENSE_TYPE" baseTableName="T_RI_BCP_SUSPENSE" constraintName="FK_RI_BCP_SUSPENSE_TYPE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SUSPENS_TYPE" referencedTableName="T_RI_BCP_SUSPENS_TYPE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_SETTLE_EXSOURCE_TYPE">
+        <addForeignKeyConstraint baseColumnNames="SOURCE_TYPE" baseTableName="T_RI_BCP_SETLLE_EX_DETAIL" constraintName="FK_RI_SETTLE_EXSOURCE_TYPE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SOURCE_TYPE" referencedTableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE"/>
+    </changeSet>
+</databaseChangeLog>

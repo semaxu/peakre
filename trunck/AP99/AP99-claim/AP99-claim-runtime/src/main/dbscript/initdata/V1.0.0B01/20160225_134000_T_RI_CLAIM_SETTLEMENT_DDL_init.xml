@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_SETTLEMENT_CLAIM_20160225_134000">
+        <createTable remarks="CLAIM SETTLEMENT infomation" tableName="T_RI_CLAIM_SETTLEMENT">
+            <column name="SETTLEMENT_ID" remarks="id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SETTLEMENT_NAME" remarks="SETTLEMENT NO" type="VARCHAR2(50)"/>
+            <column name="REF_ID" remarks="claim id/event id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DATE_OF_RECEIPT" remarks="RECEIPT DATE" type="date"/>
+            <column name="STATUS" remarks="1.new 2.pending approve 3.approve 4.reject" type="VARCHAR2(2)"/>
+            <column name="REMARK" remarks="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+            <column name="BUSINESS_DIRECTION" remarks="1.financial 2.retrocession" type="VARCHAR2(10)"/>
+            <column name="REF_TYPE" remarks="1.claim 2.event" type="VARCHAR2(2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_CLAIM_SETTLEMENT">
+        <addPrimaryKey columnNames="SETTLEMENT_ID" constraintName="PK_T_RI_CLAIM_SETTLEMENT" tableName="T_RI_CLAIM_SETTLEMENT"/>
+    </changeSet>
+</databaseChangeLog>

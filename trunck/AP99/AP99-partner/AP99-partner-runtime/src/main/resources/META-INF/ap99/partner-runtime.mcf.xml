@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module parent="platform">
+	<spring>
+		<include relative-path="/spring/partner-runtime-beans.xml" />
+	</spring>
+</module>

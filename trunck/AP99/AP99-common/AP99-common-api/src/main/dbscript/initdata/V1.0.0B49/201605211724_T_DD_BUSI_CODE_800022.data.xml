@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="201605211721_T_RI_CURRENCY">
+        <sql>
+        	insert into t_dd_busi_code_table
+  (CODE_TABLE_ID,
+   NAME,
+   DESCRIPTION,
+   CODE_TABLE_TYPE,
+   PREDICATE,
+   ID_FIELD,
+   CODE_FIELD,
+   DESC_FIELD,
+   SORT_FIELD,
+   SORT_TYPE,
+   CONTEXT_ID,
+   DATA_SOURCE,
+   IS_SMALL,
+   NEED_CACHE,
+   INSERT_BY,
+   UPDATE_BY,
+   INSERT_TIME,
+   UPDATE_TIME,
+   RECORD_USAGE,
+   CONDITION_FIELDS,
+   NEED_MULTI_LANG,
+   ID_DATA_TYPE,
+   CODE_DATA_TYPE,
+   DATA_TABLE_ID,
+   DOMAIN_MODEL_CLASS_ID)
+
+values
+  (800022,
+   'Currency With USD Equivalent',
+   'Currency With USD Equivalent',
+   -2,
+   null,
+   'CURRENCY_CODE',
+   'CURRENCY_CODE',
+   'CURRENCY_NAME',
+   'CURRENCY_CODE',
+   'ASC',
+   99,
+   'select CURRENCY_CODE,CURRENCY_NAME,symbol,PEPORTING_CURRENCY,gl_currency from t_ri_currency
+union 
+select ''USD Equivalent'',''USD Equivalent'',null,null,null from dual',
+   'Y',
+   'Y',
+   -11,
+   -11,
+   sysdate,
+   sysdate,
+   2,
+   null,
+   'Y',
+   null,
+   null,
+   null,
+   null);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

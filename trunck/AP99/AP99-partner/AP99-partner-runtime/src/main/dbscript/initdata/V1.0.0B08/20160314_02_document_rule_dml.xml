@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160314_02_DOCUMENT_RULE_DML.DATA">
+        <insert tableName="T_RI_CM_DOCUMENT_RULE">
+            <column name="DOCUMENT_RULE_ID" valueNumeric="2"/>
+            <column name="BUSINESS_TYPE" value="2"/>
+            <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractBOList"/>
+            <column name="PARSE_SERVICE" value="ContractUploadingService"/>
+            <column name="PARSE_TYPE" value="XML"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_RULE">
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="BUSINESS_TYPE" value="4"/>
+            <column name="PARSE_CLASS" value="com.ebao.ap99.arap.entity.CurrencyExchangeRate"/>
+            <column name="PARSE_SERVICE" value="currencyExchangeDataService"/>
+            <column name="PARSE_TYPE" value="XLS"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

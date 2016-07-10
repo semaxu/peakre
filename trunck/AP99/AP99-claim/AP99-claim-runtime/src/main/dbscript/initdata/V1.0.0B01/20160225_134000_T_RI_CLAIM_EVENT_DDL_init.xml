@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_EVENT_CLAIM_20160225_134000">
+        <createTable remarks="event information" tableName="T_RI_CLAIM_EVENT">
+            <column name="EVENT_ID" remarks="id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EVENT_CODE" remarks="EVENT CODE" type="VARCHAR2(20)"/>
+            <column name="DATE_OF_CREATION" remarks="create date" type="date"/>
+            <column name="DATE_OF_LOSS_FROM" remarks="loss start date" type="date"/>
+            <column name="DATE_OF_LOSS_TO" remarks="loss end date" type="date"/>
+            <column name="REMARK" remarks="REMARK" type="VARCHAR2(4000)"/>
+            <column name="LARGE_LOSS_REMIND_LVL1_FLAG" remarks="loss more than 1000000USD  flag" type="VARCHAR2(2)"/>
+            <column name="LARGE_LOSS_REMIND_LVL2_FLAG" remarks="loss more than 1millionUSD  flag" type="VARCHAR2(2)"/>
+            <column name="TOTAL_LOSS" remarks="TOTAL LOSS" type="NUMBER(20, 2)"/>
+            <column name="TASK_OWNER" remarks="TASK  OWNER" type="VARCHAR2(50)"/>
+            <column name="OPERATING_BY" remarks="OPERATING BY" type="VARCHAR2(50)"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+            <column name="CAUSE_OF_LOSS" remarks="CAUSE OF LOSS" type="NVARCHAR2(5)"/>
+            <column name="LOSS_DESC" remarks="LOSS DESC" type="VARCHAR2(4000)"/>
+            <column name="RESERVE_UPDATE_REMARK_RETRO" remarks="RETRO RESERVE UPDATE REMARK" type="VARCHAR2(4000)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_CLAIM_EVENT">
+        <addPrimaryKey columnNames="EVENT_ID" constraintName="PK_T_RI_CLAIM_EVENT" tableName="T_RI_CLAIM_EVENT"/>
+    </changeSet>
+    <changeSet author="generated" id="UQ_T_RI_CLAIM_EVENT_EVENT_CODE">
+        <addUniqueConstraint columnNames="EVENT_CODE" constraintName="UQ_T_RI_CLAIM_EVENT_EVENT_CODE" deferrable="false" disabled="false" initiallyDeferred="false" tableName="T_RI_CLAIM_EVENT"/>
+    </changeSet>
+</databaseChangeLog>

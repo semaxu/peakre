@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201604291502_T_DD_BUSI_CODE_TABLE.data">
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800017"/>
+      <column name="NAME" value="BankAccount_Payment"/>
+      <column name="DESCRIPTION" value="BankAccount_Payment"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="ACCOUNT_TYPE=2"/>
+      <column name="ID_FIELD" value="ACCOUNT_NO"/>
+      <column name="CODE_FIELD" value="ACCOUNT_NO"/>
+      <column name="DESC_FIELD" value="ACCOUNT_NAME"/>
+      <column name="SORT_FIELD" value="ACCOUNT_NAME"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BCP_CFG_BANK_ACCOUNT"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;CURRENCY_CODE&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800018"/>
+      <column name="NAME" value="BankAccount_Collection"/>
+      <column name="DESCRIPTION" value="BankAccount_Collection"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="ACCOUNT_TYPE=1"/>
+      <column name="ID_FIELD" value="ACCOUNT_NO"/>
+      <column name="CODE_FIELD" value="ACCOUNT_NO"/>
+      <column name="DESC_FIELD" value="ACCOUNT_NAME"/>
+      <column name="SORT_FIELD" value="ACCOUNT_NAME"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BCP_CFG_BANK_ACCOUNT"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;CURRENCY_CODE&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

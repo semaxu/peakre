@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185409_T_RI_SOA_SECTION_ITEM">
+        <createTable remarks="Entry items of SOA" tableName="T_RI_SOA_SECTION_ITEM">
+            <column name="ITEM_ID" remarks="primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOA_SECTION_ID" remarks="foreign key" type="NUMBER(10, 0)"/>
+            <column name="ENTRY_CODE" remarks="entry code" type="VARCHAR2(50)"/>
+            <column name="AMOUNT" remarks="entry item's amount" type="NUMBER(20, 6)"/>
+            <column name="SHARE_AMOUNT" remarks="entry item's share amount" type="NUMBER(20, 2)"/>
+            <column name="ENTRY_ITEM" remarks="entry item's entry item" type="VARCHAR2(10)"/>
+            <column name="PERCENTAGE" remarks="entry item's percentage" type="NUMBER(10, 2)"/>
+            <column name="INSERT_BY" remarks="User Id who insert this record" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="User Id who update this record" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="Record Insert Time" type="date"/>
+            <column name="UPDATE_TIME" remarks="Record Update Time" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_SOA_SECTION_ITEM">
+        <addPrimaryKey columnNames="ITEM_ID" constraintName="PK_T_RI_SOA_SECTION_ITEM" tableName="T_RI_SOA_SECTION_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_SOA_ITEM_SECTION_ID">
+        <addForeignKeyConstraint baseColumnNames="SOA_SECTION_ID" baseTableName="T_RI_SOA_SECTION_ITEM" constraintName="FK_RI_SOA_ITEM_SECTION_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SOA_SECTION_ID" referencedTableName="T_RI_SOA_SECTION"/>
+    </changeSet>
+</databaseChangeLog>

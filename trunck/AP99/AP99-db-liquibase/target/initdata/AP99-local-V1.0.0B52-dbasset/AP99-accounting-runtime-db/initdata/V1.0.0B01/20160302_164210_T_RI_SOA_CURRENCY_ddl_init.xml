@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185209_T_RI_SOA_CURRENCY">
+        <createTable remarks="Currency section of SOA" tableName="T_RI_SOA_CURRENCY">
+            <column name="SOA_CURRENCY_ID" remarks="Primay key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOA_ID" remarks="foreign key" type="NUMBER(10, 0)"/>
+            <column name="CURRENCY_CODE" remarks="currency code" type="CHAR(3)"/>
+            <column name="AMOUNT" remarks="amount" type="NUMBER(20, 2)"/>
+            <column name="INSERT_BY" remarks="User Id who insert this record" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="User Id who update this record" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="Record Insert Time" type="date"/>
+            <column name="UPDATE_TIME" remarks="Record Update Time" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_SOA_CURRENCY">
+        <addPrimaryKey columnNames="SOA_CURRENCY_ID" constraintName="PK_T_RI_SOA_CURRENCY" tableName="T_RI_SOA_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_SOA_CURRENCY_ID">
+        <addForeignKeyConstraint baseColumnNames="SOA_ID" baseTableName="T_RI_SOA_CURRENCY" constraintName="FK_RI_SOA_CURRENCY_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SOA_ID" referencedTableName="T_RI_SOA"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160314_03_DOCUMENT_FIELD_DML.DATA">
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="1"/>
+            <column name="FIELD_NAME" value="baseCurrencyCode"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="2"/>
+            <column name="FIELD_NAME" value="exCurrencyCode"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="3"/>
+            <column name="FIELD_NAME" value="rate"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="4"/>
+            <column name="FIELD_NAME" value="validDate"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="1"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="5"/>
+            <column name="FIELD_NAME" value="expiryDate"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="1"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="6"/>
+            <column name="FIELD_NAME" value="rateType"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

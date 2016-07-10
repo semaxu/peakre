@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605231652_T_RI_CM_DOCUMENT_FIELD.data">
+    <sql>
+    delete T_RI_CM_DOCUMENT_FIELD where BUSINESS_TYPE =19;
+    </sql>
+    </changeSet>
+    <changeSet author="generated" id="201605231653_T_RI_CM_DOCUMENT_FIELD.data">
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="82"/>
+      <column name="FIELD_NAME" value="currency"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="81"/>
+      <column name="FIELD_NAME" value="entryItem"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="80"/>
+      <column name="FIELD_NAME" value="entryCode"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="79"/>
+      <column name="FIELD_NAME" value="cedentQuarter"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="78"/>
+      <column name="FIELD_NAME" value="cedentYear"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="77"/>
+      <column name="FIELD_NAME" value="cedentCountry"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="76"/>
+      <column name="FIELD_NAME" value="shareType"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="75"/>
+      <column name="FIELD_NAME" value="mainSubCOB"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="74"/>
+      <column name="FIELD_NAME" value="contractSection"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="73"/>
+      <column name="FIELD_NAME" value="UWY"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="72"/>
+      <column name="FIELD_NAME" value="accountText"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="71"/>
+      <column name="FIELD_NAME" value="contractNo"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="70"/>
+      <column name="FIELD_NAME" value="statementNo"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="84"/>
+      <column name="FIELD_NAME" value="techResult"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="83"/>
+      <column name="FIELD_NAME" value="cashBalance"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="BUSINESS_TYPE" value="19"/>
+    </insert>
+     </changeSet>
+    
+</databaseChangeLog>

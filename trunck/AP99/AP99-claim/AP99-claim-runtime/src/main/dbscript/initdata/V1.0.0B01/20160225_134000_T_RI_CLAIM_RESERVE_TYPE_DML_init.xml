@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_RESERVE_TYPE_DATA_CLAIM_20160225_134000">
+        <insert tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" valueNumeric="1"/>
+            <column name="DESCRIPTION" value="Loss(Indemnity)"/>
+            <column name="SIGN" valueNumeric="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" valueNumeric="2"/>
+            <column name="DESCRIPTION" value="Expense"/>
+            <column name="SIGN" valueNumeric="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" valueNumeric="3"/>
+            <column name="DESCRIPTION" value="Additional case reserve"/>
+            <column name="SIGN" valueNumeric="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" valueNumeric="4"/>
+            <column name="DESCRIPTION" value="Reinstatement provision"/>
+            <column name="SIGN" valueNumeric="-1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" valueNumeric="5"/>
+            <column name="DESCRIPTION" value="Tax"/>
+            <column name="SIGN" valueNumeric="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" valueNumeric="6"/>
+            <column name="DESCRIPTION" value="Others"/>
+            <column name="SIGN" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

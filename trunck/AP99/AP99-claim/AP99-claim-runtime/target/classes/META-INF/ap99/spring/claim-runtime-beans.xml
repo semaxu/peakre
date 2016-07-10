@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+              http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+
+	<!-- Restful Service -->
+	<bean id="claim.restful.SampleUserRestfulService" class="com.ebao.ap99.claim.restful.SampleUserRestfulService" />
+	<bean id="claim.restful.ClaimInfoRestfulService" class="com.ebao.ap99.claim.restful.ClaimInfoRestfulService" />
+	<bean id="claim.restful.EventInfoRestfulService" class="com.ebao.ap99.claim.restful.EventInfoRestfulService" />
+	<bean id="claim.restful.ClaimSectionInfoRestfulService"
+		class="com.ebao.ap99.claim.restful.ClaimSectionInfoRestfulService" />
+	<bean id="claim.restful.ClaimQueryRestfulService" class="com.ebao.ap99.claim.restful.ClaimQueryRestfulService" />
+	<bean id="claim.restful.ClaimSettlementRestfulService"
+		class="com.ebao.ap99.claim.restful.ClaimSettlementRestfulService" />
+	<bean id="claim.restful.ClaimReserveRestfulService" class="com.ebao.ap99.claim.restful.ClaimReserveRestfulService" />
+	<bean id="claim.restful.ClaimMessageRestful" class="com.ebao.ap99.claim.restful.ClaimMessageRestful" />
+
+
+
+	<!-- Convertor -->
+	<bean id="claim.convertor.ClaimInfoConvertor" class="com.ebao.ap99.claim.convertor.ClaimInfoConvertor" />
+	<bean id="claim.convertor.ReserveInfoConvertor" class="com.ebao.ap99.claim.convertor.ReserveInfoConvertor" />
+	<bean id="claim.convertor.SettlementInfoConvertor" class="com.ebao.ap99.claim.convertor.SettlementInfoConvertor" />
+	<bean id="claim.convertor.SettlementItemInfoConvertor"
+		class="com.ebao.ap99.claim.convertor.SettlementItemInfoConvertor" />
+	<bean id="claim.convertor.ClaimSectionInfoConvertor" class="com.ebao.ap99.claim.convertor.ClaimSectionInfoConvertor" />
+	<bean id="claim.convertor.EventInfoConvertor" class="com.ebao.ap99.claim.convertor.EventInfoConvertor" />
+	<bean id="claim.convertor.ReserveLogConverter" class="com.ebao.ap99.claim.convertor.ReserveLogConverter" />
+	<bean id="claim.convertor.SettlementLogConvertor" class="com.ebao.ap99.claim.convertor.SettlementLogConvertor" />
+	<bean id="claim.convertor.EntryCodeConvertor" class="com.ebao.ap99.claim.convertor.EntryCodeConvertor" />
+	<bean id="claim.convertor.ClaimMessageConvertor" class="com.ebao.ap99.claim.convertor.ClaimMessageConvertor" />
+
+	
+
+	<!-- Service -->
+	<bean id="claim.service.impl.SampleUserService" class="com.ebao.ap99.claim.service.impl.SampleUserServiceImpl" />
+	<bean id="claim.service.impl.RiClaiminfoService" class="com.ebao.ap99.claim.service.impl.RiClaimInfoServiceImpl" />
+	<bean id="claim.service.impl.RiClaimSectionInfoService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimSectionInfoServiceImpl" />
+	<bean id="claim.service.impl.RiClaimSettlementService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimSettlementServiceImpl" />
+	<bean id="claim.service.impl.RiEventService" class="com.ebao.ap99.claim.service.impl.RiEventServiceImpl" />
+	<bean id="claim.service.impl.ClaimQueryService" class="com.ebao.ap99.claim.service.impl.ClaimQueryServiceImpl"></bean>
+	<bean id="claim.service.impl.RiClaimReserveLogService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimReserveLogServiceImpl" />
+	<bean id="claim.service.impl.RiClaimSettlementLogService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimSettlementLogServiceImpl" />
+	<bean id="claim.service.impl.RiClaimReserveService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimReserveServiceImpl" />
+	<bean id="claim.service.impl.RiClaimSettlementItemService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimSettlementItemServiceImpl" />
+	<bean id="claim.service.impl.ClaimService" class="com.ebao.ap99.claim.service.impl.ClaimServiceImpl"></bean>
+	<bean id="claim.service.impl.RiClaimMessageService"
+		class="com.ebao.ap99.claim.service.impl.RiClaimMessageServiceImpl"></bean>
+		<bean id="claim.service.impl.ClaimUploadingService"
+		class="com.ebao.ap99.claim.service.impl.ClaimUploadingServiceImpl"></bean>
+		<bean id="claim.service.impl.EventUploadingService"
+		class="com.ebao.ap99.claim.service.impl.EventUploadingServiceImpl"></bean>
+
+
+	<!-- DAO -->
+	<bean id="claim.dao.UserDao" class="com.ebao.ap99.claim.dao.SampleUserDao" />
+	<bean id="claim.dao.ClaimInfoDao" class="com.ebao.ap99.claim.dao.RiClaimInfoDao" />
+	<bean id="claim.dao.ClaimSectionDao" class="com.ebao.ap99.claim.dao.RiClaimSectionDao" />
+	<bean id="claim.dao.CLaimEventDao" class="com.ebao.ap99.claim.dao.RiClaimEventDao" />
+	<bean id="claim.dao.RiClaimSettlementDao" class="com.ebao.ap99.claim.dao.RiClaimSettlementDao" />
+	<bean id="claim.dao.RiClaimSettlementItemDao" class="com.ebao.ap99.claim.dao.RiClaimSettlementItemDao" />
+	<bean id="claim.dao.ClaimQueryDao" class="com.ebao.ap99.claim.dao.ClaimQueryDao" />
+	<bean id="claim.dao.RiClaimReserveLogDao" class="com.ebao.ap99.claim.dao.RiClaimReserveLogDao" />
+	<bean id="claim.dao.RiClaimSettlementLogDao" class="com.ebao.ap99.claim.dao.RiClaimSettlementLogDao" />
+	<bean id="claim.dao.RiClaimReserveDao" class="com.ebao.ap99.claim.dao.RiClaimReserveDao" />
+	<bean id="claim.dao.RiClaimMessageDao" class="com.ebao.ap99.claim.dao.RiClaimMessageDao" />
+
+
+</beans>

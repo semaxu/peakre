@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+	<changeSet author="generated" id="2016052001_UPDATE_RATE">
+		<sql>
+			UPDATE T_RI_CONT_PREMIUM SET RATE = NULL;
+			UPDATE T_RI_CONT_PREMIUM SET LOSSRATE_FROM = NULL;
+			UPDATE T_RI_CONT_PREMIUM SET LOSSRATE_TO = NULL;
+			UPDATE T_RI_CONT_PREMIUM SET PREMIUMRATE_FROM = NULL;
+			UPDATE T_RI_CONT_PREMIUM SET PREMIUMRATE_TO = NULL;
+			UPDATE T_RI_CONT_PREMIUM SET PROVISIONAL_RATE = NULL;
+		</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052002_UPDATE_RATE">
+		<sql>
+		UPDATE T_RI_CONT_PREMIUM_LOG SET RATE = NULL;
+		UPDATE T_RI_CONT_PREMIUM_LOG SET LOSSRATE_FROM = NULL;
+		UPDATE T_RI_CONT_PREMIUM_LOG SET LOSSRATE_TO = NULL;
+		UPDATE T_RI_CONT_PREMIUM_LOG SET PREMIUMRATE_FROM = NULL;
+		UPDATE T_RI_CONT_PREMIUM_LOG SET PREMIUMRATE_TO = NULL;
+		UPDATE T_RI_CONT_PREMIUM_LOG SET PROVISIONAL_RATE = NULL;
+		</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052003_UPDATE_RATE">
+		<sql>
+		UPDATE T_RI_CONT_DEDUCTIONS_COMM SET FIRST_CAL = NULL;
+		UPDATE T_RI_CONT_DEDUCTIONS_COMM SET SUBSEQUENT_CALC = NULL;
+		</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052004_UPDATE_RATE">
+		<sql>
+		UPDATE T_RI_CONT_DEDUCTIONS_COMM_LOG SET FIRST_CAL = NULL;
+		UPDATE T_RI_CONT_DEDUCTIONS_COMM_LOG SET SUBSEQUENT_CALC = NULL;
+		</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052005_UPDATE_RATE">
+		<sql>
+		UPDATE T_RI_CONT_PREMIUM_ITEM SET DEPOSIT_AMOUNT = NULL;
+		UPDATE T_RI_CONT_PREMIUM_ITEM SET MINIMUM_AMOUNT = NULL;
+		UPDATE T_RI_CONT_PREMIUM_ITEM SET PERCENTAGE = NULL;
+		</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052006_UPDATE_RATE">
+		<sql>
+		UPDATE T_RI_CONT_PREMIUM_ITEM_LOG SET DEPOSIT_AMOUNT = NULL;
+		UPDATE T_RI_CONT_PREMIUM_ITEM_LOG SET MINIMUM_AMOUNT = NULL;
+		UPDATE T_RI_CONT_PREMIUM_ITEM_LOG SET PERCENTAGE = NULL;
+		</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052007_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_DEDUCTIONS_ATTACH SET LR_FROM = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052008_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_DEDUCTIONS_ATTACH SET LR_TO = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052009_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_DEDUCTIONS_ATTACH SET COMMISSION = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052010_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_DEDUCTIONS_ATT_LOG SET LR_FROM = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052011_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_DEDUCTIONS_ATT_LOG SET LR_TO = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052012_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_DEDUCTIONS_ATT_LOG SET COMMISSION = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052013_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_REINSTATE_ITEM SET REIN_RATE = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052014_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_REINSTATE_ITEM_LOG SET REIN_RATE = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052015_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_SHARE SET COINSURANCE = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052016_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_SHARE_LOG SET COINSURANCE = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052017_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_REINSTATE_ITEM SET REINSTATE = NULL;</sql>
+	</changeSet>
+	<changeSet author="generated" id="2016052018_UPDATE_RATE">
+		<sql>UPDATE T_RI_CONT_REINSTATE_ITEM_LOG SET REINSTATE = NULL;</sql>
+	</changeSet>
+
+</databaseChangeLog>

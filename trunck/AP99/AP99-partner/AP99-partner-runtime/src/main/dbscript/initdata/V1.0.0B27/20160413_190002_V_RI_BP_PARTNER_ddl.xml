@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160413_190002_V_RI_BP_PARTNER_ddl">
+  <sql>
+CREATE OR REPLACE VIEW V_RI_BP_PARTNER AS
+select t."PARTNER_ID",t."BUSINESS_PARTNER_CATEGORY",t."BUSINESS_PARTNER_ID",t."TRADING_NAME",t."STATUS",t."CREATOR",t."CREATE_DATE",t."REGISTRATION_NAME",t."SHORT_NAME",t."ORGANIZATION_ID_TYPE",t."BUSINESS_REGISTRATION_CODE",t."DATE_OF_REGISTRATION",t."DUEDATE_OF_REGISTRATION",t."FIRST_NAME",t."LAST_NAME",t."ID_TYPE",t."ID_NUMBER",t."DUEDATE_OF_ID_CERTIFICATION",t."DATE_OF_BIRTH",t."GENDER",t."COUNTRY",t."PARTNER_TYPE",t."INSERT_BY",t."UPDATE_BY",t."INSERT_TIME",t."UPDATE_TIME",t."ROLE_SELECT",t."FULL_NAME" ,
+(case when (t.business_partner_category= '1') then t.full_name
+when (t.business_partner_category ='2' ) then t.trading_name
+ end ) as search_name
+ FROM t_ri_bp_partner t;
+  </sql>
+  </changeSet>
+</databaseChangeLog>

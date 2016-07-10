@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160406_185509_T_RI_ACCT_EXCEL_REVALUATE">
+    <createTable remarks="the excel revalute detail info;" tableName="T_RI_ACCT_EXCEL_REVALUATE">
+      <column name="REVALUATION_EXCEL_ID" remarks="primary key;" type="NUMBER(10, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="REVALUATION_ID" remarks="foreign key;" type="NUMBER(10, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CONTRACT_ID" type="NUMBER(22, 0)"/>
+      <column name="ENTRY_CODE" type="VARCHAR2(50)"/>
+      <column name="ENTRY_ITEM" type="VARCHAR2(1000)"/>
+      <column name="CURRENCY_OC" type="CHAR(3)"/>
+      <column name="AMOUNT_OC" type="NUMBER(20, 2)"/>
+      <column name="ORIGINAL_RATE" type="NUMBER(15, 9)"/>
+      <column name="AMOUNT_USD" type="NUMBER(20, 2)"/>
+      <column name="CURRENT_RATE" type="NUMBER(15, 9)"/>
+      <column name="CURRENTAMOUNT_USD" type="NUMBER(20, 2)"/>
+      <column name="REVALUATIONAMOUNT_USD" type="NUMBER(20, 2)"/>
+      <column name="TRANS_DATE" type="date"/>
+      <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+      <column name="UPDATE_TIME" type="date"/>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="2016031701_T_RI_CM_DOCUMENT_RULE.DATA">
+        <insert tableName="T_RI_CM_DOCUMENT_RULE">
+            <column name="DOCUMENT_RULE_ID" valueNumeric="3"/>
+            <column name="BUSINESS_TYPE" value="5"/>
+            <column name="PARSE_CLASS" value="com.ebao.ap99.contract.entity.TRiContDeductionsAttach"/>
+            <column name="PARSE_SERVICE" value="BusinessConditionUploadService"/>
+            <column name="PARSE_TYPE" value="XLS"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_RULE">
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="BUSINESS_TYPE" value="6"/>
+            <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.IBNRUploadModel"/>
+            <column name="PARSE_SERVICE" value="SegmentDSImpl"/>
+            <column name="PARSE_TYPE" value="XLS"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+    </changeSet>
+    <changeSet author="generated" id="2016031701_T_RI_CM_DOCUMENT_FIELD.DATA">
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="7"/>
+            <column name="FIELD_NAME" value="lrFrom"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="3"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="8"/>
+            <column name="FIELD_NAME" value="lrTo"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="3"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="9"/>
+            <column name="FIELD_NAME" value="commission"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="3"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="10"/>
+            <column name="FIELD_NAME" value="segmentName"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="11"/>
+            <column name="FIELD_NAME" value="cedentCountry"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="12"/>
+            <column name="FIELD_NAME" value="coB"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="13"/>
+            <column name="FIELD_NAME" value="contractNature"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="14"/>
+            <column name="FIELD_NAME" value="uy2013"/>
+            <column name="FIELD_NULLABLE" value="1"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="15"/>
+            <column name="FIELD_NAME" value="uy2014"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="16"/>
+            <column name="FIELD_NAME" value="uy2015"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="17"/>
+            <column name="FIELD_NAME" value="uy2016"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="18"/>
+            <column name="FIELD_NAME" value="uy2017"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="19"/>
+            <column name="FIELD_NAME" value="uy2018"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="20"/>
+            <column name="FIELD_NAME" value="uy2019"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="21"/>
+            <column name="FIELD_NAME" value="uy2020"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="22"/>
+            <column name="FIELD_NAME" value="uy2021"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="23"/>
+            <column name="FIELD_NAME" value="uy2022"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="24"/>
+            <column name="FIELD_NAME" value="uy2023"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="25"/>
+            <column name="FIELD_NAME" value="uy2024"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="26"/>
+            <column name="FIELD_NAME" value="uy2025"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="27"/>
+            <column name="FIELD_NAME" value="uy2026"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="28"/>
+            <column name="FIELD_NAME" value="uy2027"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="29"/>
+            <column name="FIELD_NAME" value="uy2028"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="30"/>
+            <column name="FIELD_NAME" value="uy2029"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+        <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" valueNumeric="31"/>
+            <column name="FIELD_NAME" value="uy2030"/>
+            <column name="FIELD_NULLABLE" value="0"/>
+            <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+            <column name="FIELD_TYPE" value="2"/>
+            <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+            <column name="INSERT_TIME"/>
+            <column name="INSERT_BY"/>
+            <column name="UPDATE_TIME"/>
+            <column name="UPDATE_BY"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+<changeSet author="generated" id="2016031001_T_RI_CONTRACT_INFO">
+  <addColumn tableName="T_RI_CONTRACT_INFO">
+    <column name="PROTECTION_BASIC" remarks="Protection Basis" type="VARCHAR2(2)"/>
+    <column name="APPIAN_NO" remarks="Appian No." type="VARCHAR2(100)"/>
+    <column name="MAIN_CURRENCY" remarks="Main Currency" type="VARCHAR2(10)"/>
+    <column name="PRICING_REF" remarks="Pricing Reference" type="VARCHAR2(100)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONTRACT_INFO_LOG">
+  <addColumn tableName="T_RI_CONTRACT_INFO_LOG">
+    <column name="PROTECTION_BASIC" type="VARCHAR2(2)"/>
+    <column name="APPIAN_NO" type="VARCHAR2(100)"/>
+    <column name="MAIN_CURRENCY" type="VARCHAR2(10)"/>
+    <column name="PRICING_REF" type="VARCHAR2(100)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONTRACT_MORE_INFO">
+  <addColumn tableName="T_RI_CONTRACT_MORE_INFO">
+    <column name="COVERED" remarks="Area Covered" type="VARCHAR2(200)"/>
+    <column name="COVERED_REMARK" remarks="Remarks" type="VARCHAR2(4000)"/>
+    <column name="PERIL" remarks="Peril Covered" type="VARCHAR2(200)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONTRACT_MORE_INFO_LOG">
+  <addColumn tableName="T_RI_CONTRACT_MORE_INFO_LOG">
+    <column name="COVERED" type="VARCHAR2(200)"/>
+    <column name="COVERED_REMARK" type="VARCHAR2(4000)"/>
+    <column name="PERIL" type="VARCHAR2(200)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONT_ACCOUNT_CONDITION">
+  <addColumn tableName="T_RI_CONT_ACCOUNT_CONDITION">
+    <column name="PORTFOLIO_IN" remarks="Portfolio In" type="VARCHAR2(5)"/>
+    <column name="PORTFOLIO_IN_DATA" remarks="Portfolio In data" type="NUMBER(20,2)"/>
+    <column name="PORTFOLIO_OUT" remarks="Portfolio Out" type="VARCHAR2(5)"/>
+    <column name="PORTFOLIO_OUT_DATA" remarks="Portfolio Out data" type="NUMBER(20,2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONT_ACCOUNT_LOG">
+  <addColumn tableName="T_RI_CONT_ACCOUNT_LOG">
+    <column name="PORTFOLIO_IN" type="VARCHAR2(5)"/>
+    <column name="PORTFOLIO_IN_DATA" type="NUMBER(20,2)"/>
+    <column name="PORTFOLIO_OUT" type="VARCHAR2(5)"/>
+    <column name="PORTFOLIO_OUT_DATA" type="NUMBER(20,2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONT_SECTION_INFO">
+  <addColumn tableName="T_RI_CONT_SECTION_INFO">
+    <column name="COVERED" remarks="Area Covered" type="VARCHAR2(200)"/>
+    <column name="PERIL" remarks="Peril Covered" type="VARCHAR2(200)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONT_SECTION_INFO_LOG">
+  <addColumn tableName="T_RI_CONT_SECTION_INFO_LOG">
+    <column name="COVERED" type="VARCHAR2(200)"/>
+    <column name="PERIL" type="VARCHAR2(200)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONT_SUBSECTION_INFO">
+  <addColumn tableName="T_RI_CONT_SUBSECTION_INFO">
+    <column name="COVERED" remarks="Area Covered" type="VARCHAR2(200)"/>
+    <column name="PERIL" remarks="Peril Covered" type="VARCHAR2(200)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016031001_T_RI_CONT_SUBSECTION_INFO_LOG">
+  <addColumn tableName="T_RI_CONT_SUBSECTION_INFO_LOG">
+    <column name="COVERED" type="VARCHAR2(200)"/>
+    <column name="PERIL" type="VARCHAR2(200)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="T_RI_CONT_PRICING">
+        <createTable tableName="T_RI_CONT_PRICING">
+            <column name="PRICING_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_COMP_ID" type="NUMBER(10, 0)"/>
+            <column name="SECTION_NAME" type="VARCHAR2(100)"/>
+            <column name="WRITTEN_PARTNER" type="VARCHAR2(2)"/>
+            <column name="EARNING_PARTNER" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column defaultValue="Y" name="IS_ACTIVE" type="VARCHAR2(2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CONT_PRICING_ITEM">
+        <createTable tableName="T_RI_CONT_PRICING_ITEM">
+            <column name="ITEM_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICING_ID" type="NUMBER(10, 0)"/>
+            <column name="PRICING_DATE" type="date"/>
+            <column name="UNDERWRITER" type="NUMBER(10, 0)"/>
+            <column name="CURRENCY" type="VARCHAR2(2)"/>
+            <column name="EPI" type="NUMBER(20, 2)"/>
+            <column name="COMMISSION" type="NUMBER(6, 5)"/>
+            <column name="BROKERAGE" type="NUMBER(6, 5)"/>
+            <column name="TAXS" type="NUMBER(6, 5)"/>
+            <column name="LOSS_RATIO" type="NUMBER(6, 5)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column defaultValue="Y" name="IS_ACTIVE" type="VARCHAR2(2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CONT_PRICING_ITEM_LOG">
+        <createTable tableName="T_RI_CONT_PRICING_ITEM_LOG">
+            <column name="LOG_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ITEM_ID" type="NUMBER(10, 0)"/>
+            <column name="PRICING_ID" type="NUMBER(10, 0)"/>
+            <column name="OPERATE_ID" type="NUMBER(10, 0)"/>
+            <column name="PRICING_DATE" type="date"/>
+            <column name="UNDERWRITER" type="NUMBER(10, 0)"/>
+            <column name="CURRENCY" type="VARCHAR2(2)"/>
+            <column name="EPI" type="NUMBER(20, 2)"/>
+            <column name="COMMISSION" type="NUMBER(6, 5)"/>
+            <column name="BROKERAGE" type="NUMBER(6, 5)"/>
+            <column name="TAXS" type="NUMBER(6, 5)"/>
+            <column name="LOSS_RATIO" type="NUMBER(6, 5)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column defaultValue="Y" name="IS_ACTIVE" type="VARCHAR2(2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CONT_PRICING_LOG">
+        <createTable tableName="T_RI_CONT_PRICING_LOG">
+            <column name="LOG_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICING_ID" type="NUMBER(10, 0)"/>
+            <column name="OPERATE_ID" type="NUMBER(10, 0)"/>
+            <column name="CONT_COMP_ID" type="NUMBER(10, 0)"/>
+            <column name="SECTION_NAME" type="VARCHAR2(100)"/>
+            <column name="WRITTEN_PARTNER" type="VARCHAR2(2)"/>
+            <column name="EARNING_PARTNER" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column defaultValue="Y" name="IS_ACTIVE" type="VARCHAR2(2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00731639">
+        <addPrimaryKey columnNames="PRICING_ID" constraintName="SYS_C00731639" tableName="T_RI_CONT_PRICING"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00731641">
+        <addPrimaryKey columnNames="ITEM_ID" constraintName="SYS_C00731641" tableName="T_RI_CONT_PRICING_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00731643">
+        <addPrimaryKey columnNames="LOG_ID" constraintName="SYS_C00731643" tableName="T_RI_CONT_PRICING_LOG"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00731645">
+        <addPrimaryKey columnNames="LOG_ID" constraintName="SYS_C00731645" tableName="T_RI_CONT_PRICING_ITEM_LOG"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_CONT_PRICING_ITEM_LOG__ID">
+        <addForeignKeyConstraint baseColumnNames="ITEM_ID" baseTableName="T_RI_CONT_PRICING_ITEM_LOG" constraintName="FK_CONT_PRICING_ITEM_LOG__ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ITEM_ID" referencedTableName="T_RI_CONT_PRICING_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_T_RI_CONT_PRICING_ITEM__ID">
+        <addForeignKeyConstraint baseColumnNames="PRICING_ID" baseTableName="T_RI_CONT_PRICING_ITEM" constraintName="FK_T_RI_CONT_PRICING_ITEM__ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="PRICING_ID" referencedTableName="T_RI_CONT_PRICING"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_T_RI_CONT_PRICING__CONT_ID">
+        <addForeignKeyConstraint baseColumnNames="CONT_COMP_ID" baseTableName="T_RI_CONT_PRICING" constraintName="FK_T_RI_CONT_PRICING__CONT_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="CONT_COMP_ID" referencedTableName="T_RI_CONTRACT_STRUCTURE"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_T_RI_CONT_PRINCTING_LOG__ID">
+        <addForeignKeyConstraint baseColumnNames="PRICING_ID" baseTableName="T_RI_CONT_PRICING_LOG" constraintName="FK_T_RI_CONT_PRINCTING_LOG__ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="PRICING_ID" referencedTableName="T_RI_CONT_PRICING"/>
+    </changeSet>
+</databaseChangeLog>

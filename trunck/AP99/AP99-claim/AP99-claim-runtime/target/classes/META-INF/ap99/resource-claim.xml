@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+	<!-- claim action  -->
+	<resource name="claimInfo_save" type="action" dataContext="claimInfo" description=""/>
+
+	
+	<!-- claim service  -->
+	<resource name="claimInfo/modelToEntity" type="service" dataContext="claimInfo" description=""/>
+	<resource name="claimInfo/saveData" type="service" description=""/>
+	<resource name="claimInfo/loadClaimEntity" type="service" description=""/>
+	<resource name="claimInfo/entityToModel" type="service" description=""/>
+
+</resources>

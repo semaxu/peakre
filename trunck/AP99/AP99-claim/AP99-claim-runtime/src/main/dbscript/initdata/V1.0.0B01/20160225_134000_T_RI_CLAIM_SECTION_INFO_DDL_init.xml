@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_SECTION_INFO_CLAIM_20160225_134000">
+         <createTable remarks="claim contract information" tableName="T_RI_CLAIM_SECTION_INFO">
+            <column name="CLAIM_SECTION_ID" remarks="id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REF_ID" remarks="claimid/eventid" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SECTION_ID" remarks="section id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SECTION_CODE" remarks="section Code" type="VARCHAR2(20)"/>
+            <column name="SECTION_NAME" remarks="section name" type="VARCHAR2(100)"/>
+            <column name="CONTRACT_ID" remarks="contract id" type="NUMBER(10, 0)"/>
+            <column name="CONTRACT_CODE" remarks="contract code" type="VARCHAR2(20)"/>
+            <column name="UW_YEAR" remarks="underwriting year" type="NUMBER(10, 0)"/>
+            <column name="CEDENT_NAME" remarks="CEDENT NAME" type="VARCHAR2(200)"/>
+            <column name="CEDENT_COUNTRY" remarks="CEDENT COUNTRY" type="VARCHAR2(5)"/>
+            <column name="BROKER_NAME" remarks="BROKER NAME" type="VARCHAR2(200)"/>
+            <column name="FRONTING_FLAG" remarks="FRONTING FLAG" type="VARCHAR2(2)"/>
+            <column name="RETROCESSION_FLAG" remarks="RETROCESSION FLAG" type="VARCHAR2(2)"/>
+            <column name="CONTRACT_NATURE" remarks="CONTRACT NATURE" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+            <column name="FULL_NAME" remarks="contract section FULL NAME" type="VARCHAR2(400)"/>
+            <column name="BUSINESS_DIRECTION" remarks="1.financial,2.retrocession" type="VARCHAR2(2)"/>
+            <column name="REF_TYPE" remarks="1.claim,2.event" type="VARCHAR2(2)"/>
+            <column name="SECTION_LEVEL" remarks="level : 1.contract level ,2.setion level ,3.sub_section level" type="VARCHAR2(2)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_CLAIM_SECTION_ID">
+        <addPrimaryKey columnNames="CLAIM_SECTION_ID" constraintName="PK_CLAIM_SECTION_ID" tableName="T_RI_CLAIM_SECTION_INFO"/>
+    </changeSet>
+</databaseChangeLog>

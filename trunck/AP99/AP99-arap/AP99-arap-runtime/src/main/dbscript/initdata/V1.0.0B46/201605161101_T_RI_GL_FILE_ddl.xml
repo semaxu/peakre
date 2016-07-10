@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="T_RI_GL_FILE">
+    <createTable tableName="T_RI_GL_FILE">
+      <column name="FILE_ID" type="NUMBER(10, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="FILE_NAME" type="VARCHAR2(100)"/>
+      <column name="FILE_NUM" type="NUMBER(5, 0)"/>
+      <column name="FILE_DATE" type="date"/>
+      <column name="FILE_RETURN_NAME" type="VARCHAR2(100)"/>
+      <column name="FILE_RETURN_STATUS" type="NUMBER(1, 0)"/>
+      <column name="FILE_PATH" type="VARCHAR2(500)"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="PK_RI_GL_FILE_ID">
+    <addPrimaryKey columnNames="FILE_ID" constraintName="PK_RI_GL_FILE_ID" tableName="T_RI_GL_FILE"/>
+  </changeSet>
+</databaseChangeLog>

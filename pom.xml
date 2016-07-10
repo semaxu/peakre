@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ebao</groupId>
+  <artifactId>ebao-lib-pom</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+<!--
+  <repositories>
+    <repository>
+      <snapshots />
+      <id>ebao</id>
+      <name>eBaoTech Maven Repository</name>
+      <url>http://maven-repository.ebaotech.com/artifactory/repo</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <snapshots />
+      <id>ebao</id>
+      <name>eBaoTech Maven Repository</name>
+      <url>http://maven-repository.ebaotech.com/artifactory/repo</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <distributionManagement>
+    <repository>
+      <id>ebao</id>
+      <url>http://maven-repository.ebaotech.com/artifactory/libs-release-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>ebao</id>
+      <url>http://maven-repository.ebaotech.com/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+-->
+</project>

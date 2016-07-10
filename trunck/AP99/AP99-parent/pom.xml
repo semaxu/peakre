@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ebao.unicorn.AP99</groupId>
+	<artifactId>AP99-parent</artifactId>
+	<!-- project version -->
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>AP99-parent</name>
+	<url>http://www.ebaotech.com</url>
+
+	<parent>
+		<groupId>com.ebao.unicorn</groupId>
+		<artifactId>unicorn-parent</artifactId>
+		<version>4.0.2B27</version>
+	</parent>
+
+	<properties>
+		<!-- the unicorn version -->
+		<unicorn.version>4.0.2B27</unicorn.version>
+		<dependOn>platform</dependOn>
+		<product.name>AP99</product.name>
+	</properties>
+
+
+	<!-- Manage unicorn project version -->
+
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- unicorn tech infras -->
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-technical-all</artifactId>
+				<version>${unicorn.version}</version>
+				<type>pom</type>
+			</dependency>
+	
+
+			<!-- unicorn business infras -->
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-print-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-web-pub</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-maintenancecenter-ui</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+			
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-policy-common-infras-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-policy-auto-infras-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-policy-contract-infras-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-policy-output-infras-api</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-query-api</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-query-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-channel-infras-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-referral-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-product-import</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-product-export</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-product-infras-api</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-product-infras-runtime</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ebao.unicorn</groupId>
+				<artifactId>unicorn-product-management</artifactId>
+				<version>${unicorn.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- Manage dependencies -->
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ebao.unicorn</groupId>
+			<artifactId>unicorn-technical-all</artifactId>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+	<modules>
+		<module>../AP99-test</module>
+		<module>../AP99-contract/AP99-contract-api</module>
+		<module>../AP99-contract/AP99-contract-runtime</module>
+		<module>../AP99-accounting/AP99-accounting-api</module>
+		<module>../AP99-accounting/AP99-accounting-runtime</module>
+		<module>../AP99-arap/AP99-arap-api</module>
+		<module>../AP99-arap/AP99-arap-runtime</module>
+		<module>../AP99-claim/AP99-claim-api</module>
+		<module>../AP99-claim/AP99-claim-runtime</module>
+		<module>../AP99-partner/AP99-partner-api</module>
+		<module>../AP99-partner/AP99-partner-runtime</module>
+		<module>../AP99-parent-runtime</module>
+		<module>../AP99-common/AP99-common-api</module>
+		<module>../peakRe-UI</module>
+		<module>../peakRe-Print</module>
+		<module>../AP99-local</module>
+	</modules>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.jacoco</groupId>
+										<artifactId>
+											jacoco-maven-plugin
+										</artifactId>
+										<versionRange>
+											[0.7.4.201502262128,)
+										</versionRange>
+										<goals>
+											<goal>prepare-agent</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				-->
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_RESERVE_TYPE_CLAIM_20160225_134000">
+         <createTable tableName="T_RI_CLAIM_RESERVE_TYPE">
+            <column name="ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRIPTION" type="VARCHAR2(200)"/>
+            <column name="SIGN" type="NUMBER(1, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00630748">
+        <addPrimaryKey columnNames="ID" constraintName="SYS_C00630748" tableName="T_RI_CLAIM_RESERVE_TYPE"/>
+    </changeSet>
+</databaseChangeLog>

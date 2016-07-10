@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016042302_T_RI_COUNTRY.DATA">
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1000"/>
+      <column name="COUNTRY_NAME" value="Africa"/>
+      <column name="COUNTRY_LEVEL" value="1"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="0"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1100"/>
+      <column name="COUNTRY_NAME" value="Eastern Africa"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1101"/>
+      <column name="COUNTRY_NAME" value="Burundi"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1102"/>
+      <column name="COUNTRY_NAME" value="Comoros"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1103"/>
+      <column name="COUNTRY_NAME" value="Djibouti"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1104"/>
+      <column name="COUNTRY_NAME" value="Eritrea"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1105"/>
+      <column name="COUNTRY_NAME" value="Ethiopia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1106"/>
+      <column name="COUNTRY_NAME" value="Kenya"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1107"/>
+      <column name="COUNTRY_NAME" value="Madagascar"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1108"/>
+      <column name="COUNTRY_NAME" value="Malawi"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1109"/>
+      <column name="COUNTRY_NAME" value="Mauritius"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1110"/>
+      <column name="COUNTRY_NAME" value="Mayotte"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1111"/>
+      <column name="COUNTRY_NAME" value="Mozambique"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1112"/>
+      <column name="COUNTRY_NAME" value="Reunion"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1113"/>
+      <column name="COUNTRY_NAME" value="Rwanda"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1114"/>
+      <column name="COUNTRY_NAME" value="Seychelles"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1115"/>
+      <column name="COUNTRY_NAME" value="Somalia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1116"/>
+      <column name="COUNTRY_NAME" value="Tanzania"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1117"/>
+      <column name="COUNTRY_NAME" value="Uganda"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1118"/>
+      <column name="COUNTRY_NAME" value="Zambia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1119"/>
+      <column name="COUNTRY_NAME" value="Zimbabwe"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1200"/>
+      <column name="COUNTRY_NAME" value="Middle Africa"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1201"/>
+      <column name="COUNTRY_NAME" value="Angola"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1202"/>
+      <column name="COUNTRY_NAME" value="Cameroon"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1203"/>
+      <column name="COUNTRY_NAME" value="Central African Republic"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1204"/>
+      <column name="COUNTRY_NAME" value="Chad"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1205"/>
+      <column name="COUNTRY_NAME" value="Equatorial Guinea"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1206"/>
+      <column name="COUNTRY_NAME" value="Gabon"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1207"/>
+      <column name="COUNTRY_NAME" value="Republic of the Congo"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1208"/>
+      <column name="COUNTRY_NAME" value="Sao Tome and Principe"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1209"/>
+      <column name="COUNTRY_NAME" value="Democratic Republic of the Congo"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1300"/>
+      <column name="COUNTRY_NAME" value="Northern Africa"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1301"/>
+      <column name="COUNTRY_NAME" value="Algeria"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1302"/>
+      <column name="COUNTRY_NAME" value="Egypt"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1303"/>
+      <column name="COUNTRY_NAME" value="Libya"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1304"/>
+      <column name="COUNTRY_NAME" value="Morocco"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1305"/>
+      <column name="COUNTRY_NAME" value="Sudan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1306"/>
+      <column name="COUNTRY_NAME" value="Tunisia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1400"/>
+      <column name="COUNTRY_NAME" value="Southern Africa"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1401"/>
+      <column name="COUNTRY_NAME" value="Botswana"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1402"/>
+      <column name="COUNTRY_NAME" value="Heard and McDonald Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1403"/>
+      <column name="COUNTRY_NAME" value="Lesotho"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1404"/>
+      <column name="COUNTRY_NAME" value="Namibia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1405"/>
+      <column name="COUNTRY_NAME" value="South Africa"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1406"/>
+      <column name="COUNTRY_NAME" value="Swaziland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1500"/>
+      <column name="COUNTRY_NAME" value="Western Africa"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1501"/>
+      <column name="COUNTRY_NAME" value="Benin"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1502"/>
+      <column name="COUNTRY_NAME" value="Burkina Faso"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1503"/>
+      <column name="COUNTRY_NAME" value="Cape Verde"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1504"/>
+      <column name="COUNTRY_NAME" value="Cote d'Ivoire"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1505"/>
+      <column name="COUNTRY_NAME" value="Gambia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1506"/>
+      <column name="COUNTRY_NAME" value="Ghana"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1507"/>
+      <column name="COUNTRY_NAME" value="Guinea"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1508"/>
+      <column name="COUNTRY_NAME" value="Guinea-Bissau"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1509"/>
+      <column name="COUNTRY_NAME" value="Liberia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1510"/>
+      <column name="COUNTRY_NAME" value="Mali"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1511"/>
+      <column name="COUNTRY_NAME" value="Mauretania"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1512"/>
+      <column name="COUNTRY_NAME" value="Niger"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1513"/>
+      <column name="COUNTRY_NAME" value="Nigeria"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1514"/>
+      <column name="COUNTRY_NAME" value="Saint Helena"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1515"/>
+      <column name="COUNTRY_NAME" value="Senegal"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1516"/>
+      <column name="COUNTRY_NAME" value="Sierra Leone"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="1517"/>
+      <column name="COUNTRY_NAME" value="Togo"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="1500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2000"/>
+      <column name="COUNTRY_NAME" value="Americas"/>
+      <column name="COUNTRY_LEVEL" value="1"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="0"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2100"/>
+      <column name="COUNTRY_NAME" value="Caribbean"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2101"/>
+      <column name="COUNTRY_NAME" value="American Virgin Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2102"/>
+      <column name="COUNTRY_NAME" value="Anguilla"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2103"/>
+      <column name="COUNTRY_NAME" value="Antigua and Barbuda"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2104"/>
+      <column name="COUNTRY_NAME" value="Aruba"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2105"/>
+      <column name="COUNTRY_NAME" value="Bahamas"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2106"/>
+      <column name="COUNTRY_NAME" value="Barbados"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2107"/>
+      <column name="COUNTRY_NAME" value="British Virgin Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2108"/>
+      <column name="COUNTRY_NAME" value="Cayman Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2109"/>
+      <column name="COUNTRY_NAME" value="Cuba"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2110"/>
+      <column name="COUNTRY_NAME" value="Dominica"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2111"/>
+      <column name="COUNTRY_NAME" value="Dominican Republic"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2112"/>
+      <column name="COUNTRY_NAME" value="Dutch Antilles"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2113"/>
+      <column name="COUNTRY_NAME" value="Grenada"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2114"/>
+      <column name="COUNTRY_NAME" value="Guadeloupe"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2115"/>
+      <column name="COUNTRY_NAME" value="Haiti"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2116"/>
+      <column name="COUNTRY_NAME" value="Jamaica"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2117"/>
+      <column name="COUNTRY_NAME" value="Martinique"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2118"/>
+      <column name="COUNTRY_NAME" value="Montserrat"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2119"/>
+      <column name="COUNTRY_NAME" value="Puerto Rico"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2120"/>
+      <column name="COUNTRY_NAME" value="Saint Kitts and Nevis"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2121"/>
+      <column name="COUNTRY_NAME" value="Saint Martin (French Part)"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2122"/>
+      <column name="COUNTRY_NAME" value="St. Lucia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2123"/>
+      <column name="COUNTRY_NAME" value="St. Vincent and the Grenadines"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2124"/>
+      <column name="COUNTRY_NAME" value="Trinidad and Tobago"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2200"/>
+      <column name="COUNTRY_NAME" value="Central America"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2201"/>
+      <column name="COUNTRY_NAME" value="Belize"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2202"/>
+      <column name="COUNTRY_NAME" value="Costa Rica"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2203"/>
+      <column name="COUNTRY_NAME" value="El Salvador"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2204"/>
+      <column name="COUNTRY_NAME" value="Guatemala"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2205"/>
+      <column name="COUNTRY_NAME" value="Honduras"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2206"/>
+      <column name="COUNTRY_NAME" value="Mexico"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2207"/>
+      <column name="COUNTRY_NAME" value="Nicaragua"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2208"/>
+      <column name="COUNTRY_NAME" value="Panama"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2300"/>
+      <column name="COUNTRY_NAME" value="Northern America"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2301"/>
+      <column name="COUNTRY_NAME" value="Bermuda"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2302"/>
+      <column name="COUNTRY_NAME" value="Canada"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2303"/>
+      <column name="COUNTRY_NAME" value="Greenland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2304"/>
+      <column name="COUNTRY_NAME" value="South Georgia and the Southern Sandwich Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2305"/>
+      <column name="COUNTRY_NAME" value="St. Pierre and Miquelon"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2306"/>
+      <column name="COUNTRY_NAME" value="USA"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2400"/>
+      <column name="COUNTRY_NAME" value="South America"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2401"/>
+      <column name="COUNTRY_NAME" value="Argentina"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2402"/>
+      <column name="COUNTRY_NAME" value="Bolivia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2403"/>
+      <column name="COUNTRY_NAME" value="Brazil"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2404"/>
+      <column name="COUNTRY_NAME" value="Chile"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2405"/>
+      <column name="COUNTRY_NAME" value="Colombia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2406"/>
+      <column name="COUNTRY_NAME" value="Ecuador"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2407"/>
+      <column name="COUNTRY_NAME" value="Falkland Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2408"/>
+      <column name="COUNTRY_NAME" value="French Guyana"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2409"/>
+      <column name="COUNTRY_NAME" value="Guyana"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2410"/>
+      <column name="COUNTRY_NAME" value="Paraguay"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2411"/>
+      <column name="COUNTRY_NAME" value="Peru"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2412"/>
+      <column name="COUNTRY_NAME" value="Suriname"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2413"/>
+      <column name="COUNTRY_NAME" value="Uruguay"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="2414"/>
+      <column name="COUNTRY_NAME" value="Venezuela"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="2400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3000"/>
+      <column name="COUNTRY_NAME" value="Asia"/>
+      <column name="COUNTRY_LEVEL" value="1"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="0"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3100"/>
+      <column name="COUNTRY_NAME" value="Central Asia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3101"/>
+      <column name="COUNTRY_NAME" value="Kazakhstan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3102"/>
+      <column name="COUNTRY_NAME" value="Kyrgyzstan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3103"/>
+      <column name="COUNTRY_NAME" value="Tajikistan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3104"/>
+      <column name="COUNTRY_NAME" value="Turkmenistan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3105"/>
+      <column name="COUNTRY_NAME" value="Uzbekistan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3200"/>
+      <column name="COUNTRY_NAME" value="Eastern Asia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3201"/>
+      <column name="COUNTRY_NAME" value="China"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3202"/>
+      <column name="COUNTRY_NAME" value="Hong Kong"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3203"/>
+      <column name="COUNTRY_NAME" value="Japan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3204"/>
+      <column name="COUNTRY_NAME" value="Macau"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3205"/>
+      <column name="COUNTRY_NAME" value="Mongolia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3206"/>
+      <column name="COUNTRY_NAME" value="North Korea"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3207"/>
+      <column name="COUNTRY_NAME" value="South Korea"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3208"/>
+      <column name="COUNTRY_NAME" value="Taiwan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3300"/>
+      <column name="COUNTRY_NAME" value="Middle East"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3301"/>
+      <column name="COUNTRY_NAME" value="Bahrain"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3302"/>
+      <column name="COUNTRY_NAME" value="Iran"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3303"/>
+      <column name="COUNTRY_NAME" value="Iraq"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3304"/>
+      <column name="COUNTRY_NAME" value="Israel"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3305"/>
+      <column name="COUNTRY_NAME" value="Jordan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3306"/>
+      <column name="COUNTRY_NAME" value="Kuwait"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3307"/>
+      <column name="COUNTRY_NAME" value="Lebanon"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3308"/>
+      <column name="COUNTRY_NAME" value="Oman"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3309"/>
+      <column name="COUNTRY_NAME" value="Palestine"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3310"/>
+      <column name="COUNTRY_NAME" value="Qatar"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3311"/>
+      <column name="COUNTRY_NAME" value="Saudi Arabia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3312"/>
+      <column name="COUNTRY_NAME" value="Syria"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3313"/>
+      <column name="COUNTRY_NAME" value="United Arab Emirates"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3314"/>
+      <column name="COUNTRY_NAME" value="Yemen"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3400"/>
+      <column name="COUNTRY_NAME" value="South-Eastern Asia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3401"/>
+      <column name="COUNTRY_NAME" value="Brunei Darussalam"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3402"/>
+      <column name="COUNTRY_NAME" value="Burma"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3403"/>
+      <column name="COUNTRY_NAME" value="Cambodia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3404"/>
+      <column name="COUNTRY_NAME" value="Christmas Islnd"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3405"/>
+      <column name="COUNTRY_NAME" value="Coconut Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3406"/>
+      <column name="COUNTRY_NAME" value="East Timor"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3407"/>
+      <column name="COUNTRY_NAME" value="Indonesia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3408"/>
+      <column name="COUNTRY_NAME" value="Laos"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3409"/>
+      <column name="COUNTRY_NAME" value="Malaysia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3410"/>
+      <column name="COUNTRY_NAME" value="Philippines"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3411"/>
+      <column name="COUNTRY_NAME" value="Singapore"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3412"/>
+      <column name="COUNTRY_NAME" value="Thailand"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3413"/>
+      <column name="COUNTRY_NAME" value="Vietnam"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3500"/>
+      <column name="COUNTRY_NAME" value="Southern Asia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3501"/>
+      <column name="COUNTRY_NAME" value="Afghanistan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3502"/>
+      <column name="COUNTRY_NAME" value="Bangladesh"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3503"/>
+      <column name="COUNTRY_NAME" value="Bhutan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3504"/>
+      <column name="COUNTRY_NAME" value="British Indian Ocean Territory"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3505"/>
+      <column name="COUNTRY_NAME" value="India"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3506"/>
+      <column name="COUNTRY_NAME" value="Maldives"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3507"/>
+      <column name="COUNTRY_NAME" value="Nepal"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3508"/>
+      <column name="COUNTRY_NAME" value="Pakistan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3509"/>
+      <column name="COUNTRY_NAME" value="Sri Lanka"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3500"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3600"/>
+      <column name="COUNTRY_NAME" value="Western Asia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3601"/>
+      <column name="COUNTRY_NAME" value="Armenia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3600"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3602"/>
+      <column name="COUNTRY_NAME" value="Azerbaijan"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3600"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3603"/>
+      <column name="COUNTRY_NAME" value="Cyprus"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3600"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3604"/>
+      <column name="COUNTRY_NAME" value="Georgia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3600"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="3605"/>
+      <column name="COUNTRY_NAME" value="Turkey"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="3600"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="4000"/>
+      <column name="COUNTRY_NAME" value="EU"/>
+      <column name="COUNTRY_LEVEL" value="1"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="0"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="4100"/>
+      <column name="COUNTRY_NAME" value="EU"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="4000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="4101"/>
+      <column name="COUNTRY_NAME" value="European Union"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="4100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5000"/>
+      <column name="COUNTRY_NAME" value="Europe"/>
+      <column name="COUNTRY_LEVEL" value="1"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="0"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5100"/>
+      <column name="COUNTRY_NAME" value="Eastern Europe"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5101"/>
+      <column name="COUNTRY_NAME" value="Belarus"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5102"/>
+      <column name="COUNTRY_NAME" value="Bulgaria"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5103"/>
+      <column name="COUNTRY_NAME" value="Czech Republic"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5104"/>
+      <column name="COUNTRY_NAME" value="Hungary"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5105"/>
+      <column name="COUNTRY_NAME" value="Moldova"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5106"/>
+      <column name="COUNTRY_NAME" value="Poland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5107"/>
+      <column name="COUNTRY_NAME" value="Romania"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5108"/>
+      <column name="COUNTRY_NAME" value="Russian Federation"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5109"/>
+      <column name="COUNTRY_NAME" value="Slovakia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5110"/>
+      <column name="COUNTRY_NAME" value="Ukraine"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5200"/>
+      <column name="COUNTRY_NAME" value="Northern Europe"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5201"/>
+      <column name="COUNTRY_NAME" value="Denmark"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5202"/>
+      <column name="COUNTRY_NAME" value="Estonia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5203"/>
+      <column name="COUNTRY_NAME" value="Faroe Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5204"/>
+      <column name="COUNTRY_NAME" value="Finland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5205"/>
+      <column name="COUNTRY_NAME" value="Iceland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5206"/>
+      <column name="COUNTRY_NAME" value="Ireland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5207"/>
+      <column name="COUNTRY_NAME" value="Latvia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5208"/>
+      <column name="COUNTRY_NAME" value="Lithuania"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5209"/>
+      <column name="COUNTRY_NAME" value="Norway"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5210"/>
+      <column name="COUNTRY_NAME" value="Sweden"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5211"/>
+      <column name="COUNTRY_NAME" value="United Kingdom"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5300"/>
+      <column name="COUNTRY_NAME" value="Southern Europe"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5301"/>
+      <column name="COUNTRY_NAME" value="Albania"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5302"/>
+      <column name="COUNTRY_NAME" value="Andorra"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5303"/>
+      <column name="COUNTRY_NAME" value="Bosnia and Herzegovina"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5304"/>
+      <column name="COUNTRY_NAME" value="Croatia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5305"/>
+      <column name="COUNTRY_NAME" value="Gibraltar"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5306"/>
+      <column name="COUNTRY_NAME" value="Greece"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5307"/>
+      <column name="COUNTRY_NAME" value="Italy"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5308"/>
+      <column name="COUNTRY_NAME" value="Macedonia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5309"/>
+      <column name="COUNTRY_NAME" value="Malta"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5310"/>
+      <column name="COUNTRY_NAME" value="Portugal"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5311"/>
+      <column name="COUNTRY_NAME" value="San Marino"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5312"/>
+      <column name="COUNTRY_NAME" value="Sint Maarten (Dutch)"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5313"/>
+      <column name="COUNTRY_NAME" value="Slovenia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5314"/>
+      <column name="COUNTRY_NAME" value="Spain"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5400"/>
+      <column name="COUNTRY_NAME" value="Western Europe"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5401"/>
+      <column name="COUNTRY_NAME" value="Austria"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5402"/>
+      <column name="COUNTRY_NAME" value="Belgium"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5403"/>
+      <column name="COUNTRY_NAME" value="France"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5404"/>
+      <column name="COUNTRY_NAME" value="Germany"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5405"/>
+      <column name="COUNTRY_NAME" value="Liechtenstein"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5406"/>
+      <column name="COUNTRY_NAME" value="Luxembourg"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5407"/>
+      <column name="COUNTRY_NAME" value="Monaco"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5408"/>
+      <column name="COUNTRY_NAME" value="Netherlands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5409"/>
+      <column name="COUNTRY_NAME" value="Switzerland"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="5410"/>
+      <column name="COUNTRY_NAME" value="Vatican City"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="5400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6000"/>
+      <column name="COUNTRY_NAME" value="Oceania"/>
+      <column name="COUNTRY_LEVEL" value="1"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="0"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6100"/>
+      <column name="COUNTRY_NAME" value="Australia and New Zealand"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6101"/>
+      <column name="COUNTRY_NAME" value="Australia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6102"/>
+      <column name="COUNTRY_NAME" value="New Zealand"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6103"/>
+      <column name="COUNTRY_NAME" value="Norfolk Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6100"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6200"/>
+      <column name="COUNTRY_NAME" value="Melanesia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6201"/>
+      <column name="COUNTRY_NAME" value="Fiji"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6202"/>
+      <column name="COUNTRY_NAME" value="New Caledonia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6203"/>
+      <column name="COUNTRY_NAME" value="Papua New Guinea"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6204"/>
+      <column name="COUNTRY_NAME" value="Solomon Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6205"/>
+      <column name="COUNTRY_NAME" value="Vanuatu"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6200"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6300"/>
+      <column name="COUNTRY_NAME" value="Micronesia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6301"/>
+      <column name="COUNTRY_NAME" value="Guam"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6302"/>
+      <column name="COUNTRY_NAME" value="Kiribati"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6303"/>
+      <column name="COUNTRY_NAME" value="Marshall Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6304"/>
+      <column name="COUNTRY_NAME" value="Micronesia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6305"/>
+      <column name="COUNTRY_NAME" value="Nauru"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6306"/>
+      <column name="COUNTRY_NAME" value="North Mariana Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6307"/>
+      <column name="COUNTRY_NAME" value="Palau"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6300"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6400"/>
+      <column name="COUNTRY_NAME" value="Polynesia"/>
+      <column name="COUNTRY_LEVEL" value="2"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6000"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6401"/>
+      <column name="COUNTRY_NAME" value="American Samoa"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6402"/>
+      <column name="COUNTRY_NAME" value="Cook Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6403"/>
+      <column name="COUNTRY_NAME" value="French Polynesia"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6404"/>
+      <column name="COUNTRY_NAME" value="Niue"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6405"/>
+      <column name="COUNTRY_NAME" value="Pitcairn Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6406"/>
+      <column name="COUNTRY_NAME" value="Samoa"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6407"/>
+      <column name="COUNTRY_NAME" value="Tokelau Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6408"/>
+      <column name="COUNTRY_NAME" value="Tonga"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6409"/>
+      <column name="COUNTRY_NAME" value="Tuvalu"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+    <insert tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" valueNumeric="6410"/>
+      <column name="COUNTRY_NAME" value="Wallis and Futuna Islands"/>
+      <column name="COUNTRY_LEVEL" value="3"/>
+      <column name="IF_USE" value="1"/>
+      <column name="PARENT_ID" valueNumeric="6400"/>
+    </insert>
+  </changeSet>
+    
+</databaseChangeLog>

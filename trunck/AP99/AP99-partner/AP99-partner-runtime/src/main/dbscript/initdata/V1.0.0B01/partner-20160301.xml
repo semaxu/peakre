@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_BP_AML_CHECK">
+        <createTable tableName="T_RI_BP_AML_CHECK">
+            <column name="AML_CHECK_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AML_CHECK" type="VARCHAR2(1)"/>
+            <column name="CHECK_DATE" type="date"/>
+            <column name="AML_CHECK_RESULT" type="VARCHAR2(1)"/>
+            <column name="AMBEST" type="VARCHAR2(1)"/>
+            <column name="COMPANY_NAME" type="VARCHAR2(50)"/>
+            <column name="COUNTRY_INCORPORATION" type="VARCHAR2(50)"/>
+            <column name="SANCTIONEDCOUNTRY" type="VARCHAR2(50)"/>
+            <column name="SP" type="VARCHAR2(1)"/>
+            <column name="SP_TEXT" type="VARCHAR2(50)"/>
+            <column name="AMBEST_TEXT" type="VARCHAR2(50)"/>
+            <column name="FITCH" type="VARCHAR2(1)"/>
+            <column name="FITCH_TEXT" type="VARCHAR2(50)"/>
+            <column name="MOODYS" type="VARCHAR2(1)"/>
+            <column name="MOODYS_TEXT" type="VARCHAR2(50)"/>
+            <column name="LICENSED" type="VARCHAR2(50)"/>
+            <column name="COMMENTS" type="VARCHAR2(200)"/>
+            <column name="CHECK_BY" type="NUMBER"/>
+            <column name="APPROVED_BY" type="NUMBER"/>
+            <column name="REMARKS" type="VARCHAR2(200)"/>
+            <column name="PARTNER_ID" type="NUMBER"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECK_YEAR" type="VARCHAR2(4)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_BANK_ACCOUNT">
+        <createTable tableName="T_RI_BP_BANK_ACCOUNT">
+            <column name="BANK_ACCOUNT_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACCOUNT_HOLDER_TYPE" type="VARCHAR2(1)"/>
+            <column name="ACCOUNT_HOLDER_NAME" type="VARCHAR2(100)"/>
+            <column name="BANK_CODE" type="VARCHAR2(100)"/>
+            <column name="ACCOUNT_NUMBER" type="VARCHAR2(100)"/>
+            <column name="DEBIT_CREDIT" type="VARCHAR2(100)"/>
+            <column name="ACCOUNT_STATUS" type="VARCHAR2(1)"/>
+            <column name="PARTNER_ID" type="NUMBER(10, 0)"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_BROKER_AML_CHECK">
+        <createTable tableName="T_RI_BP_BROKER_AML_CHECK">
+            <column name="AML_CHECK_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AML_CHECK" type="VARCHAR2(1)"/>
+            <column name="CHECK_DATE" type="date"/>
+            <column name="AML_CHECK_RESULT" type="VARCHAR2(1)"/>
+            <column name="PARTNER_ID" type="NUMBER"/>
+            <column name="COMPANY_NAME" type="VARCHAR2(50)"/>
+            <column name="COUNTRY_INCORPORATION" type="VARCHAR2(50)"/>
+            <column name="SANCTIONED_COUNTRY" type="VARCHAR2(50)"/>
+            <column name="INSURANCE_BODY" type="VARCHAR2(50)"/>
+            <column name="BROKER_ASSOCIATION" type="VARCHAR2(1)"/>
+            <column name="LLOYD_BROKER" type="VARCHAR2(1)"/>
+            <column name="COMMENTS" type="VARCHAR2(200)"/>
+            <column name="CERTIFICATE_INCORPORATION" type="VARCHAR2(50)"/>
+            <column name="OWNERSHIP_STRUCTURE" type="VARCHAR2(50)"/>
+            <column name="NAMES_OWNERS" type="VARCHAR2(50)"/>
+            <column name="NAMES_DIRECTORS" type="VARCHAR2(50)"/>
+            <column name="NAMES_SENIOR_MANAGEMENTS" type="VARCHAR2(50)"/>
+            <column name="IS_BROKER_SANCTIONED" type="VARCHAR2(1)"/>
+            <column name="IS_OWNER_TERRORIST" type="VARCHAR2(1)"/>
+            <column name="IS_MANAGEMENT_TERRORIST" type="VARCHAR2(1)"/>
+            <column name="REMARKS" type="VARCHAR2(200)"/>
+            <column name="CHECK_BY" type="NUMBER"/>
+            <column name="APPROVED_BY" type="NUMBER"/>
+            <column name="CHECK_REMARKS" type="VARCHAR2(200)"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECK_YEAR" type="VARCHAR2(4)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_CHANGE_HISTORY">
+        <createTable tableName="T_RI_BP_CHANGE_HISTORY">
+            <column name="CHANGE_HISTORY_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BUSINESS_PARTNER_ROLE" type="VARCHAR2(1)"/>
+            <column name="TRADING_NAME" type="VARCHAR2(50)"/>
+            <column name="OPERATOR" type="VARCHAR2(50)"/>
+            <column defaultValueComputed="sysdate" name="UPDATE_DATE" type="date"/>
+            <column name="CHANGE_CONTENT" type="VARCHAR2(200)"/>
+            <column name="PARTNER_ID" type="NUMBER"/>
+            <column name="INSERT_BY" type="NUMBER"/>
+            <column name="UPDATE_BY" type="NUMBER"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_CONTACT">
+        <createTable tableName="T_RI_BP_CONTACT">
+            <column name="CONTACT_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONTACT_PERSON" type="VARCHAR2(100)"/>
+            <column name="CONTACT_TITLE" type="VARCHAR2(100)"/>
+            <column name="EMAIL_ADDRESS" type="VARCHAR2(100)"/>
+            <column name="TELEPHONE_NUMBER" type="VARCHAR2(100)"/>
+            <column name="REMARK" type="VARCHAR2(50)"/>
+            <column name="PARTNER_ID" type="NUMBER(10, 0)"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_PARTNER">
+        <createTable tableName="T_RI_BP_PARTNER">
+            <column name="PARTNER_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BUSINESS_PARTNER_CATEGORY" type="VARCHAR2(1)"/>
+            <column name="BUSINESS_PARTNER_ID" type="NUMBER(10, 0)"/>
+            <column name="TRADING_NAME" type="VARCHAR2(100)"/>
+            <column name="STATUS" type="VARCHAR2(1)"/>
+            <column name="CREATOR" type="NUMBER(10, 0)"/>
+            <column defaultValueComputed="sysdate" name="CREATE_DATE" type="date"/>
+            <column name="REGISTRATION_NAME" type="VARCHAR2(100)"/>
+            <column name="SHORT_NAME" type="VARCHAR2(100)"/>
+            <column name="ORGANIZATION_ID_TYPE" type="VARCHAR2(1)"/>
+            <column name="BUSINESS_REGISTRATION_CODE" type="VARCHAR2(100)"/>
+            <column name="DATE_OF_REGISTRATION" type="date"/>
+            <column name="DUEDATE_OF_REGISTRATION" type="date"/>
+            <column name="FIRST_NAME" type="VARCHAR2(100)"/>
+            <column name="LAST_NAME" type="VARCHAR2(100)"/>
+            <column name="ID_TYPE" type="VARCHAR2(1)"/>
+            <column name="ID_NUMBER" type="VARCHAR2(100)"/>
+            <column name="DUEDATE_OF_ID_CERTIFICATION" type="date"/>
+            <column name="DATE_OF_BIRTH" type="date"/>
+            <column name="GENDER" type="VARCHAR2(1)"/>
+            <column name="COUNTRY" type="VARCHAR2(3)"/>
+            <column name="PARTNER_TYPE" type="VARCHAR2(1)"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ROLE_SELECT" type="VARCHAR2(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_PARTNER_LOG">
+        <createTable tableName="T_RI_BP_PARTNER_LOG">
+            <column name="PARTNER_LOG_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TRADING_NAME" type="VARCHAR2(50)"/>
+            <column name="REGISTRATION_NAME" type="VARCHAR2(50)"/>
+            <column name="SHORT_NAME" type="VARCHAR2(50)"/>
+            <column name="FIRST_NAME" type="VARCHAR2(50)"/>
+            <column name="LAST_NAME" type="VARCHAR2(50)"/>
+            <column name="STATUS" type="VARCHAR2(1)"/>
+            <column name="PARTNER_ID" type="NUMBER"/>
+            <column name="INSERT_BY" type="NUMBER"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_RELATIONSHIP">
+        <createTable tableName="T_RI_BP_RELATIONSHIP">
+            <column name="RELATIONSHIP_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RELATIONSHIP_TYPE" type="VARCHAR2(1)"/>
+            <column name="PARTNER_ID" type="NUMBER(10, 0)"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER"/>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date"/>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER"/>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date"/>
+            <column name="RELATED_PARTNER_ID" type="NUMBER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CM_DOCUMENT">
+        <createTable tableName="T_RI_CM_DOCUMENT">
+            <column name="DOCUMENT_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DOCUMENT_TYPE" type="VARCHAR2(1)"/>
+            <column name="UPLOAD_TIME" type="date"/>
+            <column name="UPLOAD_PERSON" type="NUMBER"/>
+            <column name="FILE_NAME" type="VARCHAR2(50)"/>
+            <column name="FILE_PATH" type="VARCHAR2(50)"/>
+            <column name="REMARKS" type="VARCHAR2(200)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="INSERT_BY" type="NUMBER"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER"/>
+            <column name="BUSINESS_ID" type="NUMBER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CM_DOCUMENT_RECORD">
+        <createTable tableName="T_RI_CM_DOCUMENT_RECORD">
+            <column name="DOCUMENT_RECORD_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="RECORD_CONTENT" type="VARCHAR2(50)"/>
+            <column name="PARSE_RESULT" type="VARCHAR2(1)"/>
+            <column name="ERR_CONTENT" type="VARCHAR2(50)"/>
+            <column name="DOCUMENT_ID" type="NUMBER"/>
+            <column name="INSERT_BY" type="NUMBER"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_AML_CHECK">
+        <addPrimaryKey columnNames="AML_CHECK_ID" constraintName="PK_RI_BP_AML_CHECK" tableName="T_RI_BP_AML_CHECK"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_BANK_ACCOUNT">
+        <addPrimaryKey columnNames="BANK_ACCOUNT_ID" constraintName="PK_RI_BP_BANK_ACCOUNT" tableName="T_RI_BP_BANK_ACCOUNT"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_CHANGE_HISTORY_ID">
+        <addPrimaryKey columnNames="CHANGE_HISTORY_ID" constraintName="PK_RI_BP_CHANGE_HISTORY_ID" tableName="T_RI_BP_CHANGE_HISTORY"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_CONTACT">
+        <addPrimaryKey columnNames="CONTACT_ID" constraintName="PK_RI_BP_CONTACT" tableName="T_RI_BP_CONTACT"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_PARTNER">
+        <addPrimaryKey columnNames="PARTNER_ID" constraintName="PK_RI_BP_PARTNER" tableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_PARTNER_LOG">
+        <addPrimaryKey columnNames="PARTNER_LOG_ID" constraintName="PK_RI_BP_PARTNER_LOG" tableName="T_RI_BP_PARTNER_LOG"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_RELATIONSHIP_ID">
+        <addPrimaryKey columnNames="RELATIONSHIP_ID" constraintName="PK_RI_BP_RELATIONSHIP_ID" tableName="T_RI_BP_RELATIONSHIP"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BROKER_AML_CHECK">
+        <addPrimaryKey columnNames="AML_CHECK_ID" constraintName="PK_RI_BROKER_AML_CHECK" tableName="T_RI_BP_BROKER_AML_CHECK"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_CM_DOCUMENT_ID">
+        <addPrimaryKey columnNames="DOCUMENT_ID" constraintName="PK_RI_CM_DOCUMENT_ID" tableName="T_RI_CM_DOCUMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_CM_DOCUMENT_RECORD_ID">
+        <addPrimaryKey columnNames="DOCUMENT_RECORD_ID" constraintName="PK_RI_CM_DOCUMENT_RECORD_ID" tableName="T_RI_CM_DOCUMENT_RECORD"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_AML_CHECK_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_AML_CHECK" constraintName="FK_RI_AML_CHECK_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BANK_ACCOUNT_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_BANK_ACCOUNT" constraintName="FK_RI_BANK_ACCOUNT_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BP_CONTACT_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_CONTACT" constraintName="FK_RI_BP_CONTACT_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_BROKER_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_BROKER_AML_CHECK" constraintName="FK_RI_BROKER_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_CHANGE_HISTORY_PARTNER">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_CHANGE_HISTORY" constraintName="FK_RI_CHANGE_HISTORY_PARTNER" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_CM_DOCUMENT_DOCUMENT_ID">
+        <addForeignKeyConstraint baseColumnNames="DOCUMENT_ID" baseTableName="T_RI_CM_DOCUMENT_RECORD" constraintName="FK_RI_CM_DOCUMENT_DOCUMENT_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="DOCUMENT_ID" referencedTableName="T_RI_CM_DOCUMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_PARTNER_LOG_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_PARTNER_LOG" constraintName="FK_RI_PARTNER_LOG_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_RELATIONSHIP_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_RELATIONSHIP" constraintName="FK_RI_RELATIONSHIP_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+</databaseChangeLog>

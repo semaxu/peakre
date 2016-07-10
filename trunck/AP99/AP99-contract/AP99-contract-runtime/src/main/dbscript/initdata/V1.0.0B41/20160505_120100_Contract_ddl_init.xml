@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016050503_T_RI_CONT_DEDUCTIONS">
+        <modifyDataType columnName="BROKERAGE"
+        	newDataType="NUMBER(10,9)"
+        	tableName="T_RI_CONT_DEDUCTIONS"/>
+    </changeSet>
+    <changeSet author="generated" id="2016050504_T_RI_CONT_DEDUCTIONS_LOG">
+        <modifyDataType columnName="BROKERAGE"
+        	newDataType="NUMBER(10,9)"
+        	tableName="T_RI_CONT_DEDUCTIONS_LOG"/>
+    </changeSet>
+    
+</databaseChangeLog>

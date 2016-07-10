@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module parent="platform">
+	<spring>
+		<include relative-path="/spring/claim-runtime-beans.xml" />
+	</spring>
+	<resource>
+		<include relative-path="/resource-claim.xml" />
+	</resource>
+	<routing>
+		<include relative-path="/routing-claim.xml" />
+	</routing>
+	<orchestration>
+		<include relative-path="/claim-RouteConfig.xml" />
+	</orchestration>
+	<custDataProvider>
+		<include relative-path="/resource/dataProvider.properties" />
+	</custDataProvider>
+</module>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/data/jpa 
+        http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+        http://www.springframework.org/schema/data/repository 
+        http://www.springframework.org/schema/data/repository/spring-repository.xsd
+        http://www.springframework.org/schema/util
+    	http://www.springframework.org/schema/util/spring-util.xsd   ">
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="JPAUnit" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>META-INF/platform/foundation-orm.xml</value>
+			</list>
+		</property>
+		<property name="packagesToScan">
+			<list>
+				<value>com.ebao.unicorn.**.domain</value>
+				<value>com.ebao.unicorn.**.entity</value>
+				<value>com.ebao.unicorn.**.model</value>
+				<value>com.ebao.unicorn.platform.foundation.envers</value>
+				<value>com.ebao.ap99.**.entity</value>
+				<!-- <value>com.ebao.unicorn.icp.uic.pojo</value> -->
+			</list>
+		</property>
+		<property name="jpaVendorAdapter" ref="jpaVendorAdapter">
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<!-- hibernate envers property,don't change -->
+				<prop key="org.hibernate.envers.audit_table_suffix">_LOG</prop>
+				<prop key="org.hibernate.envers.audit_strategy">org.hibernate.envers.strategy.ValidityAuditStrategy
+				</prop>
+				<prop key="org.hibernate.envers.use_revision_entity_with_native_id">true</prop>
+				<prop key="org.hibernate.envers.track_entities_changed_in_revision">false</prop>
+				<prop key="org.hibernate.envers.store_data_at_delete">true</prop>
+				<prop key="org.hibernate.envers.revision_field_name">START_REVISION_ID</prop>
+				<prop key="org.hibernate.envers.revision_type_field_name">REVISION_TYPE</prop>
+
+				<prop
+					key="org.hibernate.envers.audit_strategy_validity_end_rev_field_name">END_REVISION_ID</prop>
+				<!-- hibernate envers property end -->
+				<prop key="hibernate.generate_statistics">true</prop>
+				<prop key="hibernate.id.new_generator_mappings">true</prop>
+				<prop key="hibernate.hql.bulk_id_strategy">org.hibernate.hql.spi.id.persistent.EbaoFixedPersistentTableBulkIdStrategy
+				</prop>
+				<!-- hibernate.implicit_naming_strategy <prop key="hibernate.physical_naming_strategy">com.ebao.unicorn.platform.foundation.dao.ImprovedNamingStrategy</prop> -->
+				<prop key="javax.persistence.validation.mode">none</prop>
+				<!-- only for jason test -->
+				<!-- <prop key="hibernate.hbm2ddl.auto">update</prop> -->
+				<!-- -->
+			</props>
+		</property>
+	</bean>
+
+</beans>

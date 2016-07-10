@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016040701_T_RI_CONT_DEDUCTIONS_CARRIED">
+        <dropColumn tableName="T_RI_CONT_DEDUCTIONS_CARRIED">
+            <column name="YN" type="NUMBER(1)"/>
+            <column name="EXTINCTION" type="VARCHAR2(4000)"/>
+        </dropColumn>
+        <addColumn tableName="T_RI_CONT_DEDUCTIONS_CARRIED">
+            <column name="YN" type="VARCHAR2(2)"/>
+            <column name="EXTINCTION" type="VARCHAR2(2)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="generated" id="2016040702_T_RI_CONT_DEDUCTIONS_CARR_LOG">
+        <dropColumn tableName="T_RI_CONT_DEDUCTIONS_CARR_LOG">
+            <column name="YN" type="NUMBER(1)"/>
+            <column name="EXTINCTION" type="VARCHAR2(4000)"/>
+        </dropColumn>
+        <addColumn tableName="T_RI_CONT_DEDUCTIONS_CARR_LOG">
+            <column name="YN" type="VARCHAR2(2)"/>
+            <column name="EXTINCTION" type="VARCHAR2(2)"/>
+        </addColumn>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016040703_T_RI_CONT_LIMIT_ITEM">
+        <modifyDataType columnName="LIMIT_MIN"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_LIMIT_ITEM"/>
+        <modifyDataType columnName="LIMIT_MAX"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_LIMIT_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="2016040704_T_RI_CONT_LIMIT_ITEM_LOG">
+        <modifyDataType columnName="LIMIT_MIN"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_LIMIT_ITEM_LOG"/>
+        <modifyDataType columnName="LIMIT_MAX"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_LIMIT_ITEM_LOG"/>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016040705_T_RI_CONT_SHARE">
+        <modifyDataType columnName="WRITTEN_SHARE3"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_SHARE"/>
+        <modifyDataType columnName="SIGNED_SHARES3"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_SHARE"/>
+    </changeSet>
+    <changeSet author="generated" id="2016040706_T_RI_CONT_SHARE_LOG">
+        <modifyDataType columnName="WRITTEN_SHARE3"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_SHARE_LOG"/>
+        <modifyDataType columnName="SIGNED_SHARES3"
+        	newDataType="NUMBER(12,2)"
+        	tableName="T_RI_CONT_SHARE_LOG"/>
+    </changeSet>
+</databaseChangeLog>

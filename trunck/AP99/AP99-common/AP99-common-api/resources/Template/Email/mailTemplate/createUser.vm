@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>
+			create user email
+		</title>
+	</head>
+	<body><p style="font-family:Calibri;font-size:16">
+		Dear $username:<br>
+		<br>
+		your user name is $username,password is $password, click <a href="$url" target="blank">here</a> to login.
+	</p>
+	</body>
+</html>

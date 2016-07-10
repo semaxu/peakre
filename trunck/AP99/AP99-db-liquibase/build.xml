@@ -1,0 +1,150 @@
+<project name="liquibase" default="build" basedir=".">
+	<taskdef resource="net/sf/antcontrib/antlib.xml" classpath="lib/ant-contrib-1.0nci.jar" />
+	<property file="build.properties"/>
+	<property name="target.dir" location="${INDEX_PATH}" />
+	<property name="dbscript.dir" location="target/dbscript" />
+	
+	<target name="build">
+	</target>
+
+	<target name="dbscript-clean">
+		<delete>
+			<fileset dir="${dbscript.dir}">
+			</fileset>
+		</delete>
+	</target>
+	
+	<target name="dbscript-zip">
+		<echo file="${dbscript.dir}/upgrade-db.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">]]>
+		</echo>
+		<foreach list="${dbscript_projects}" param="dbscript_project" target="dbscript-copy">
+			<param name="dbscript_path" value="../${dbscript_project}/src/main/dbscript" />
+		</foreach>
+		<echo file="${dbscript.dir}/upgrade-db.xml" append="true">
+			<![CDATA[</databaseChangeLog>]]>
+		</echo>
+		<!--  
+		<zip destfile="target/dbscript.zip">
+			<fileset dir="${dbscript.dir}" includes="**/*.*" />
+		</zip>
+		-->
+	</target>
+
+	<target name="dbscript-copy">
+		<echo message="copy todir:${dbscript.dir}/${dbscript_project}"/>
+		<copy todir="${dbscript.dir}/${dbscript_project}">
+			<fileset dir="../${dbscript_project}/src/main/dbscript" includes="**/*.*" />
+		</copy>
+		<echo file="${dbscript.dir}/upgrade-db.xml" append="true">
+			<![CDATA[<include file="${dbscript_project}/index.xml"/>]]></echo>
+	</target>
+
+  
+  <target name="clean">
+    <delete>
+      <fileset dir="${target.dir}">
+        <include name="index.xml"/>
+        <include name="*/index.xml"/>
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="table-list">
+    <echo file="${target.dir}/index.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">]]></echo>
+    <for param="dir">
+      <sort>
+        <dirset dir="${target.dir}">
+          <include name="*" />
+        </dirset>
+      </sort>
+      <sequential>
+         <antcall target="table-list-echo">
+          <param name="table.dir" value="@{dir}"/>
+        </antcall>
+      </sequential>
+    </for>
+    <echo file="${target.dir}/index.xml" append="true"><![CDATA[
+</databaseChangeLog>]]></echo>
+  </target>
+
+  <target name="table-list-echo">
+    <basename property="table" file="${table.dir}" />
+    <echo file="${target.dir}/index.xml" append="true">
+  <![CDATA[<include file="${table}/index.xml"/>]]></echo>
+  </target>
+  
+  <target name="table-index-iterator">
+    <for param="dir">
+      <dirset dir="${target.dir}">
+        <include name="*" />
+      </dirset>
+      <sequential>
+        <antcall target="table-index">
+          <param name="table.dir" value="@{dir}"/>
+        </antcall>
+     </sequential>
+    </for>
+  </target>
+
+  <target name="table-index">
+    <basename property="table" file="${table.dir}" />
+    <echo file="${table.dir}/index.xml"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">]]></echo>
+    <for param="file">
+      <path>
+        <fileset dir="${table.dir}">
+          <include name="${table}.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="S_*.xml" />
+          <include name="HIBERNATE_SEQUENCE*.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="T_PARTY.data.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="T_CUSTOMER.data.xml" />
+          <include name="T_COMPANY_CUSTOMER.data.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="${table}*.data.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="T_USER.data.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="*.t_code.xml" />
+        </fileset>
+        <fileset dir="${table.dir}">
+          <include name="*.t_string_resource.xml" />
+          <include name="*.t_string_resource.*.xml" />
+        </fileset>
+      </path>
+      <sequential>
+        <antcall target="table-index-echo">
+          <param name="table.dir" value="${table.dir}"/>
+          <param name="table.file" value="@{file}"/>
+        </antcall>
+      </sequential>
+    </for>
+    <echo file="${table.dir}/index.xml" append="true"><![CDATA[
+</databaseChangeLog>]]></echo>
+  </target>
+  
+  <target name="table-index-echo">
+    <basename property="file" file="${table.file}" />
+    <echo file="${table.dir}/index.xml" append="true">
+  <![CDATA[<include file="${file}"/>]]></echo>
+  </target>
+  
+</project>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605121856_T_RI_SOA_TYPE">
+        <createTable remarks="Statement type for entry code" tableName="T_RI_SOA_TYPE">
+            <column name="STATEMENT_TYPE" remarks="STATEMENT type" type="NUMBER(2)"/>
+            <column name="DESCRIPTION" remarks="DESCRIPTION" type="VARCHAR2(50)"/>
+            <column name="STATUS" remarks="0:INVALID; 1:VALID" type="CHAR(1)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

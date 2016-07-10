@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_SETTLEMENT_LOG_CLAIM_20160225_134000">
+        <createTable remarks="claim SETTLEMENT LOG" tableName="T_RI_CLAIM_SETTLEMENT_LOG">
+            <column name="SETTLE_LOG_ID" remarks="id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SETTLEMENT_ID" remarks="SETTLEMENT ID" type="NUMBER(10, 0)"/>
+            <column name="OPERATE_BY" remarks="OPERATE BY" type="VARCHAR2(50)"/>
+            <column name="OPERATE_DATE" remarks="OPERATE DATE" type="date"/>
+            <column name="DESICION" remarks="DESICION" type="VARCHAR2(20)"/>
+            <column name="REMARK" remarks="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_CLAIM_SETTLEMENT_LOG">
+        <addPrimaryKey columnNames="SETTLE_LOG_ID" constraintName="PK_T_RI_CLAIM_SETTLEMENT_LOG" tableName="T_RI_CLAIM_SETTLEMENT_LOG"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_ST_LG_SETTLEMENT_ID">
+        <addForeignKeyConstraint baseColumnNames="SETTLEMENT_ID" baseTableName="T_RI_CLAIM_SETTLEMENT_LOG" constraintName="FK_ST_LG_SETTLEMENT_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SETTLEMENT_ID" referencedTableName="T_RI_CLAIM_SETTLEMENT"/>
+    </changeSet>
+</databaseChangeLog>

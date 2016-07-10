@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_MESSAGE_CLAIM_20160225_134000">
+        <createTable remarks="CLAIM MESSAGE" tableName="T_RI_CLAIM_MESSAGE">
+            <column name="MESSAGE_ID" remarks="id" type="NUMBER(10, 0)"/>
+            <column name="MESSAGE_TYPE" remarks="1.PortfolioTransfer 2.claim amout message 3.event amount message" type="CHAR(1)"/>
+            <column name="MESSAGE_NAME" remarks="message name" type="VARCHAR2(100)"/>
+            <column name="MESSAGE_DESCRIPTION" remarks="message description" type="VARCHAR2(500)"/>
+            <column name="MESSAGE_DATE" remarks="message date" type="date"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

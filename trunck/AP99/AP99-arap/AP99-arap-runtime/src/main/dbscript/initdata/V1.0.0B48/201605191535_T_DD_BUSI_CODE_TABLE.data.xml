@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201605191535_T_DD_BUSI_CODE_TABLE.data">
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="810033"/>
+      <column name="NAME" value="CONTRACT_SUBCOB_TYPE_IBNR"/>
+      <column name="DESCRIPTION" value="Contract Sub-Cob Type For IBNR"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="TYPE NOT IN (12,28,33,41,50,55,59,64,68)"/>
+      <column name="ID_FIELD" value="TYPE"/>
+      <column name="CODE_FIELD" value="TYPE"/>
+      <column name="DESC_FIELD" value="DESCRIPTION"/>
+      <column name="SORT_FIELD" value="DESCRIPTION"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_CONTRACT_SUBCOB_TYPE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

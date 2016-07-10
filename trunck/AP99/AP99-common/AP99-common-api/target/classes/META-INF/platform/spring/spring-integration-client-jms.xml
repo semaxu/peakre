@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd"
+	default-autowire="byName">
+
+	<!-- Spring JMS Template -->
+	<bean id="jmsTemplateQueue" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory">
+			<ref bean="connectionFactory" />
+		</property>
+		<property name="defaultDestinationName" value="" />
+		<property name="pubSubDomain" value="false" />
+		<property name="sessionTransacted" value="false"/>
+	</bean>
+
+	<bean id="jmsTemplateTopic" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory">
+			<ref bean="connectionFactory" />
+		</property>
+		<property name="defaultDestinationName" value="" />
+		<property name="pubSubDomain" value="true" />
+		<property name="sessionTransacted" value="false"/>
+	</bean>
+	
+	<bean id="jmsHelper" class="com.ebao.unicorn.integration.client.mq.impl.JmsHelper">
+		<property name="connectionFactory">
+			<ref bean="connectionFactory"/>
+		</property>
+		<property name="propertyResolver">
+			<ref bean="propertyResolver"/>
+		</property>
+		<property name="transactionManager">
+			<ref bean="transactionManager"/>
+		</property>
+	</bean>
+	
+	
+	<bean id="mqClient" class="com.ebao.unicorn.integration.client.mq.impl.MQClientImpl" destroy-method="close">
+		<property name="clientListener">
+			<ref bean="mqClientListener"/>
+		</property>
+		<property name="connectionFactory">
+			<ref bean="connectionFactory"/>
+		</property>
+		<property name="concurrentConsumers">
+			<value>${client.concurrentConsumers}</value>
+		</property>
+		<property name="maxConcurrentConsumers">
+			<value>${client.maxConcurrentConsumers}</value>
+		</property>
+		<property name="maxMessagesPerTask">
+			<value>${client.maxMessagesPerTask}</value>
+		</property>
+		<property name="destinationHolder">
+			<ref bean="destinationHolder" />
+		</property>
+		<property name="jmsHelper">
+			<ref bean="jmsHelper" />
+		</property>
+		<property name="receiveTimeout" value="${client.receiveTimeout}" />
+		<property name="listenTimeout" value="${client.listenTimeout}" />
+		<property name="requestTimeout" value="${client.requestTimeout}" />
+		<property name="timeToLive" value="${client.timeToLive}" />
+	</bean>
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_164204_T_RI_ACCT_FEE">
+        <createTable tableName="T_RI_ACCT_FEE">
+            <column name="FEE_ID" remarks="fee id" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BUSI_TYPE" remarks="business type" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_ACCT_FEE">
+        <addPrimaryKey columnNames="FEE_ID" constraintName="PK_T_RI_ACCT_FEE" tableName="T_RI_ACCT_FEE"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="2016050201_T_RI_CM_DOCUMENT_TYPE.DATA">
+      <delete tableName="T_RI_CM_DOCUMENT_TYPE"/>
+  </changeSet>
+  
+  <changeSet author="generated" id="2016050202_T_RI_CM_DOCUMENT_TYPE.DATA">
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="1"/>
+      <column name="TYPE_NAME" value="New Business"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="10"/>
+      <column name="TYPE_NAME" value="Business Partner Information"/>
+      <column name="BUSINESS_TYPE" value="1"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="11"/>
+      <column name="TYPE_NAME" value="Signed Compliance Checklist"/>
+      <column name="BUSINESS_TYPE" value="1"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="12"/>
+      <column name="TYPE_NAME" value="New Statement"/>
+      <column name="BUSINESS_TYPE" value="7"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="13"/>
+      <column name="TYPE_NAME" value="IBNR"/>
+      <column name="BUSINESS_TYPE" value="6"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="14"/>
+      <column name="TYPE_NAME" value="Offer email"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="15"/>
+      <column name="TYPE_NAME" value="Approval email "/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="16"/>
+      <column name="TYPE_NAME" value="Confirmation on written line"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="17"/>
+      <column name="TYPE_NAME" value="Confirmation on signing"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="18"/>
+      <column name="TYPE_NAME" value="Signed Slip"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="19"/>
+      <column name="TYPE_NAME" value="Pricing Summary"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="2"/>
+      <column name="TYPE_NAME" value="Endorsement"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="20"/>
+      <column name="TYPE_NAME" value="Underwriting rationale"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="21"/>
+      <column name="TYPE_NAME" value="Premium Adjustment"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="22"/>
+      <column name="TYPE_NAME" value="Endorsement / Addendum"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="23"/>
+      <column name="TYPE_NAME" value="Special Acceptance"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="24"/>
+      <column name="TYPE_NAME" value="Internal Update"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="25"/>
+      <column name="TYPE_NAME" value="Free text"/>
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="3"/>
+      <column name="TYPE_NAME" value="General files- Loss advice"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="4"/>
+      <column name="TYPE_NAME" value="General files- Settlement advice"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="5"/>
+      <column name="TYPE_NAME" value="Sent files- Large claims/events"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="6"/>
+      <column name="TYPE_NAME" value="General files- General advice"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="7"/>
+      <column name="TYPE_NAME" value="Sent files- Large settlement amount"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="8"/>
+      <column name="TYPE_NAME" value="Approval- supporting files- Cash Call approval"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" value="9"/>
+      <column name="TYPE_NAME" value="Approval- supporting files- LLA approval"/>
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="INSERT_BY"/>
+      <column name="INSERT_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="UPDATE_TIME"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

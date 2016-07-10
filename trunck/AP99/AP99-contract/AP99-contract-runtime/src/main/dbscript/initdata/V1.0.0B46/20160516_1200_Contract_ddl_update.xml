@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+	<changeSet author="generated" id="2016051612_T_RI_CONTRACT_PERIL_TYPE">
+		<sql>
+			DELETE FROM T_RI_CONTRACT_PERIL_TYPE ;
+			DROP TABLE T_RI_CONTRACT_PERIL_TYPE;
+			
+			create table T_RI_CONTRACT_PERIL_TYPE
+			(
+			peril_id NUMBER not null,
+			peril_name VARCHAR2(500),
+			peril_level CHAR(1),
+			parent_id NUMBER not null
+			);
+			
+		</sql>
+	</changeSet>
+
+
+</databaseChangeLog>

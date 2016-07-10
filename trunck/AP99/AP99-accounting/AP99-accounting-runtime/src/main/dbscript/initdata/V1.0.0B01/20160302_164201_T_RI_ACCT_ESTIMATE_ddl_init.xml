@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_164201_T_RI_ACCT_ESTIMATE">
+        <createTable tableName="T_RI_ACCT_ESTIMATE">
+            <column name="ESTIMATE_ID" remarks="estimate id" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_ID" remarks="contract id" type="NUMBER(12, 0)"/>
+            <column name="CONT_SECTION_ID" remarks="contract section id" type="NUMBER(12, 0)"/>
+            <column name="CEDENT_YEAR" remarks="cedent year" type="NUMBER(4, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CEDENT_QUARTER" remarks="cedent quarter" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="QUARTER_SEQ" remarks="quarter sequence" type="NUMBER(2, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CURRENCY" remarks="currency" type="CHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" remarks="status" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_ACCT_ESTIMATE">
+        <addPrimaryKey columnNames="ESTIMATE_ID" constraintName="PK_T_RI_ACCT_ESTIMATE" tableName="T_RI_ACCT_ESTIMATE"/>
+    </changeSet>
+</databaseChangeLog>

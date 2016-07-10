@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201605311035_T_DD_BUSI_CODE_TABLE.data">
+   <sql>
+   update T_DD_BUSI_CODE_TABLE set PREDICATE ='TYPE NOT IN(12,28,33,41,50,55,59,64,68,70)' where code_table_id = 810033;
+   </sql>
+  </changeSet>
+</databaseChangeLog>

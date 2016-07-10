@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016050303_T_RI_CONT_CURRENCY">
+        <modifyDataType columnName="CURRENCY_RATE"
+        	newDataType="NUMBER(15,9)"
+        	tableName="T_RI_CONT_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="2016050304_T_RI_CONT_CURRENCY_LOG">
+        <modifyDataType columnName="CURRENCY_RATE"
+        	newDataType="NUMBER(15,9)"
+        	tableName="T_RI_CONT_CURRENCY_LOG"/>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016050305_T_RI_CONTRACT_INFO">
+        <modifyDataType columnName="ANALYTICS_RESP"
+        	newDataType="NUMBER(10)"
+        	tableName="T_RI_CONTRACT_INFO"/>
+        <modifyDataType columnName="MARKET_RESP"
+        	newDataType="NUMBER(10)"
+        	tableName="T_RI_CONTRACT_INFO"/>
+    </changeSet>
+    <changeSet author="generated" id="2016050306_T_RI_CONTRACT_INFO_LOG">
+        <modifyDataType columnName="ANALYTICS_RESP"
+        	newDataType="NUMBER(10)"
+        	tableName="T_RI_CONTRACT_INFO_LOG"/>
+        <modifyDataType columnName="MARKET_RESP"
+        	newDataType="NUMBER(10)"
+        	tableName="T_RI_CONTRACT_INFO_LOG"/>
+    </changeSet>
+    
+</databaseChangeLog>

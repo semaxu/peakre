@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>
+			Pricing Estimate Adjustment Request
+		</title>
+	</head>
+	<body><p style="font-family:Calibri;font-size:16">
+		Dear User,<br>
+		<br>
+		Premium has been revised via Endorsement for Contract $contractCode under UY$uwYear. Please make <a href="$url" target="blank">Pricing & Estimate update</a> if necessary.<br>
+		<br>
+		This e-mail is an automated notification, please do not reply.
+	</p>
+	</body>
+</html>

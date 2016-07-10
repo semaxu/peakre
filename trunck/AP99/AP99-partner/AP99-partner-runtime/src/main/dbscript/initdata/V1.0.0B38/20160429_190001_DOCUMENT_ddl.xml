@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160429_190001_DOCUMENT_ddl">
+  <sql>
+drop table  T_RI_CM_DOCUMENT_RULE ;
+drop table  T_RI_CM_DOCUMENT_CATEGORY ;
+drop table  T_RI_CM_DOCUMENT_FIELD ;
+drop table T_RI_CM_DOCUMENT_RECORD;
+drop table  T_RI_CM_DOCUMENT ;
+  </sql>
+  </changeSet>
+</databaseChangeLog>

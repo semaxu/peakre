@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module parent="platform">
+	<spring>
+		<include relative-path="/spring/spring-jpa-local.xml" />
+		<include relative-path="/spring/parent-runtime-beans.xml" />
+		<include relative-path="/spring/applicationContext-service-orchestration.xml" />
+		<include relative-path="/spring/restful-service-bean.xml" />
+	</spring>
+	<env>
+		<include relative-path="/env.xml" />
+	</env>
+</module>

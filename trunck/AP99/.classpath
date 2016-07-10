@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="AP99-accounting/AP99-accounting-api/src/main/java"/>
+	<classpathentry kind="src" path="AP99-accounting/AP99-accounting-runtime/src/main/java"/>
+	<classpathentry kind="src" path="AP99-accounting/AP99-accounting-runtime/src/test/java"/>
+	<classpathentry kind="src" path="AP99-arap/AP99-arap-api/src/main/java"/>
+	<classpathentry kind="src" path="AP99-arap/AP99-arap-runtime/src/main/java"/>
+	<classpathentry kind="src" path="AP99-claim/AP99-claim-api/src/main/java"/>
+	<classpathentry kind="src" path="AP99-claim/AP99-claim-runtime/src/main/java"/>
+	<classpathentry kind="src" path="AP99-claim/AP99-claim-runtime/src/test/java"/>
+	<classpathentry kind="src" path="AP99-common/AP99-common-api/src/main/java"/>
+	<classpathentry kind="src" path="AP99-common/AP99-common-api/src/test/java"/>
+	<classpathentry kind="src" path="AP99-contract/AP99-contract-api/src/main/java"/>
+	<classpathentry kind="src" path="AP99-contract/AP99-contract-runtime/src/main/java"/>
+	<classpathentry kind="src" path="AP99-parent-runtime/src/main/java"/>
+	<classpathentry kind="src" path="AP99-partner/AP99-partner-api/src/main/java"/>
+	<classpathentry kind="src" path="AP99-partner/AP99-partner-runtime/src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_91">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="AP99-local/target/classes"/>
+</classpath>

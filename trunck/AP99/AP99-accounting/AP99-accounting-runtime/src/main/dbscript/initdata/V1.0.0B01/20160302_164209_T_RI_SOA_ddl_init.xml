@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185109_T_RI_SOA">
+        <createTable remarks="Statement of Account" tableName="T_RI_SOA">
+            <column name="SOA_ID" remarks="primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOA_NUMBER" remarks="The statement of account business number" type="VARCHAR2(10)"/>
+            <column name="CONTRACT_ID" remarks="Contract's contract code" type="VARCHAR2(10)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ACCOUNT_TYPE" type="VARCHAR2(10)"/>
+            <column name="BIZ_TYPE" type="VARCHAR2(2)"/>
+            <column name="BROKE" remarks="Contract's broker" type="VARCHAR2(20)"/>
+            <column name="CEDENT" remarks="cedent" type="VARCHAR2(20)"/>
+            <column name="CEDENT_QUARTER" remarks="cedent quarter" type="NUMBER(2, 0)"/>
+            <column name="CEDENT_YEAR" remarks="cedent year" type="NUMBER(4, 0)"/>
+            <column name="FINANCIAL_QUARTER" remarks="financial quarter" type="NUMBER(2, 0)"/>
+            <column name="FINANCIAL_YEAR" remarks="financial year" type="NUMBER(4, 0)"/>
+            <column name="TASK_RELEASER" remarks="The statement of account's released by user's id" type="VARCHAR2(10)"/>
+            <column name="TASK_CREATOR" remarks="The statement of account's created by user's id" type="VARCHAR2(10)"/>
+            <column name="TASK_WITHDRAW" remarks="The statement of account's withdrawed by user's id" type="VARCHAR2(10)"/>
+            <column name="TASK_RELEASER_NAME" remarks="The statement of account's released by user's name" type="VARCHAR2(20)"/>
+            <column name="TASK_CREATOR_NAME" remarks="The statement of account's created by user's name" type="VARCHAR2(20)"/>
+            <column name="TASK_WITHDRAW_NAME" remarks="The statement of account's withdrawed by user's name" type="VARCHAR2(20)"/>
+            <column name="RECEIVED_DATE" remarks="The statement of account's received date" type="date"/>
+            <column name="UW_YEAR" remarks="under writing year" type="NUMBER(4, 0)"/>
+            <column name="DUE_DATE" remarks="due date" type="date"/>
+            <column name="SOA_STATUS" remarks="1:DATA INPUT;  2:RELEASE;  3:WITHDRAW;  4:CANCEL;  5:PARKING" type="VARCHAR2(2)"/>
+            <column name="SOA_TEXT" remarks="The statement of account's remark" type="VARCHAR2(200)"/>
+            <column name="ENTRY_TASK" remarks="The statement of account's entry user" type="VARCHAR2(10)"/>
+            <column name="ACCOUNT_LEVEL" remarks="1:our share" type="VARCHAR2(10)"/>
+            <column name="REMARKS" type="VARCHAR2(200)"/>
+            <column name="REVIEWED_FLAG" remarks="1:REVIEWED;  2:NOT REVIEWED;" type="VARCHAR2(2)"/>
+            <column name="REVIEWED_BY" type="VARCHAR2(20)"/>
+            <column name="WITHDRAW_IGNORING_CUTOFF_DATE" remarks="withdraw ignoring cutoff date;" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" remarks="User Id who insert this record" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="User Id who update this record" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="Record Insert Time" type="date"/>
+            <column name="UPDATE_TIME" remarks="Record Update Time" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_SOA">
+        <addPrimaryKey columnNames="SOA_ID" constraintName="PK_T_RI_SOA" tableName="T_RI_SOA"/>
+    </changeSet>
+</databaseChangeLog>

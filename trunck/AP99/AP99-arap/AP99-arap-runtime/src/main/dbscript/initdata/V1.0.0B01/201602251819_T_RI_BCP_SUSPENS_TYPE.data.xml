@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201602251819_T_RI_BCP_SUSPENS_TYPE.data">
+        <insert tableName="T_RI_BCP_SUSPENS_TYPE">
+            <column name="SUSPENS_TYPE" valueNumeric="1"/>
+            <column name="SUSPENS_NAME" value="Contract Balance"/>
+        </insert>
+        <insert tableName="T_RI_BCP_SUSPENS_TYPE">
+            <column name="SUSPENS_TYPE" valueNumeric="2"/>
+            <column name="SUSPENS_NAME" value="Business Partner Balance"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

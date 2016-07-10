@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_BCP_TRANS">
+        <createTable tableName="T_RI_BCP_TRANS">
+            <column name="TRANS_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_GL_ACCOUNT_MAPPING_DEF">
+        <createTable remarks="Entry code mapping to General Ledger account" tableName="T_RI_GL_ACCOUNT_MAPPING_DEF">
+            <column name="MAPPING_ID" remarks="Primary Key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ENTRY_CODE" type="VARCHAR2(50)"/>
+            <column name="CONTRACT_CATE" remarks="Contract category" type="NUMBER(1, 0)"/>
+            <column name="CURRENCY_CODE" type="VARCHAR2(3)"/>
+            <column name="GL_ACCOUNT_NO" type="VARCHAR2(50)"/>
+            <column name="GL_ACCOUNT_TYPE" remarks="D Debit, C Credit" type="VARCHAR2(1)"/>
+            <column name="SUB_TRANSACTION" type="VARCHAR2(50)"/>
+            <column name="MAIN_TRANSACTION" type="VARCHAR2(50)"/>
+            <column name="DESCRIPTION" type="VARCHAR2(500)"/>
+            <column name="CASH_BALANCE" remarks="Indicate if the GL is for cash balance entry" type="NUMBER(1, 0)"/>
+            <column name="NEED_POST" remarks="Indicate if the account need to be posted" type="NUMBER(1, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_GL_BATCH">
+        <createTable remarks="Sub / General batch history" tableName="T_RI_GL_BATCH">
+            <column name="GL_BATCH_ID" remarks="Primary key" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BATCH_TYPE" remarks="1 sub ledger generation batch, 2 general ledger generation batch" type="NUMBER(1, 0)"/>
+            <column name="START_TIME" remarks="start time of the batch" type="date"/>
+            <column name="FINISH_TIME" remarks="end time of the batch" type="date"/>
+            <column name="STATUS" remarks="1 successful,0 fail" type="NUMBER(1, 0)"/>
+            <column name="MESSAGE" type="VARCHAR2(1000)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_GL_SUB_LEDGER">
+        <createTable tableName="T_RI_GL_SUB_LEDGER">
+            <column name="SUB_LEDGER_ID" type="NUMBER(22, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FEE_ID" type="NUMBER(22, 0)"/>
+            <column name="SETTLE_DETAIL_ID" type="NUMBER(22, 0)"/>
+            <column name="CONTRACT_ID" type="NUMBER(22, 0)"/>
+            <column name="SETTLE_TYPE" type="NUMBER(1, 0)"/>
+            <column name="SETTLE_ID" type="NUMBER(22, 0)"/>
+            <column name="GL_ACCOUNT_NO" type="VARCHAR2(50)"/>
+            <column name="GL_ACCOUNT_TYPE" type="VARCHAR2(1)"/>
+            <column name="DATA_SOURCE_TYPE" type="NUMBER(2, 0)"/>
+            <column name="AMOUNT" type="NUMBER(20, 2)"/>
+            <column name="CURRENCY_CODE" type="VARCHAR2(3)"/>
+            <column name="SUB_TRANSACTION" type="VARCHAR2(50)"/>
+            <column name="MAIN_TRANSACTION" type="VARCHAR2(50)"/>
+            <column name="GENERAL_LEDGER_ID" type="NUMBER(22, 0)"/>
+            <column name="NEED_POST" type="NUMBER(1, 0)"/>
+            <column name="GL_BATCH_ID" type="NUMBER(22, 0)"/>
+            <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="SUSPENSE_ID" type="NUMBER(22, 0)"/>
+            <column name="SPECIAL_SUBMIT" type="NUMBER(1, 0)"/>
+            <column name="DOC_DATE" remarks="The document date is the date on which the original document was issued." type="date"/>
+            <column name="GL_MAPPING_ID" remarks="GL account mapping definition id" type="NUMBER(22, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_GL_BATCH_ID">
+        <addPrimaryKey columnNames="GL_BATCH_ID" constraintName="FK_RI_GL_BATCH_ID" tableName="T_RI_GL_BATCH"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_GL_SUB_LEDGER_ID">
+        <addPrimaryKey columnNames="SUB_LEDGER_ID" constraintName="FK_RI_GL_SUB_LEDGER_ID" tableName="T_RI_GL_SUB_LEDGER"/>
+    </changeSet>
+    <changeSet author="generated" id="GL_ACCOUNT_MAPPING_ID">
+        <addPrimaryKey columnNames="MAPPING_ID" constraintName="GL_ACCOUNT_MAPPING_ID" tableName="T_RI_GL_ACCOUNT_MAPPING_DEF"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BCP_TRANS_ID">
+        <addPrimaryKey columnNames="TRANS_ID" constraintName="PK_RI_BCP_TRANS_ID" tableName="T_RI_BCP_TRANS"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_GL_ACC_MAP_CURRENCY_COD">
+        <addForeignKeyConstraint baseColumnNames="CURRENCY_CODE" baseTableName="T_RI_GL_ACCOUNT_MAPPING_DEF" constraintName="FK_GL_ACC_MAP_CURRENCY_COD" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="CURRENCY_CODE" referencedTableName="T_RI_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_GL_ACC_MAP_ENTRY_CODE">
+        <addForeignKeyConstraint baseColumnNames="ENTRY_CODE" baseTableName="T_RI_GL_ACCOUNT_MAPPING_DEF" constraintName="FK_GL_ACC_MAP_ENTRY_CODE" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ENTRY_CODE" referencedTableName="T_RI_ENTRY_CODE"/>
+    </changeSet>
+</databaseChangeLog>

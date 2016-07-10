@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>
+			Underwriting Review Notification
+		</title>
+	</head>
+	<body><p style="font-family:Calibri;font-size:16">
+		Dear Underwriter,<br>
+		<br>
+		$contractCode under UY$uwYear is waiting for your REVIEW. <br>
+		Please refer to attached contract summary for detail information, and  <a href="$url" target="blank">submit your review result</a> as soon as possible.<br>
+		<br>
+		This e-mail is an automated notification, please do not reply.
+	</p>
+	</body>
+</html>

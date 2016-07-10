@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+              http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+	
+	<bean id="com.ebao.ap99.partner.service.PartnerService" class="com.ebao.ap99.partner.service.impl.PartnerServiceImpl" />
+	<bean id="com.ebao.ap99.partner.service.AmlService" class="com.ebao.ap99.partner.service.impl.AmlServiceImpl" />
+	<bean id="com.ebao.ap99.partner.service.RetroAmlService" class="com.ebao.ap99.partner.service.impl.RetroAmlServiceImpl" />
+	<bean id="com.ebao.ap99.partner.service.BrokerAmlService" class="com.ebao.ap99.partner.service.impl.BrokerAmlServiceImpl" />
+	<bean id="com.ebao.ap99.partner.service.MgaAmlService" class="com.ebao.ap99.partner.service.impl.MgaAmlServiceImpl" />
+	
+	<bean id="partnerDao" class="com.ebao.ap99.partner.dao.PartnerDao" />
+    <bean id="partnerBankAccountDao" class="com.ebao.ap99.partner.dao.BankAccountDao" />
+    <bean id="contactDao" class="com.ebao.ap99.partner.dao.ContactDao" />
+    <bean id="relationshipDao" class="com.ebao.ap99.partner.dao.RelationshipDao" />
+    <bean id="amlCheckDao" class="com.ebao.ap99.partner.dao.AmlCheckDao" />
+    <bean id="retroAmlCheckDao" class="com.ebao.ap99.partner.dao.RetroAmlCheckDao" />
+    <bean id="brokerAmlCheckDao" class="com.ebao.ap99.partner.dao.BrokerAmlCheckDao" />
+    <bean id="mgaAmlCheckDao" class="com.ebao.ap99.partner.dao.MgaAmlCheckDao" />
+    <bean id="partnerLogDao" class="com.ebao.ap99.partner.dao.PartnerLogDao" />
+    <bean id="changeHistoryDao" class="com.ebao.ap99.partner.dao.ChangeHistoryDao" />
+    
+    <!-- Convertor -->
+	<bean id="partnerConvertor" class="com.ebao.ap99.partner.convertor.PartnerConvertor" />
+	<bean id="contactConvertor" class="com.ebao.ap99.partner.convertor.ContactConvertor" />
+	<bean id="partnerBankAccountConvertor" class="com.ebao.ap99.partner.convertor.BankAccountConvertor" />
+	<bean id="amlCheckConvertor" class="com.ebao.ap99.partner.convertor.AmlCheckConvertor" />
+	<bean id="brokerAmlCheckConvertor" class="com.ebao.ap99.partner.convertor.BrokerAmlCheckConvertor" />
+	<bean id="retroAmlCheckConvertor" class="com.ebao.ap99.partner.convertor.RetroAmlCheckConvertor" />
+	<bean id="mgaAmlCheckConvertor" class="com.ebao.ap99.partner.convertor.MgaAmlCheckConvertor" />
+	<bean id="relationshipConvertor" class="com.ebao.ap99.partner.convertor.RelationshipConvertor" />
+	
+	 <!-- DS -->
+	<bean id="amlCheckDS" class="com.ebao.ap99.partner.convertor.AmlCheckDS" />
+	<bean id="brokerAmlCheckDS" class="com.ebao.ap99.partner.convertor.BrokerAmlCheckDS" />
+	<bean id="retroAmlCheckDS" class="com.ebao.ap99.partner.convertor.RetroAmlCheckDS" />
+	<bean id="mgaAmlCheckDS" class="com.ebao.ap99.partner.convertor.MgaAmlCheckDS" />
+	
+	<bean id="com.ebao.ap99.partner.restful.partnerResource"
+			class="com.ebao.ap99.partner.restful.PartnerResource" />
+</beans>

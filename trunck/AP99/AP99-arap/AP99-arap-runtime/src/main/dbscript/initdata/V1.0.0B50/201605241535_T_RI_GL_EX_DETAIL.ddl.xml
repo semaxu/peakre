@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="T_RI_GL_EX_DETAIL">
+    <createTable tableName="T_RI_GL_EX_DETAIL">
+      <column name="DETAIL_ID" type="NUMBER(22, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="CURRENCY_CODE" type="VARCHAR2(3)"/>
+      <column name="AMOUNT" type="NUMBER(25, 2)"/>
+      <column name="EXCHANGE_RATE" type="NUMBER(15, 9)"/>
+      <column name="SOURCE_TYPE" remarks="1 SUB LEDGER ID, 2 GENERAL LEDGER ID" type="NUMBER(2, 0)"/>
+      <column name="SOURCE_ID" type="NUMBER(22, 0)"/>
+      <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+      <column name="UPDATE_TIME" type="date"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="T_RI_GL_LOG">
+    <createTable tableName="T_RI_GL_LOG">
+      <column name="LOG_ID" type="NUMBER(19, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="LOG_CONTENT" type="VARCHAR2(500)"/>
+      <column name="REF_ID" type="NUMBER(19, 0)"/>
+      <column name="REF_TYPE" remarks="1 GL BATCH LOG, 2 GL REALTIME LOG" type="NUMBER(2, 0)"/>
+      <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+      <column name="UPDATE_TIME" type="date"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="PK_RI_GL_EX_DETAIL_ID">
+    <addPrimaryKey columnNames="DETAIL_ID" constraintName="PK_RI_GL_EX_DETAIL_ID" tableName="T_RI_GL_EX_DETAIL"/>
+  </changeSet>
+  <changeSet author="generated" id="PK_RI_GL_LOG_ID">
+    <addPrimaryKey columnNames="LOG_ID" constraintName="PK_RI_GL_LOG_ID" tableName="T_RI_GL_LOG"/>
+  </changeSet>
+</databaseChangeLog>

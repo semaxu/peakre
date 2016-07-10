@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016041201_T_RI_CONT_OPERATE_TYPE.DATA">
+      <delete tableName="T_RI_CONT_OPERATE_TYPE"/>
+  </changeSet>
+
+  <changeSet author="generated" id="2016041202_T_RI_CONT_OPERATE_TYPE.DATA">
+    <insert tableName="T_RI_CONT_OPERATE_TYPE">
+      <column name="TYPE_ID" value="1"/>
+      <column name="TYPE_DESC" value="Data Input"/>
+    </insert>
+    <insert tableName="T_RI_CONT_OPERATE_TYPE">
+      <column name="TYPE_ID" value="2"/>
+      <column name="TYPE_DESC" value="UW Review"/>
+    </insert>
+    <insert tableName="T_RI_CONT_OPERATE_TYPE">
+      <column name="TYPE_ID" value="3"/>
+      <column name="TYPE_DESC" value="Endorsement"/>
+    </insert>
+    <insert tableName="T_RI_CONT_OPERATE_TYPE">
+      <column name="TYPE_ID" value="4"/>
+      <column name="TYPE_DESC" value="SUPI Adjustment"/>
+    </insert>
+    <insert tableName="T_RI_CONT_OPERATE_TYPE">
+      <column name="TYPE_ID" value="5"/>
+      <column name="TYPE_DESC" value="Pricing Estimation"/>
+    </insert>
+    <insert tableName="T_RI_CONT_OPERATE_TYPE">
+      <column name="TYPE_ID" value="6"/>
+      <column name="TYPE_DESC" value="Termination"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

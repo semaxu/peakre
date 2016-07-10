@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+	<changeSet author="generated" id="2016050630_T_RI_CONT_SHARE_TYPE">
+		<sql>
+			DELETE FROM T_RI_CONT_SHARE_TYPE;
+			insert into T_RI_CONT_SHARE_TYPE (TYPE, DESCRIPTION, CONTRACT_NATURE) values ('2', 'Surplus', '1');
+			insert into T_RI_CONT_SHARE_TYPE (TYPE, DESCRIPTION, CONTRACT_NATURE) values ('3', 'XOL', '2');
+			insert into T_RI_CONT_SHARE_TYPE (TYPE, DESCRIPTION, CONTRACT_NATURE) values ('1', 'QS', '1');
+			insert into T_RI_CONT_SHARE_TYPE (TYPE, DESCRIPTION, CONTRACT_NATURE) values ('7', 'Combined QS&amp;SPL', '1');
+			insert into T_RI_CONT_SHARE_TYPE (TYPE, DESCRIPTION, CONTRACT_NATURE) values ('4', 'Stop Loss', '2');
+		</sql>
+	</changeSet>
+
+
+</databaseChangeLog>

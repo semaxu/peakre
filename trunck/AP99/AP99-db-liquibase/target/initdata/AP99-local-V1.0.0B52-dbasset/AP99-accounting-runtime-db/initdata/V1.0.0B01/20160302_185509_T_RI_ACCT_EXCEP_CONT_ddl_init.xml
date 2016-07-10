@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185509_T_RI_ACCT_EXCEP_CONT">
+        <createTable remarks="Exception report for cut-off" tableName="T_RI_ACCT_EXCEP_CONT">
+            <column name="EXCEPTION_ID" remarks="primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="JOB_ID" remarks="the batch job id" type="NUMBER(10, 0)"/>
+            <column name="STATUS" remarks="1:has collected the exception contract record" type="CHAR(1)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_ACCT_EXCEP_CONT_ID">
+        <addPrimaryKey columnNames="EXCEPTION_ID" constraintName="PK_T_RI_ACCT_EXCEP_CONT_ID" tableName="T_RI_ACCT_EXCEP_CONT"/>
+    </changeSet>
+</databaseChangeLog>

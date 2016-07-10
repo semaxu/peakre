@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="2016050101_T_DD_BUSI_CODE_TABLE.DATA">
+    <sql>
+      delete from T_DD_BUSI_CODE_TABLE where CODE_TABLE_ID in ('800015','800016');
+    </sql>
+  </changeSet>
+  <changeSet author="generated" id="2016050102_T_DD_BUSI_CODE_TABLE.DATA">
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800015"/>
+      <column name="NAME" value="document_business_type"/>
+      <column name="DESCRIPTION" value="business type for document"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="BUSINESS_TYPE"/>
+      <column name="CODE_FIELD" value="BUSINESS_TYPE"/>
+      <column name="DESC_FIELD" value="DESCRIPTION"/>
+      <column name="SORT_FIELD" value="DESCRIPTION"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_CM_DOCUMENT_RULE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="INSERT_BY" valueNumeric="401"/>
+      <column name="UPDATE_BY" valueNumeric="401"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800016"/>
+      <column name="NAME" value="document_type"/>
+      <column name="DESCRIPTION" value="document type"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="DOCUMENT_TYPE"/>
+      <column name="CODE_FIELD" value="DOCUMENT_TYPE"/>
+      <column name="DESC_FIELD" value="TYPE_NAME"/>
+      <column name="SORT_FIELD" value="TYPE_NAME"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_CM_DOCUMENT_TYPE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="INSERT_BY" valueNumeric="401"/>
+      <column name="UPDATE_BY" valueNumeric="401"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;BUSINESS_TYPE&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

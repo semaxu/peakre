@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="PK_T_RI_CLAIM_LOSS_CAUSE">
+        <addPrimaryKey columnNames="CODE" constraintName="PK_T_RI_CLAIM_LOSS_CAUSE" tableName="T_RI_CLAIM_LOSS_CAUSE"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_CLAIM_MESSAGE">
+        <addPrimaryKey columnNames="MESSAGE_ID" constraintName="PK_T_RI_CLAIM_MESSAGE" tableName="T_RI_CLAIM_MESSAGE"/>
+    </changeSet>
+</databaseChangeLog>

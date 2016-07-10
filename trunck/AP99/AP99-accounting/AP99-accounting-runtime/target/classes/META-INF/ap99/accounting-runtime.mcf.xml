@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module parent="platform">
+	<spring>
+		<include relative-path="/spring/accounting-runtime-batch.xml" />
+		<include relative-path="/spring/accounting-runtime-beans.xml" />
+	</spring>
+</module>

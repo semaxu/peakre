@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+              http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+	
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- Restful Service -->
+	<bean id="ContractHomeRestfulService" class="com.ebao.ap99.contract.restful.ContractHomeRestfulService" />
+	<bean id="ContractBusinessRestfulService" class="com.ebao.ap99.contract.restful.ContractBusinessRestfulService" />
+	<bean id="ContractRestfulService" class="com.ebao.ap99.contract.restful.ContractRestfulService" />
+	<bean id="ContractRetrocessionRestfulService" class="com.ebao.ap99.contract.restful.ContractRetrocessionRestfulService" />
+	<bean id="ContractEndorsementRestfulService" class="com.ebao.ap99.contract.restful.ContractEndorsementRestfulService" />
+	<bean id="ContractPricingRestfulService" class="com.ebao.ap99.contract.restful.ContractPricingRestfulService" />
+	<bean id="ContractAdjustmentRestfulService" class="com.ebao.ap99.contract.restful.ContractAdjustmentRestfulService" />
+
+	<!-- Convertor -->
+	<bean id="ContractModelConvertor" class="com.ebao.ap99.contract.convertor.ContractModelConvertor" />
+	<bean id="ContractSectionModelConvertor" class="com.ebao.ap99.contract.convertor.ContractSectionModelConvertor" />
+	<bean id="ContractSubsectionModelConvertor" class="com.ebao.ap99.contract.convertor.ContractSubsectionModelConvertor" />
+	<bean id="RetrocessionConvertor" class="com.ebao.ap99.contract.convertor.RetrocessionConvertor" />
+	
+	<!-- Service -->
+	<bean id="ContractService" class="com.ebao.ap99.contract.service.impl.ContractServiceImpl" />
+	<bean id="BusinessConditionDS" class="com.ebao.ap99.contract.service.impl.BusinessConditionDSImpl" />
+	<bean id="ContractDS" class="com.ebao.ap99.contract.service.impl.ContractDSImpl" />
+	<bean id="ContractHomeDS" class="com.ebao.ap99.contract.service.impl.ContractHomeDSImpl" />
+	<bean id="ContractRetrocessionDS" class="com.ebao.ap99.contract.service.impl.ContractRetrocessionDSImpl" />
+	<bean id="ContractEndorsementDS" class="com.ebao.ap99.contract.service.impl.ContractEndorsementDSImpl" />
+	<bean id="ContractUploadingService" class="com.ebao.ap99.contract.service.impl.ContractUploadingServiceImpl" />
+	<bean id="ContractPricingDS" class="com.ebao.ap99.contract.service.impl.ContractPricingDSImpl" />
+	<bean id="BusinessConditionUploadService" class="com.ebao.ap99.contract.service.impl.BusinessConditionUploadServiceImpl" />
+	<bean id="ContractAdjustmentDS" class="com.ebao.ap99.contract.service.impl.ContractAdjustmentDSImpl" />
+	<bean id="ContractPDFPrintService" class="com.ebao.ap99.contract.service.impl.ContractPDFPrintServiceImpl" />
+	
+	<!-- DAO -->
+	<bean id="TRiContractStructureDao" class="com.ebao.ap99.contract.dao.TRiContractStructureDao" />
+	<bean id="TRiContractStructureLogDao" class="com.ebao.ap99.contract.dao.TRiContractStructureLogDao" />
+	<bean id="TRiContractAreaperilDao" class="com.ebao.ap99.contract.dao.TRiContractAreaperilDao" />
+	<bean id="TRiContractAreaperilLogDao" class="com.ebao.ap99.contract.dao.TRiContractAreaperilLogDao" />
+	<bean id="TRiContractInfoDao" class="com.ebao.ap99.contract.dao.TRiContractInfoDao"/>
+	<bean id="TRiContractInfoLogDao" class="com.ebao.ap99.contract.dao.TRiContractInfoLogDao" />
+	<bean id="TRiContAccountDao" class="com.ebao.ap99.contract.dao.TRiContAccountDao" />
+	<bean id="TRiContAccountLogDao" class="com.ebao.ap99.contract.dao.TRiContAccountLogDao" />
+	<bean id="TRiContClaimDao" class="com.ebao.ap99.contract.dao.TRiContClaimDao" />
+	<bean id="TRiContClaimConditionLogDao" class="com.ebao.ap99.contract.dao.TRiContClaimLogDao" />
+	<bean id="TRiContClaimConditionItemDao" class="com.ebao.ap99.contract.dao.TRiContClaimItemDao" />
+	<bean id="TRiContClaimConditionItemLogDao" class="com.ebao.ap99.contract.dao.TRiContClaimItemLogDao" />
+	<bean id="TRiContractMoreInfoDao" class="com.ebao.ap99.contract.dao.TRiContractMoreInfoDao" />
+	<bean id="TRiContractMoreInfoLogDao" class="com.ebao.ap99.contract.dao.TRiContractMoreInfoLogDao" />
+	<bean id="TRiContPremiumDao" class="com.ebao.ap99.contract.dao.TRiContPremiumDao" />
+	<bean id="TRiContPremiumLogDao" class="com.ebao.ap99.contract.dao.TRiContPremiumLogDao" />
+	<bean id="TRiContPremiumItemDao" class="com.ebao.ap99.contract.dao.TRiContPremiumItemDao" />
+	<bean id="TRiContPremiumItemLogDao" class="com.ebao.ap99.contract.dao.TRiContPremiumItemLogDao" />
+	<bean id="TRiContCancelDao" class="com.ebao.ap99.contract.dao.TRiContCancelDao" />
+	<bean id="TRiContCancelLogDao" class="com.ebao.ap99.contract.dao.TRiContCancelLogDao" />
+	<bean id="TRiContSectionInfoDao" class="com.ebao.ap99.contract.dao.TRiContSectionInfoDao" />
+	<bean id="TRiContSectionInfoLogDao" class="com.ebao.ap99.contract.dao.TRiContSectionInfoLogDao" />
+	<bean id="TRiContSubsectionInfoDao" class="com.ebao.ap99.contract.dao.TRiContSubsectionInfoDao" />
+	<bean id="TRiContSubsectionInfoLogDao" class="com.ebao.ap99.contract.dao.TRiContSubsectionInfoLogDao" />
+	<bean id="TRiContReserveRebateDao" class="com.ebao.ap99.contract.dao.TRiContReserveRebateDao"/>
+	<bean id="TRiContReserveRebateLogDao" class="com.ebao.ap99.contract.dao.TRiContReserveRebateLogDao"/>
+	<bean id="TRiContShareDao" class="com.ebao.ap99.contract.dao.TRiContShareDao"/> 
+	<bean id="TRiContShareLogDao" class="com.ebao.ap99.contract.dao.TRiContShareLogDao"/> 
+	<bean id="TRiContCurrencyDao" class="com.ebao.ap99.contract.dao.TRiContCurrencyDao"/> 
+	<bean id="TRiContCurrencyLogDao" class="com.ebao.ap99.contract.dao.TRiContCurrencyLogDao"/> 
+	<bean id="TRiContLossDao" class="com.ebao.ap99.contract.dao.TRiContLossDao"/> 
+	<bean id="TRiContRetroDao" class="com.ebao.ap99.contract.dao.TRiContRetroDao"/>
+	<bean id="TRiContRetroLogDao" class="com.ebao.ap99.contract.dao.TRiContRetroLogDao"/>
+	<bean id="TRiContLossLogDao" class="com.ebao.ap99.contract.dao.TRiContLossLogDao"/> 
+	<bean id="TRiContDeductionsDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsDao"/>
+	<bean id="TRiContDeductionsLogDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsLogDao"/>
+	<bean id="TRiContDeductionsItemDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsItemDao"/>
+	<bean id="TRiContDeductionsItemLogDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsItemLogDao"/>
+	<bean id="TRiContDeductionsPcDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsPcDao"/>
+	<bean id="TRiContDeductionsPcLogDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsPcLogDao"/>
+	<bean id="TRiContDeductionsAttachDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsAttachDao"/>
+	<bean id="TRiContDeductionsAttLogDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsAttLogDao"/>
+	<bean id="TRiContractEndoDao" class="com.ebao.ap99.contract.dao.TRiContractEndoDao"/>
+	<bean id="TRiContTerminationDao" class="com.ebao.ap99.contract.dao.TRiContTerminationDao"/>
+	
+	<!--  <bean id="TRiContAttachmentTableSsDao" class="com.ebao.ap99.contract.dao.TRiContAttachmentTableSsDao"/>-->
+	<bean id="TRiContDeductionsCommDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsCommDao"/>
+	<bean id="TRiContDeductionsCommLogDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsCommLogDao"/>
+	<bean id="TRiContDeductionsCarriedDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsCarriedDao"/>
+	<bean id="TRiContDeductionsCarriedLogDao" class="com.ebao.ap99.contract.dao.TRiContDeductionsCarriedLogDao"/>
+	
+	<bean id="TRiContOperationDao" class="com.ebao.ap99.contract.dao.TRiContOperationDao"/> 
+	<bean id="TRiContClausesDao" class="com.ebao.ap99.contract.dao.TRiContClausesDao"/> 
+	<bean id="TRiContClausesLogDao" class="com.ebao.ap99.contract.dao.TRiContClausesLogDao"/> 
+ 	<bean id="TRiContReinstateDao" class="com.ebao.ap99.contract.dao.TRiContReinstateDao"/> 
+ 	<bean id="TRiContReinStateItemDao" class="com.ebao.ap99.contract.dao.TRiContReinstateItemDao"/> 
+ 	<bean id="TRiContReinstateLogDao" class="com.ebao.ap99.contract.dao.TRiContReinstateLogDao"/> 
+ 	<bean id="TRiContReinStateItemLogDao" class="com.ebao.ap99.contract.dao.TRiContReinstateItemLogDao"/> 
+ 	<bean id="TRiContLimitDao" class="com.ebao.ap99.contract.dao.TRiContLimitDao"/> 
+ 	<bean id="TRiContLimitItemDao" class="com.ebao.ap99.contract.dao.TRiContLimitItemDao"/> 
+ 	<bean id="TRiContLimitEventDao" class="com.ebao.ap99.contract.dao.TRiContLimitEventDao"/> 
+ 	<bean id="TRiContLimitLogDao" class="com.ebao.ap99.contract.dao.TRiContLimitLogDao"/> 
+ 	<bean id="TRiContLimitItemLogDao" class="com.ebao.ap99.contract.dao.TRiContLimitItemLogDao"/> 
+ 	<bean id="TRiContLimitEventLogDao" class="com.ebao.ap99.contract.dao.TRiContLimitEventLogDao"/> 
+ 	<bean id="TRiContractStatusLogDao" class="com.ebao.ap99.contract.dao.TRiContractStatusLogDao"/> 
+ 	
+ 	<bean id="TRiContPricingDao" class="com.ebao.ap99.contract.dao.TRiContPricingDao"/> 
+ 	<bean id="TRiContPricingItemDao" class="com.ebao.ap99.contract.dao.TRiContPricingItemDao"/> 
+ 	<bean id="TRiContPricingItemLogDao" class="com.ebao.ap99.contract.dao.TRiContPricingItemLogDao"/> 
+ 	<bean id="TRiContPricingLogDao" class="com.ebao.ap99.contract.dao.TRiContPricingLogDao"/> 
+ 	
+ 	<bean id="TRiContAdjustmentDao" class="com.ebao.ap99.contract.dao.TRiContAdjustmentDao"/> 
+ 	<bean id="TRiContAdjustmentItemDao" class="com.ebao.ap99.contract.dao.TRiContAdjustmentItemDao"/> 
+ 	<bean id="TRiContAdjustmentLogDao" class="com.ebao.ap99.contract.dao.TRiContAdjustmentLogDao"/> 
+ 	<bean id="TRiContAdjustmentItemLogDao" class="com.ebao.ap99.contract.dao.TRiContAdjustmentItemLogDao"/> 
+
+
+</beans>

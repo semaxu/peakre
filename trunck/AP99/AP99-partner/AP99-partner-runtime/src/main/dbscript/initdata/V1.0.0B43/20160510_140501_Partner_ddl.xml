@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="20160510_140501_Partner_ddl">
+		<addColumn tableName="T_RI_BP_RETRO_AML_CHECK">
+			<column name="OTHERS" remarks="OTHERS" type="VARCHAR2(1)"/>
+			<column name="OTHERSTEXT" remarks="OTHERSTEXT" type="VARCHAR2(50)"/>
+		</addColumn>
+	</changeSet>
+</databaseChangeLog>

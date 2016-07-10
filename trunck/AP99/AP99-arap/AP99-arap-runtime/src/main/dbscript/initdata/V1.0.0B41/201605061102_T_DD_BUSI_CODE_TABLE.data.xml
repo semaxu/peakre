@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605061102_T_DD_BUSI_CODE_TABLE.data">
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="ACCOUNT_TYPE=2 OR ACCOUNT_TYPE=3" type="VARCHAR2(4000)"/>
+        	<where>CODE_TABLE_ID=800017</where>
+        </update>
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="ACCOUNT_TYPE=1 OR ACCOUNT_TYPE=3" type="VARCHAR2(4000)"/>
+        	<where>CODE_TABLE_ID=800018</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

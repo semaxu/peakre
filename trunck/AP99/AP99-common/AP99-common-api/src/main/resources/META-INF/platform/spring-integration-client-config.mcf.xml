@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module parent="configframework">
+	<spring>
+ 		<include relative-path="/spring/spring-integration-client-integration-point.xml" />
+ 		<include relative-path="/spring/spring-integration-client-jms.xml" /> 
+ 		<include relative-path="/spring/common-api-beans.xml" /> 
+	</spring>
+	<env>
+		<include relative-path="/integration-client.xml" />
+	</env>
+</module>

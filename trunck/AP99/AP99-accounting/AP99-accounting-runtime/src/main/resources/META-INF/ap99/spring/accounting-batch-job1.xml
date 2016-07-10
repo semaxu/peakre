@@ -1,0 +1,43 @@
+<beans:beans profile="batch"
+	xmlns="http://www.springframework.org/schema/batch" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/batch
+	http://www.springframework.org/schema/batch/spring-batch.xsd">
+<!-- 
+	<job id="cutoffBatchJob">
+		<step id="cutoffStep" parent="abstractStep">
+			<tasklet>
+				<chunk reader="cutoffReader" processor="cutoffLoadProcessor"
+					writer="cutoffWriter" commit-interval="1" skip-limit="1000">					
+					<skippable-exception-classes>
+						<include class="java.lang.Exception" />
+					</skippable-exception-classes>
+				</chunk>
+			</tasklet>
+		</step>
+	</job>
+ -->
+	<beans:bean id="cutoffReader"
+		class="com.ebao.ap99.accounting.batch.CutoffReader"
+		scope="step">
+	</beans:bean>
+     
+	<beans:bean id="cutoffLoadProcessor"
+		class="com.ebao.ap99.accounting.batch.CutoffLoadProcessor"
+		scope="step">
+	</beans:bean>
+	
+	<beans:bean id="cutoffWriter"
+		class="com.ebao.ap99.accounting.batch.CutoffWriter"
+		scope="step">
+	</beans:bean>
+	
+	
+	
+		
+
+
+</beans:beans>

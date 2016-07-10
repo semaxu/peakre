@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160527_110001_T_RI_SOA">
+    <sql>
+   	  UPDATE T_RI_SOA SET IS_REVERSAL = 'Y' WHERE IS_REVERSAL = '1';
+      UPDATE T_RI_SOA SET IS_REVERSAL = 'N' WHERE IS_REVERSAL IS NULL;
+      UPDATE T_RI_SOA SET WITHDRAW_IGNORING_CUTOFF_DATE = 'Y' WHERE WITHDRAW_IGNORING_CUTOFF_DATE = '1';
+      UPDATE T_RI_SOA SET WITHDRAW_IGNORING_CUTOFF_DATE = 'Y' WHERE WITHDRAW_IGNORING_CUTOFF_DATE IS NULL;
+      UPDATE T_RI_SOA_SECTION SET IS_REVERSAL = 'Y' WHERE IS_REVERSAL = '1';
+      UPDATE T_RI_SOA_SECTION SET IS_REVERSAL = 'N' WHERE IS_REVERSAL IS NULL;
+      UPDATE T_RI_SOA_SECTION SET IS_FULLY_TRANSFER = 'Y' WHERE IS_FULLY_TRANSFER = '1';
+      UPDATE T_RI_SOA_SECTION SET IS_FULLY_TRANSFER = 'N' WHERE IS_FULLY_TRANSFER IS NULL;
+    </sql>
+  </changeSet>
+  <changeSet author="generated" id="20160527_110002_T_RI_SOA">
+    <sql>
+   	  alter table T_RI_SOA modify is_reversal CHAR(1);
+   	  alter table T_RI_SOA modify withdraw_ignoring_cutoff_date CHAR(1);
+      alter table T_RI_SOA_SECTION modify is_reversal CHAR(1);
+      alter table T_RI_SOA_SECTION modify is_fully_transfer CHAR(1);
+    </sql>
+  </changeSet>
+</databaseChangeLog>

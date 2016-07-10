@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201603091601_ARAP_DDL">
+    	<addColumn tableName="T_RI_BCP_FEE">
+        <column name="SECTION_ID" type="number(22)"/>
+        <column name="BIZ_TRANS_DESC" remarks="Business description" type="varchar2(500)"/>
+    	</addColumn>
+    	<dropColumn columnName="BIZ_REF_TYPE" tableName="T_RI_BCP_FEE"/>
+    	<dropColumn columnName="TRANS_REF_ID" tableName="T_RI_BCP_REVERSE"/>
+    	<modifyDataType columnName="CURRENCY_CODE" newDataType="VARCHAR2(3)" tableName="T_RI_BCP_SETLLE_EX_DETAIL"/>
+    </changeSet>
+</databaseChangeLog>

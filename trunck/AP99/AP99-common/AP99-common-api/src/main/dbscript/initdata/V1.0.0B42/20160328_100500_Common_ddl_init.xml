@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    
+
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="16"/>
+            <column name="MENU_NAME" value="Exception Report"/>
+            <column name="DESCRIPTION" value="Exception Report"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.exceptionReport"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="46"/>
+           	<column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        
+    </changeSet>
+</databaseChangeLog>

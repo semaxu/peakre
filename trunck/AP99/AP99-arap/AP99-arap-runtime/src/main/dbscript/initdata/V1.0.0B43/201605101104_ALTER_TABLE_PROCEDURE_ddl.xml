@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160510110401_ALTER_TABLE_PROCEDURE_ddl">
+      <createProcedure>
+          CREATE OR REPLACE PROCEDURE P_Alter_Table_Column(alterType in varchar2, tableName in varchar2, columnName in varchar2, columnType in varchar2,newColumnName in varchar2)
+					IS
+					CNT NUMBER;
+					V_ALTER_TYPE VARCHAR2(1);
+					BEGIN
+					  IF alterType IS NOT null THEN
+					    V_ALTER_TYPE := UPPER(alterType);
+					    SELECT COUNT(*) INTO CNT FROM user_tab_columns A
+					           WHERE A.TABLE_NAME = tableName and a.COLUMN_NAME = columnName;
+					
+					    IF CNT = 0 AND V_ALTER_TYPE = 'A' THEN
+					      EXECUTE IMMEDIATE 'ALTER TABLE '|| tableName || ' ADD '|| columnName || ' ' || columnType;
+					    END IF;
+					
+					    IF CNT != 0 THEN
+					      IF V_ALTER_TYPE = 'D' THEN
+					        EXECUTE IMMEDIATE 'ALTER TABLE '|| tableName || ' DROP COLUMN '|| columnName;
+					      END IF;
+					      IF V_ALTER_TYPE = 'M' THEN
+					        EXECUTE IMMEDIATE 'ALTER TABLE '|| tableName || ' MODIFY '|| columnName || ' ' || columnType;
+					      END IF;
+					      IF V_ALTER_TYPE = 'R' THEN
+					        EXECUTE IMMEDIATE 'ALTER TABLE '|| tableName || ' RENAME COLUMN '|| columnName || ' TO '|| newColumnName;
+					      END IF;
+					    END IF;
+					  END IF;
+					END P_Alter_Table_Column;
+    </createProcedure>
+  </changeSet>
+</databaseChangeLog>

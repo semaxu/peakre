@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160412_190002_BUSI_CODE_TABLE_dml">
+  <sql>
+  delete T_DD_BUSI_CONTEXT where CONTEXT_ID = 99;
+  delete T_DD_BUSI_CODE_TABLE where CODE_TABLE_ID like '8000%';
+  </sql>
+  	<insert tableName="T_DD_BUSI_CONTEXT">
+  		 <column name="CONTEXT_ID" valueNumeric="99"/>
+  		 <column name="CONTEXT_TYPE" valueNumeric="-1"/>
+  		 <column name="REFERENCE_ID" valueNumeric="99"/>
+  		 <column name="DESCRIPTION" value="PeakRe"/>
+  		 <column name="RECORD_USAGE" valueNumeric="1"/>
+  	</insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800000"/>
+      <column name="NAME" value="Broker"/>
+      <column name="DESCRIPTION" value="Broker"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="PARTNER_ID"/>
+      <column name="CODE_FIELD" value="PARTNER_ID"/>
+      <column name="DESC_FIELD" value="TRADING_NAME"/>
+      <column name="SORT_FIELD" value="PARTNER_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BP_PARTNER"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;BUSINESS_PARTNER_CATEGORY&quot;,&quot;STATUS&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800001"/>
+      <column name="NAME" value="Cedent"/>
+      <column name="DESCRIPTION" value="Cedent"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="PARTNER_ID"/>
+      <column name="CODE_FIELD" value="PARTNER_ID"/>
+      <column name="DESC_FIELD" value="TRADING_NAME"/>
+      <column name="SORT_FIELD" value="PARTNER_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BP_PARTNER"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800002"/>
+      <column name="NAME" value="CollectionPartner"/>
+      <column name="DESCRIPTION" value="CollectionPartner"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="PARTNER_ID"/>
+      <column name="CODE_FIELD" value="PARTNER_ID"/>
+      <column name="DESC_FIELD" value="TRADING_NAME"/>
+      <column name="SORT_FIELD" value="PARTNER_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BP_PARTNER"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800003"/>
+      <column name="NAME" value="Retrocessionaire"/>
+      <column name="DESCRIPTION" value="Retrocessionaire"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="PARTNER_ID"/>
+      <column name="CODE_FIELD" value="PARTNER_ID"/>
+      <column name="DESC_FIELD" value="TRADING_NAME"/>
+      <column name="SORT_FIELD" value="PARTNER_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BP_PARTNER"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800004"/>
+      <column name="NAME" value="EntryCode"/>
+      <column name="DESCRIPTION" value="EntryCode"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="entry_code not in ('4012','4016','4011','4015','4021','4023','4025','4041','4051','4053','4055','4061','4111','4112','4115','4116','4121','4123','4125','4141','4161','4171','4181')"/>
+      <column name="ID_FIELD" value="ENTRY_CODE"/>
+      <column name="CODE_FIELD" value="ENTRY_CODE"/>
+      <column name="DESC_FIELD" value="ENTRY_CODE_NAME"/>
+      <column name="SORT_FIELD" value="ENTRY_CODE"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_ENTRY_CODE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800005"/>
+      <column name="NAME" value="Bank"/>
+      <column name="DESCRIPTION" value="Bank"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="BANK_ID"/>
+      <column name="CODE_FIELD" value="BANK_ID"/>
+      <column name="DESC_FIELD" value="BANK_NAME"/>
+      <column name="SORT_FIELD" value="BANK_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BCP_CFG_BANK"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800007"/>
+      <column name="NAME" value="Collection BankAccount"/>
+      <column name="DESCRIPTION" value="Collection BankAccount"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="STATUS=1 AND ACCOUNT_TYPE=1"/>
+      <column name="ID_FIELD" value="ACCOUNT_ID"/>
+      <column name="CODE_FIELD" value="ACCOUNT_NO"/>
+      <column name="DESC_FIELD" value="ACCOUNT_NAME"/>
+      <column name="SORT_FIELD" value="ACCOUNT_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BCP_CFG_BANK_ACCOUNT"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;STATUS&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800008"/>
+      <column name="NAME" value="Payment BankAccount"/>
+      <column name="DESCRIPTION" value="Payment BankAccount"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="STATUS=1 AND ACCOUNT_TYPE=2"/>
+      <column name="ID_FIELD" value="ACCOUNT_ID"/>
+      <column name="CODE_FIELD" value="ACCOUNT_NO"/>
+      <column name="DESC_FIELD" value="ACCOUNT_NAME"/>
+      <column name="SORT_FIELD" value="ACCOUNT_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BCP_CFG_BANK_ACCOUNT"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;STATUS&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800009"/>
+      <column name="NAME" value="CedentCountry"/>
+      <column name="DESCRIPTION" value="CedentCountry"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="CID"/>
+      <column name="CODE_FIELD" value="CID"/>
+      <column name="DESC_FIELD" value="CNAME"/>
+      <column name="SORT_FIELD" value="CID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="TB_TREE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS" value="[&quot;PID&quot;]"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800010"/>
+      <column name="NAME" value="Currency"/>
+      <column name="DESCRIPTION" value="Currency"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE"/>
+      <column name="ID_FIELD" value="CURRENCY_CODE"/>
+      <column name="CODE_FIELD" value="CURRENCY_CODE"/>
+      <column name="DESC_FIELD" value="CURRENCY_NAME"/>
+      <column name="SORT_FIELD" value="CURRENCY_CODE"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_CURRENCY"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800011"/>
+      <column name="NAME" value="Branch"/>
+      <column name="DESCRIPTION" value="Branch"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="STATUS=1"/>
+      <column name="ID_FIELD" value="BRANCH_ID"/>
+      <column name="CODE_FIELD" value="BRANCH_ID"/>
+      <column name="DESC_FIELD" value="BRANCH_NAME"/>
+      <column name="SORT_FIELD" value="BRANCH_ID"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_BRANCH"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800014"/>
+      <column name="NAME" value="SoaContractID"/>
+      <column name="DESCRIPTION" value="SoaContractID"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="LATEST_STATUS='4'"/>
+      <column name="ID_FIELD" value="CONTRACT_CODE"/>
+      <column name="CODE_FIELD" value="UW_YEAR"/>
+      <column name="DESC_FIELD" value="CONTRACT_CODE"/>
+      <column name="SORT_FIELD" value="UW_YEAR"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_CONTRACT_INFO"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="N"/>
+      <column name="RECORD_USAGE" valueNumeric="1"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="Y"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016050103_T_RI_CONT_SUB_COB_TYPE.DATA">
+  <sql>
+  INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('1','Fire, FLEXA','1');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('2','Property All Risks','1');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('3','Business Interruption','1');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('4','Natural Catastrophe','1');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('5','Movabe All Risk (MAR)','1');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('6','Others','1');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('7','Contractors''/Erection All Risks','2');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('8','Machinery Breakdown','2');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('9','Electronic Equipment','2');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('10','Contractors'' Third Party Liability','2');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('11','Contractors'' Plant and Machinery','2');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('12','Others','2');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('13','General Third Party Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('14','Products Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('15','Products Recall','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('16','Workmen''s Compensation/Employers'' Liab','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('17','Medical Malpractice Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('18','Contractors'' Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('19','Environmental Impairment Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('20','Personal Accident','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('21','Professional Indemnity','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('22','Fidelity Guarantee','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('23','Director''s &amp; Officers''','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('24','Bankers'' Blanket Bond','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('25','Commercial General Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('26','Cyber Liability','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('27','Health','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('28','Others','3');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('29','Own Damage','4');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('30','Motor Third Party Liability','4');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('31','Passengers/Drivers PA','4');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('32','Passenger Carriers'' Liability','4');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('33','Others','4');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('34','Marine Hull','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('35','Marine Cargo','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('36','Protection and Indemnification','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('37','Energy','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('38','Builders'' Risk','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('39','Fine Arts','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('40','Freight Forwarders'' Liability','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('41','Others','5');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('42','Trade Credit','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('43','Performance Bond','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('44','Contractors'' Bond','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('45','Political Riks','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('46','Trade Finance','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('47','Refund Guarantee','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('48','Financial Guarantee','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('49','Customs &amp; License Bond','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('50','Others','6');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('51','Aviation Hull','7');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('52','Aviation Liability','7');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('53','Satellite at launch','7');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('54','Satellite in orbit','7');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('55','Others','7');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('56','Crops','8');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('57','Livestock','8');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('58','Forestry','8');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('59','Others','8');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('60','Mortgage Insurance','9');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('61','Title Insurance','9');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('62','Extended Warranty','9');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('63','Residual Value Guarantee','9');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('64','Others','9');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('65','Burglary &amp; Theft','10');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('66','Cash/Money','10');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('67','Plate Glass','10');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('68','Others','10');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('69','Life &amp; Annuity','11');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('70','Personal Accident','11');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('71','Unit Linked Long Term','11');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('72','Permanent Health','11');
+INSERT INTO T_RI_CONTRACT_SUBCOB_TYPE VALUES ('73','Variable Annuities','11');
+</sql>
+</changeSet>
+</databaseChangeLog>

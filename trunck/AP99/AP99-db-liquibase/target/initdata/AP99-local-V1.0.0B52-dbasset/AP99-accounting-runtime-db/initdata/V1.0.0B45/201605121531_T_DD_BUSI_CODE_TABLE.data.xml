@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+     <changeSet author="generated" id="2016051202_T_RI_ENTRY_CODE.DATA">    	
+       <addColumn tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" type="VARCHAR2(20)"/>           
+       </addColumn>
+       
+    </changeSet>
+  <changeSet author="generated" id="2016051203_T_DD_BUSI_CODE_TABLE.DATA">
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800020"/>
+      <column name="NAME" value="EntryCode"/>
+      <column name="DESCRIPTION" value="EntryCode"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="entry_code  in ('5010','5020','5030','5040')"/>
+      <column name="ID_FIELD" value="ENTRY_CODE"/>
+      <column name="CODE_FIELD" value="ENTRY_CODE"/>
+      <column name="DESC_FIELD" value="ENTRY_CODE_NAME"/>
+      <column name="SORT_FIELD" value="ENTRY_CODE"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_ENTRY_CODE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="INSERT_BY" valueNumeric="-11"/>
+      <column name="UPDATE_BY" valueNumeric="-11"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+    <insert tableName="T_DD_BUSI_CODE_TABLE">
+      <column name="CODE_TABLE_ID" valueNumeric="800021"/>
+      <column name="NAME" value="EntryCode"/>
+      <column name="DESCRIPTION" value="EntryCode"/>
+      <column name="CODE_TABLE_TYPE" valueNumeric="-2"/>
+      <column name="PREDICATE" value="entry_code  in ('5011','5021','5031','5041')"/>
+      <column name="ID_FIELD" value="ENTRY_CODE"/>
+      <column name="CODE_FIELD" value="ENTRY_CODE"/>
+      <column name="DESC_FIELD" value="ENTRY_CODE_NAME"/>
+      <column name="SORT_FIELD" value="ENTRY_CODE"/>
+      <column name="SORT_TYPE" value="ASC"/>
+      <column name="CONTEXT_ID" valueNumeric="99"/>
+      <column name="DATA_SOURCE" value="T_RI_ENTRY_CODE"/>
+      <column name="IS_SMALL" value="Y"/>
+      <column name="NEED_CACHE" value="Y"/>
+      <column name="INSERT_BY" valueNumeric="-11"/>
+      <column name="UPDATE_BY" valueNumeric="-11"/>
+      <column name="RECORD_USAGE" valueNumeric="2"/>
+      <column name="CONDITION_FIELDS"/>
+      <column name="NEED_MULTI_LANG" value="N"/>
+      <column name="ID_DATA_TYPE"/>
+      <column name="CODE_DATA_TYPE"/>
+      <column name="DATA_TABLE_ID"/>
+      <column name="DOMAIN_MODEL_CLASS_ID"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

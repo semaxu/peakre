@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_GL_GENERAL_LEDGER">
+    <createTable tableName="T_RI_GL_GENERAL_LEDGER">
+      <column name="GENERAL_LEDGER_ID" type="NUMBER(22, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="GL_ACCOUNT_NO" type="VARCHAR2(50)"/>
+      <column name="GL_ACCOUNT_TYPE" type="VARCHAR2(1)"/>
+      <column name="DATA_SOURCE_TYPE" type="NUMBER(2, 0)"/>
+      <column name="AMOUNT" type="NUMBER(20, 2)"/>
+      <column name="CURRENCY_CODE" type="VARCHAR2(3)"/>
+      <column name="SUB_TRANSACTION" type="VARCHAR2(50)"/>
+      <column name="MAIN_TRANSACTION" type="VARCHAR2(50)"/>
+      <column name="EXCHANGE_RATE" type="NUMBER(15, 9)"/>
+      <column name="REF_GL_ID" type="NUMBER(22, 0)"/>
+      <column name="POST_DATE" type="date"/>
+      <column name="POST_STATUS" type="NUMBER(1, 0)"/>
+      <column name="GL_BATCH_ID" type="NUMBER(22, 0)"/>
+      <column name="INSERT_BY" type="NUMBER(19, 0)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER(19, 0)"/>
+      <column name="UPDATE_TIME" type="date"/>
+      <column name="DOC_DATE" remarks="The document date is the date on which the original document was issued." type="date"/>
+      <column name="AMOUNT_DOC_CURRENCY" remarks="Line item amount in document currency." type="NUMBER(20, 2)"/>
+      <column name="ASSIGNMENT" remarks="Line item amount in the local currency of the company code." type="NUMBER(20, 2)"/>
+      <column name="VALUE_DATE" remarks="The value date is used in bank accounts and bank sub-accounts." type="date"/>
+      <column name="TEXT_DESC" remarks="Contains an explanatory text on the line item." type="VARCHAR2(500)"/>
+      <column name="REFERENCE" remarks="The reference document number can contain the document number of the customer/vendor." type="VARCHAR2(500)"/>
+      <column name="DOC_CURRENCY" type="VARCHAR2(3)"/>
+      <column name="FIN_QUARTER" type="VARCHAR2(8)"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="PK_RI_GL_GENERAL_LEDGER_ID">
+    <addPrimaryKey columnNames="GENERAL_LEDGER_ID" constraintName="PK_RI_GL_GENERAL_LEDGER_ID" tableName="T_RI_GL_GENERAL_LEDGER"/>
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="2016031601_T_RI_CONT_TERMINATION">
+        <createTable tableName="T_RI_CONT_TERMINATION">
+            <column name="TERMINATION_ID" remarks="Primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_COMP_ID" type="NUMBER(10, 0)"/>
+            <column name="TERMINATED_DATE" remarks="Terminated as of" type="date"/>
+            <column name="AGREED_DATE" remarks="Agreed on" type="date"/>
+            <column name="CONDITION" remarks="Condition" type="VARCHAR2(2)"/>
+            <column name="REASON" remarks="Reason" type="VARCHAR2(4000)"/>
+            <column name="COMMUTTED_DATE" remarks="Commutted as of" type="date"/>
+            <column name="REMARKS" remarks="Remarks" type="VARCHAR2(4000)"/>
+            <column defaultValue="Y" name="IS_ACTIVE" remarks="Y:active, N:deleted" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00731771">
+        <addPrimaryKey columnNames="TERMINATION_ID" constraintName="SYS_C00731771" tableName="T_RI_CONT_TERMINATION"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_T_RI_CONT_TERMINATION">
+        <addForeignKeyConstraint baseColumnNames="CONT_COMP_ID" baseTableName="T_RI_CONT_TERMINATION" constraintName="FK_T_RI_CONT_TERMINATION" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="CONT_COMP_ID" referencedTableName="T_RI_CONTRACT_INFO"/>
+    </changeSet>
+</databaseChangeLog>

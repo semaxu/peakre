@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201602251809_T_RI_BCP_EXCHANGE_RATE_TYPE.data">
+        <insert tableName="T_RI_BCP_EXCHANGE_RATE_TYPE">
+            <column name="RATE_TYPE" valueNumeric="1"/>
+            <column name="NAME" value="General Exchange Rate"/>
+        </insert>
+        <insert tableName="T_RI_BCP_EXCHANGE_RATE_TYPE">
+            <column name="RATE_TYPE" valueNumeric="2"/>
+            <column name="NAME" value="Month-End Exchange Rate"/>
+        </insert>
+        <insert tableName="T_RI_BCP_EXCHANGE_RATE_TYPE">
+            <column name="RATE_TYPE" valueNumeric="3"/>
+            <column name="NAME" value="Year-End Exchange Rate"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

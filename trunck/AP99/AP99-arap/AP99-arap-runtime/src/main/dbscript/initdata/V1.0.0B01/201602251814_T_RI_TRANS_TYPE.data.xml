@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201602251814_T_RI_TRANS_TYPE.data">
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="1"/>
+            <column name="TRANS_TYPE_NAME" value="Claim Reserve"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="2"/>
+            <column name="TRANS_TYPE_NAME" value="Claim Settlement"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="3"/>
+            <column name="TRANS_TYPE_NAME" value="Statement"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="4"/>
+            <column name="TRANS_TYPE_NAME" value="IBNR Upload"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="5"/>
+            <column name="TRANS_TYPE_NAME" value="Estimation"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="6"/>
+            <column name="TRANS_TYPE_NAME" value="Collection"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="7"/>
+            <column name="TRANS_TYPE_NAME" value="Payment"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="8"/>
+            <column name="TRANS_TYPE_NAME" value="Internal Offset"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="9"/>
+            <column name="TRANS_TYPE_NAME" value="Transaction Reversal"/>
+            <column name="MODULE"/>
+        </insert>
+        <insert tableName="T_RI_TRANS_TYPE">
+            <column name="TRANS_TYPE_ID" valueNumeric="10"/>
+            <column name="TRANS_TYPE_NAME" value="Revaluation"/>
+            <column name="MODULE"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

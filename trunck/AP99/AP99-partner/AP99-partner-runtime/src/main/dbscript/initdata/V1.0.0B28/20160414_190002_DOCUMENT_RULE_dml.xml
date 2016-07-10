@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+     <changeSet author="generated" id="20160414_190001_DOCUMENT_RULE_dml">
+        <delete tableName="T_RI_CM_DOCUMENT_RULE"/>
+    </changeSet>
+  <changeSet author="generated" id="20160414_190002_DOCUMENT_RULE_dml">
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="2"/>
+      <column name="BUSINESS_TYPE" value="2"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractBOList"/>
+      <column name="PARSE_SERVICE" value="ContractUploadingService"/>
+      <column name="PARSE_TYPE" value="XML"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="1"/>
+      <column name="BUSINESS_TYPE" value="4"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.arap.entity.CurrencyExchangeRate"/>
+      <column name="PARSE_SERVICE" value="currencyExchangeDataService"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="3"/>
+      <column name="BUSINESS_TYPE" value="5"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.entity.TRiContDeductionsAttach"/>
+      <column name="PARSE_SERVICE" value="BusinessConditionUploadService"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="4"/>
+      <column name="BUSINESS_TYPE" value="6"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.IBNRUploadModel"/>
+      <column name="PARSE_SERVICE" value="SegmentDSImpl"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="BUSINESS_TYPE" value="11"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.RevaluationDetailModel"/>
+      <column name="PARSE_SERVICE" value="RevaluationReportServiceImpl"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="revaluation.xlsx"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="16"/>
+      <column name="BUSINESS_TYPE" value="16"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.ExceptionReportDetailModel"/>
+      <column name="PARSE_SERVICE" value="ExeceptionContractBizServiceImpl"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="exceptionReport.xlsx"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="17"/>
+      <column name="BUSINESS_TYPE" value="17"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.partner.model.BrokerAmlCheckPDFVOList"/>
+      <column name="PARSE_SERVICE" value="com.ebao.ap99.partner.service.BrokerAmlService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="complianceCheckBroker.rptdesign"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="6"/>
+      <column name="BUSINESS_TYPE" value="9"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.ClaimExcelModel"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.RiClaiminfoService"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="claim.xlsx"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="7"/>
+      <column name="BUSINESS_TYPE" value="10"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.ClaimRecordsExcelModel"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.RiEventService"/>
+      <column name="PARSE_TYPE" value="XLS"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="claimRecord.xlsx"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="13"/>
+      <column name="BUSINESS_TYPE" value="13"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractPDFVOList"/>
+      <column name="PARSE_SERVICE" value="ContractPDFPrintService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="non-Proportional.rptdesign"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="14"/>
+      <column name="BUSINESS_TYPE" value="14"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractPDFVOList"/>
+      <column name="PARSE_SERVICE" value="ContractPDFPrintService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="proportional.rptdesign"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="DOCUMENT_RULE_ID" valueNumeric="15"/>
+      <column name="BUSINESS_TYPE" value="15"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.partner.model.AmlCheckPDFVOList"/>
+      <column name="PARSE_SERVICE" value="com.ebao.ap99.partner.service.AmlService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="complianceCheckCedent.rptdesign"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

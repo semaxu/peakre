@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+              http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+	
+	<!-- convertor -->
+	<bean id="currencyExchangeRateConvertor" class="com.ebao.ap99.arap.convertor.CurrencyExchangeRateConvertor" />
+	<bean id="bankAccountConvertor" class="com.ebao.ap99.arap.convertor.BankAccountConvertor" />
+	<bean id="transactionReversalConvertor" class="com.ebao.ap99.arap.convertor.TransactionReversalConvertor" />
+	<bean id="feeQueryConditionConvertor" class="com.ebao.ap99.arap.convertor.FeeQueryConditionConvertor" />
+	<bean id="balanceSearchConvertor" class="com.ebao.ap99.arap.convertor.BalanceSearchConvertor" />
+	<bean id="settlementDTOConvertor" class="com.ebao.ap99.arap.convertor.SettlementDTOConvertor" />
+	
+	<!-- Dao -->
+	<bean id="bankAccountDao" class="com.ebao.ap99.arap.dao.BankAccountDao" />
+	<bean id="bankDao" class="com.ebao.ap99.arap.dao.BankDao" />
+	<bean id="currencyExchangeDao" class="com.ebao.ap99.arap.dao.CurrencyExchangeRateDao" />
+	<bean id="entryCodeDao" class="com.ebao.ap99.arap.dao.EntryCodeDao" />
+	<bean id="currencyDao" class="com.ebao.ap99.arap.dao.CurrencyDao" />
+	<bean id="bcpTransDao" class="com.ebao.ap99.arap.dao.BCPTransDao" />
+	<bean id="collectionDao" class="com.ebao.ap99.arap.dao.CollectionDao" />
+	<bean id="feeDao" class="com.ebao.ap99.arap.dao.FeeDao" />
+	<bean id="paymentDao" class="com.ebao.ap99.arap.dao.PaymentDao" />
+	<bean id="offsetDao" class="com.ebao.ap99.arap.dao.OffsetDao" />
+	<bean id="numberingDao" class="com.ebao.ap99.arap.dao.NumberingDao" />
+	<bean id="setllementExchangeDetailDao" class="com.ebao.ap99.arap.dao.SetllementExchangeDetailDao" />
+	<bean id="settlementDetailDao" class="com.ebao.ap99.arap.dao.SettlementDetailDao" />
+	<bean id="settlementGroupDao" class="com.ebao.ap99.arap.dao.SettlementGroupDao" />
+	<bean id="suspenseDao" class="com.ebao.ap99.arap.dao.SuspenseDao" />
+	<bean id="payeeDao" class="com.ebao.ap99.arap.dao.PayeeDao" />
+	<bean id="reverseDao" class="com.ebao.ap99.arap.dao.ReverseDao" />
+	<bean id="reverseReasonDao" class="com.ebao.ap99.arap.dao.ReverseReasonDao" />
+	<bean id="glMappingEntryDao" class="com.ebao.ap99.arap.dao.GLMappingEntryDao" />
+	<bean id="glAccountMappingDao" class="com.ebao.ap99.arap.dao.GLAccountMappingDao" />
+	<bean id="glBatchDao" class="com.ebao.ap99.arap.dao.GLBatchDao" />
+	<bean id="glSubLedgerDao" class="com.ebao.ap99.arap.dao.GLSubLedgerDao" />
+	<bean id="glGeneralLedgerDao" class="com.ebao.ap99.arap.dao.GLGeneralLedgerDao" />
+	<bean id="glFileInfoDao" class="com.ebao.ap99.arap.dao.GLFileInfoDao" />
+	<bean id="glLogDao" class="com.ebao.ap99.arap.dao.GLLogDao" />
+	<bean id="glExDetailDao" class="com.ebao.ap99.arap.dao.GLExDetailDao" />
+	
+	<!-- Service -->
+	<bean id="bankAccountService" class="com.ebao.ap99.arap.service.impl.BankAccountServiceImpl" />
+	<bean id="currencyExchangeService" class="com.ebao.ap99.arap.service.impl.CurrencyExchangeServiceImpl" />
+	<bean id="currencyExchangeDataService" class="com.ebao.ap99.arap.service.impl.CurrencyExchangeDataServiceImpl" />
+	<bean id="entryCodeService" class="com.ebao.ap99.arap.service.impl.EntryCodeServiceImpl" />
+	<bean id="feeService" class="com.ebao.ap99.arap.service.impl.FeeServiceImpl" />
+	<bean id="financeService" class="com.ebao.ap99.arap.service.impl.FinanceServiceImpl" />
+	<bean id="settlementService" class="com.ebao.ap99.arap.service.impl.SettlementServiceImpl" />
+	<bean id="collectionService" class="com.ebao.ap99.arap.service.impl.CollectionServiceImpl" />
+	<bean id="suspenseService" class="com.ebao.ap99.arap.service.impl.SuspenseServiceImpl" />
+	<bean id="paymentService" class="com.ebao.ap99.arap.service.impl.PaymentServiceImpl" />
+	<bean id="offsetService" class="com.ebao.ap99.arap.service.impl.OffsetServiceImpl" />
+	<bean id="reversalService" class="com.ebao.ap99.arap.service.impl.ReversalServiceImpl" />
+	<bean id="glDataService" class="com.ebao.ap99.arap.service.impl.GLDataServiceImpl" />
+	<bean id="glService" class="com.ebao.ap99.arap.service.impl.GLServiceImpl" />
+	<bean id="glFileService" class="com.ebao.ap99.arap.service.impl.GLFileServiceImpl" />
+	
+    <!-- restful -->
+	<bean id="bankAccountRestfulService" class="com.ebao.ap99.arap.restful.BankAccountRestfulService" />
+	<bean id="exchangeRatetRestfulService" class="com.ebao.ap99.arap.restful.ExchangeRatetRestfulService" />
+	<bean id="transactionReversalRestfulService" class="com.ebao.ap99.arap.restful.TransactionReversalRestfulService" />
+	<bean id="transactionQueryRestfulService" class="com.ebao.ap99.arap.restful.TransactionQueryRestfulService" />
+	<bean id="collectionRestfulService" class="com.ebao.ap99.arap.restful.CollectionRestfulService" />
+	<bean id="paymentRestfulService" class="com.ebao.ap99.arap.restful.PaymentRestfulService" />
+	<bean id="offsetRestfulService" class="com.ebao.ap99.arap.restful.OffsetRestfulService" />
+	<bean id="balanceSearchRestfulService" class="com.ebao.ap99.arap.restful.BalanceSearchRestfulService" />
+	<bean id="glQueryRestfulService" class="com.ebao.ap99.arap.restful.GLQueryRestfulService" />
+	<bean id="creditOfGeneralQueryViewRestfulService" class="com.ebao.ap99.arap.restful.CreditOfGeneralQueryViewRestfulService"/>
+</beans>

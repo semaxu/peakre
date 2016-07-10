@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_LOSS_CAUSE_CLAIM_20160225_134000">
+        <createTable remarks="code table" tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" remarks="cause of loss code" type="VARCHAR2(15)"/>
+            <column name="NAME" remarks="cause of loss name" type="VARCHAR2(100)"/>
+            <column name="IFUSE" remarks="ifuse" type="CHAR(1)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

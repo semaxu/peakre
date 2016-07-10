@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605241102_T_RI_GL_FILE.ddl">
+        <sql>
+        	alter table T_RI_GL_FILE add INSERT_BY NUMBER(19);
+					alter table T_RI_GL_FILE add INSERT_TIME date;
+					alter table T_RI_GL_FILE add UPDATE_BY NUMBER(19);
+					alter table T_RI_GL_FILE add UPDATE_TIME date;
+					alter table T_RI_GL_ACCOUNT_MAPPING_DEF add OTHER_FACTORS varchar2(500);
+					comment on column T_RI_GL_ACCOUNT_MAPPING_DEF.OTHER_FACTORS is 'format: [k1:v1][k2:v2]';
+        </sql>
+    </changeSet>
+</databaseChangeLog>

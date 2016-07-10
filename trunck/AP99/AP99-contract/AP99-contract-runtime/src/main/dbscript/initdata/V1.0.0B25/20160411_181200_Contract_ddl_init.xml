@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016041101_T_RI_CONT_PREMIUM_ITEM">
+        <addColumn tableName="T_RI_CONT_PREMIUM_ITEM">
+            <column name="INSTAL_NO" remarks="Installment No." type="NUMBER(4)"/>
+            <column name="INSTAL_PAY_NO" remarks="Installment No." type="NUMBER(4)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="generated" id="2016041101_T_RI_CONT_PREMIUM_ITEM_LOG">
+        <addColumn tableName="T_RI_CONT_PREMIUM_ITEM_LOG">
+            <column name="INSTAL_NO" type="NUMBER(4)"/>
+            <column name="INSTAL_PAY_NO" type="NUMBER(4)"/>
+        </addColumn>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016041101_T_RI_CONT_LIMIT_ITEM">
+        <addColumn tableName="T_RI_CONT_LIMIT_ITEM">
+            <column name="LIMIT_LAYER_PER" remarks="Limit  100% " type="NUMBER(10,9)"/>
+            <column name="DEDUCTIBLE_PER" remarks="Deductible" type="NUMBER(10,9)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="generated" id="2016041101_T_RI_CONT_LIMIT_ITEM_LOG">
+        <addColumn tableName="T_RI_CONT_LIMIT_ITEM_LOG">
+            <column name="LIMIT_LAYER_PER" type="NUMBER(10,9)"/>
+            <column name="DEDUCTIBLE_PER" type="NUMBER(10,9)"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

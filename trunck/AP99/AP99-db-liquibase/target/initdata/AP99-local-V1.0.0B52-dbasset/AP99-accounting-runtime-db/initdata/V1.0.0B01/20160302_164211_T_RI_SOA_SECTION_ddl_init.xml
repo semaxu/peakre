@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185309_T_RI_SOA_SECTION">
+        <createTable remarks="Contract information of SOA" tableName="T_RI_SOA_SECTION">
+            <column name="SOA_SECTION_ID" remarks="primary Key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SOA_CURRENCY_ID" remarks="foreign key" type="NUMBER(10, 0)"/>
+            <column name="SOA_ID" remarks="foreign key" type="NUMBER(10, 0)"/>
+            <column name="CONTRAC_COMP_ID" remarks="Contract's contract id" type="NUMBER(10, 0)"/>
+            <column name="CONTRACT_SECTION" remarks="section's share type" type="VARCHAR2(50)"/>
+            <column name="COB" remarks="section's CoB" type="VARCHAR2(10)"/>
+            <column name="SHARE_TYPE" remarks="section's under writing area" type="VARCHAR2(10)"/>
+            <column name="UW_AREA" remarks="section's under writing area" type="VARCHAR2(10)"/>
+            <column name="PREMIUM" remarks="section's premium" type="NUMBER(20, 2)"/>
+            <column name="INCURRED_LOSS" remarks="section's incurred loss" type="NUMBER(20, 2)"/>
+            <column name="EXPENSE" remarks="section's expense" type="NUMBER(20, 2)"/>
+            <column name="INSERT_BY" remarks="User Id who insert this record" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="User Id who update this record" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="Record Insert Time" type="date"/>
+            <column name="UPDATE_TIME" remarks="Record Update Time" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_SOA_SECTION">
+        <addPrimaryKey columnNames="SOA_SECTION_ID" constraintName="PK_T_RI_SOA_SECTION" tableName="T_RI_SOA_SECTION"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_SOA_SECTION_CURRENCY_ID">
+        <addForeignKeyConstraint baseColumnNames="SOA_CURRENCY_ID" baseTableName="T_RI_SOA_SECTION" constraintName="FK_RI_SOA_SECTION_CURRENCY_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SOA_CURRENCY_ID" referencedTableName="T_RI_SOA_CURRENCY"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_SOA_SECTION_SOA_ID">
+        <addForeignKeyConstraint baseColumnNames="SOA_ID" baseTableName="T_RI_SOA_SECTION" constraintName="FK_RI_SOA_SECTION_SOA_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SOA_ID" referencedTableName="T_RI_SOA"/>
+    </changeSet>
+</databaseChangeLog>

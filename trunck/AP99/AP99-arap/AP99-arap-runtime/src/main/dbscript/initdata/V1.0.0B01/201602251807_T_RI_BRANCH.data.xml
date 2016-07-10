@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201602251807_T_RI_BRANCH.data">
+        <insert tableName="T_RI_BRANCH">
+            <column name="BRANCH_ID" valueNumeric="1"/>
+            <column name="BRANCH_LEVEL" valueNumeric="1"/>
+            <column name="FULL_BRANCH_CODE" value="HongKong"/>
+            <column name="BRANCH_NAME" value="HongKong"/>
+            <column name="PARENT_ID"/>
+            <column name="STATUS" valueNumeric="1"/>
+        </insert>
+        <insert tableName="T_RI_BRANCH">
+            <column name="BRANCH_ID" valueNumeric="2"/>
+            <column name="BRANCH_LEVEL" valueNumeric="1"/>
+            <column name="FULL_BRANCH_CODE" value="Zurich"/>
+            <column name="BRANCH_NAME" value="Zurich"/>
+            <column name="PARENT_ID" valueNumeric="1"/>
+            <column name="STATUS" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

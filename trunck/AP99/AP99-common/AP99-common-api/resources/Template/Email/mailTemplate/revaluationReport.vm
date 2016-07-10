@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>
+			Exception Report Review Notification
+		</title>
+	</head>
+	<body><p style="font-family:Calibri;font-size:16">
+		Dear $username:<br>
+		<br>
+		The Exception Report of $FNYearAndQuarter has been attached. Please go to Contract Management module to review the corresponding contract information and submit the review result through Technical Accounting > Exception Report.<br>
+		<br>
+		This e-mail is sent automatically by system. Please do not reply.
+	</p>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="20160512_140500_Partner_ddl">
+		<addColumn tableName="T_RI_BP_PARTNER">
+			<column name="CITY" remarks="CITY" type="VARCHAR2(100)"/>
+			<column name="DISCTRICT" remarks="DISCTRICT" type="VARCHAR2(100)"/>
+			<column name="STREET" remarks="STREET" type="VARCHAR2(100)"/>
+			<column name="STREET_NUMBER" remarks="STREET_NUMBER" type="VARCHAR2(100)"/>
+   		 	<column name="BUILDING" remarks="BUILDING" type="VARCHAR2(100)"/>
+    		<column name="FLOOR" remarks="FLOOR" type="VARCHAR2(100)"/>
+    		<column name="ROOM" remarks="ROOM" type="VARCHAR2(100)"/>
+    		<column name="CMS_NO" remarks="CMS_NO" type="VARCHAR2(100)"/>
+		</addColumn>
+	</changeSet>
+</databaseChangeLog>

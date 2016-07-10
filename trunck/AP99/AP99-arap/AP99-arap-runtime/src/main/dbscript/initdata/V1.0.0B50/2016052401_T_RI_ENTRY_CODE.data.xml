@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="2016052401_T_RI_ENTRY_CODE.data">
+		<update tableName = "T_RI_ENTRY_CODE">
+			<column name = "entry_code" type = "VARCHAR2(50)">0101</column>
+			<where>entry_code = 'ENTRY_CODE_SETTLE_DIFF'</where>
+		</update>
+		<update tableName = "T_RI_ENTRY_CODE">
+			<column name = "entry_code" type = "VARCHAR2(50)">0102</column>
+			<where>entry_code = 'ENTRY_CODE_BALANCE'</where>
+		</update>
+		<update tableName = "T_RI_ENTRY_CODE">
+			<column name = "entry_code" type = "VARCHAR2(50)">0103</column>
+			<where>entry_code = 'ENTRY_CODE_GAIN_LOSS'</where>
+		</update>
+		<update tableName = "T_RI_ENTRY_CODE">
+			<column name = "entry_code" type = "VARCHAR2(50)">0104</column>
+			<where>entry_code = 'ENTRY_CODE_REVALUATION'</where>
+		</update>
+  </changeSet>
+</databaseChangeLog>

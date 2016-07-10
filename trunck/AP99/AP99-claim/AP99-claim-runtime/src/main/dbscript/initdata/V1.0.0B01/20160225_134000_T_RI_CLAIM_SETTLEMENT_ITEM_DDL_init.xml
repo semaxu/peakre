@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_SETTLEMENT_ITEM_CLAIM_20160225_134000">
+        <createTable remarks="CLAIM SETTLEMENT item" tableName="T_RI_CLAIM_SETTLEMENT_ITEM">
+            <column name="SETTLE_DETAIL_ID" remarks="id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SETTLEMENT_ID" remarks="SETTLEMENT ID" type="NUMBER(10, 0)"/>
+            <column name="SECTION_ID" remarks="SECTION ID" type="NUMBER(10, 0)"/>
+            <column name="SETTLEMENT_TYPE" remarks="1.Loss(Indemnity),2.Expense,3.Additional case reserve,4.Reinstatement provision,5.Tax,6.Others" type="VARCHAR2(50)"/>
+            <column name="ORIGINAL_CURRENCY" remarks="CURRENCY type" type="VARCHAR2(10)"/>
+            <column name="AMOUNT_OC" remarks="last entered ORIGINAL CURRENCY AMOUNT" type="NUMBER(20, 2)"/>
+            <column name="AMOUNT_USD" remarks="usd amount" type="NUMBER(20, 2)"/>
+            <column name="EXCHANGE_RATE" remarks="EXCHANGE RATE" type="NUMBER(10, 9)"/>
+            <column name="CEDANT_REFER" remarks="CEDENT REFER" type="VARCHAR2(200)"/>
+            <column name="BROKER_REFER" remarks="BROKER REFER" type="VARCHAR2(200)"/>
+            <column name="POSTING_FLAG" remarks="POSTING FLAG" type="VARCHAR2(2)"/>
+            <column name="REMARK" remarks="REMARK" type="VARCHAR2(4000)"/>
+            <column name="DATE_OF_PAYMENT" remarks="pay date" type="date"/>
+            <column name="PAY_TYPE" remarks="PAY TYPE" type="VARCHAR2(10)"/>
+            <column name="BUSINESS_DIRECTION" remarks="1.financial 2.retrocession" type="VARCHAR2(10)"/>
+            <column name="FRONTING_FLAG" remarks="FRONTING FLAG" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+            <column name="ORG_POSTING_FLAG" remarks="org POSTING FLAG" type="VARCHAR2(2)"/>
+            <column name="RETRO_REF_SECTION_ID" remarks="related financial section id" type="NUMBER(10, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_CLAIM_SETTLEMENTLIST">
+        <addPrimaryKey columnNames="SETTLE_DETAIL_ID" constraintName="PK_T_RI_CLAIM_SETTLEMENTLIST" tableName="T_RI_CLAIM_SETTLEMENT_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_CL_ST_SETTLTMENT_ID">
+        <addForeignKeyConstraint baseColumnNames="SETTLEMENT_ID" baseTableName="T_RI_CLAIM_SETTLEMENT_ITEM" constraintName="FK_CL_ST_SETTLTMENT_ID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="SETTLEMENT_ID" referencedTableName="T_RI_CLAIM_SETTLEMENT"/>
+    </changeSet>
+</databaseChangeLog>

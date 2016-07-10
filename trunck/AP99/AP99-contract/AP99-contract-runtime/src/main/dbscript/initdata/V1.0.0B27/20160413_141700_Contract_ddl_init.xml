@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016041301_T_RI_CONT_ADJUSTMENT_ITEM">
+        <addColumn tableName="T_RI_CONT_ADJUSTMENT_ITEM">
+            <column name="DATE_AT" remarks="As at  Date" type="DATE"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="generated" id="2016041302_T_RI_CONT_ADJUSTMENT_ITEM_LOG">
+        <addColumn tableName="T_RI_CONT_ADJUSTMENT_ITEM_LOG">
+            <column name="DATE_AT" type="DATE"/>
+        </addColumn>
+    </changeSet>
+    
+</databaseChangeLog>

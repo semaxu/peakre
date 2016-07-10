@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+  <changeSet id="init-user" author="generated" runOnChange="true" runAlways="true" dbms="oracle">
+    <preConditions onFail="CONTINUE" onFailMessage="PKG_PUB_APP_CONTEXT not available and user will not be set in the context">
+      <or>
+        <sqlCheck expectedResult="2">select count(1) from user_objects where object_name='PKG_PUB_APP_CONTEXT' and status='VALID'</sqlCheck>
+        <sqlCheck expectedResult="1">select count(1) from user_objects where object_name='PKG_PUB_APP_CONTEXT' and object_type='SYNONYM' and status='VALID'</sqlCheck>
+      </or>
+    </preConditions>
+    <sql>CALL PKG_PUB_APP_CONTEXT.P_SET_APP_USER_ID(400)</sql>
+  </changeSet>  
+  
+</databaseChangeLog>

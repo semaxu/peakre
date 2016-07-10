@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016042101_T_RI_CONTRACT_INFO_LOG">
+    	<renameColumn 	
+            columnDataType="NUMBER(10)"		
+            newColumnName="CREATED_BY"		
+            oldColumnName="CREATE_BY"                 		
+            tableName="T_RI_CONTRACT_INFO_LOG"/> 		
+    </changeSet>
+
+    <changeSet author="generated" id="2016042102_T_RI_CONTRACT_INFO_LOG">
+    	<dropColumn tableName="T_RI_CONTRACT_INFO_LOG">
+            <column name="CREATE_ON" type="DATE"/>
+            <column name="LAST_CHANGED_ON" type="DATE"/>
+        </dropColumn>		
+    </changeSet>
+    
+    <changeSet author="generated" id="2016042203_T_RI_CONT_RESERVE_REBATE">
+    	<renameColumn 	
+            columnDataType="VARCHAR2(4000)"
+            newColumnName="REBATE_REMARK"
+            oldColumnName="REMARK"
+            tableName="T_RI_CONT_RESERVE_REBATE"/>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016042204_T_RI_CONT_RESERVE_REBATE_LOG">
+    	<renameColumn 	
+            columnDataType="VARCHAR2(4000)"
+            newColumnName="REBATE_REMARK"
+            oldColumnName="REMARK"
+            tableName="T_RI_CONT_RESERVE_REBATE_LOG"/>
+    </changeSet>
+    
+</databaseChangeLog>

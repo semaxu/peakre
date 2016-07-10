@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160429_190002_T_RI_CM_DOCUMENT">
+    <createTable tableName="T_RI_CM_DOCUMENT">
+      <column name="DOCUMENT_ID" type="NUMBER">
+        <constraints nullable="false"/>
+      </column>
+      <column name="DOCUMENT_TYPE" type="VARCHAR2(9)"/>
+      <column name="UPLOAD_TIME" type="date"/>
+      <column name="UPLOAD_PERSON" type="NUMBER"/>
+      <column name="FILE_NAME" type="VARCHAR2(50)"/>
+      <column name="FILE_PATH" type="VARCHAR2(200)"/>
+      <column name="REMARKS" type="VARCHAR2(200)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="INSERT_BY" type="NUMBER"/>
+      <column name="UPDATE_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER"/>
+      <column name="BUSINESS_ID" type="NUMBER"/>
+      <column name="BUSINESS_TYPE" remarks="business type" type="VARCHAR2(50)"/>
+      <column name="PARA" remarks="PARA" type="VARCHAR2(500)"/>
+      <column name="FILE_URL" remarks="FILE URL" type="VARCHAR2(500)"/>
+      <column name="STATUS" remarks="0-PENDING; 1-VALID" type="CHAR(1)"/>
+      <column name="DOCUMENT_TYPE_SELF" type="VARCHAR2(200)"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_T_RI_CM_DOCUMENT_FIELD">
+    <createTable tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" type="NUMBER">
+        <constraints nullable="false"/>
+      </column>
+      <column name="FIELD_NAME" type="VARCHAR2(200)"/>
+      <column name="FIELD_NULLABLE" type="VARCHAR2(1)"/>
+      <column name="FIELD_MAXLENGTH" type="NUMBER"/>
+      <column name="FIELD_TYPE" type="VARCHAR2(200)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="INSERT_BY" type="NUMBER"/>
+      <column name="UPDATE_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER"/>
+      <column name="BUSINESS_TYPE" type="VARCHAR2(50)">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_T_RI_CM_DOCUMENT_RULE">
+    <createTable tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" remarks="Upload type" type="VARCHAR2(50)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="PARSE_CLASS" remarks="Object class" type="VARCHAR2(200)"/>
+      <column name="PARSE_SERVICE" remarks="Business service class" type="VARCHAR2(200)"/>
+      <column name="PARSE_TYPE" remarks="File format" type="VARCHAR2(50)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="INSERT_BY" type="NUMBER"/>
+      <column name="UPDATE_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER"/>
+      <column name="TEMPLATE" remarks="Template name -FILE_ROOT_PATH/Template" type="VARCHAR2(200)"/>
+      <column name="DESCRIPTION" type="VARCHAR2(200)"/>
+      <column name="PROCESS_TYPE" remarks="1-Attachment;2-Parse File;3-Generate File" type="CHAR(1)"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_T_RI_CM_DOCUMENT_TYPE">
+    <createTable tableName="T_RI_CM_DOCUMENT_TYPE">
+      <column name="DOCUMENT_TYPE" type="VARCHAR2(10)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="TYPE_NAME" type="VARCHAR2(50)"/>
+      <column name="BUSINESS_TYPE" type="VARCHAR2(5)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="INSERT_BY" type="NUMBER"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER"/>
+      <column name="UPDATE_TIME" type="date"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_PK_RI_CM_DOCUMENT_ID">
+    <addPrimaryKey columnNames="DOCUMENT_ID" constraintName="PK_RI_CM_DOCUMENT_ID" tableName="T_RI_CM_DOCUMENT"/>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_PK_T_RI_CM_DOCUMENT_RULE">
+    <addPrimaryKey columnNames="BUSINESS_TYPE" constraintName="PK_T_RI_CM_DOCUMENT_RULE" tableName="T_RI_CM_DOCUMENT_RULE"/>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_PK_T_RI_CM_DOCUMENT_TYPE">
+    <addPrimaryKey columnNames="DOCUMENT_TYPE" constraintName="PK_T_RI_CM_DOCUMENT_TYPE" tableName="T_RI_CM_DOCUMENT_TYPE"/>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_T_RI_CM_DOCUMENT_RECORD">
+    <createTable tableName="T_RI_CM_DOCUMENT_RECORD">
+      <column name="DOCUMENT_RECORD_ID" type="NUMBER">
+        <constraints nullable="false"/>
+      </column>
+      <column name="RECORD_CONTENT" type="VARCHAR2(50)"/>
+      <column name="ERR_CONTENT" type="VARCHAR2(50)"/>
+      <column name="DOCUMENT_ID" type="NUMBER"/>
+      <column name="INSERT_BY" type="NUMBER"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_BY" type="NUMBER"/>
+      <column name="UPDATE_TIME" type="date"/>
+      <column name="PARSE_RESULT" remarks="Parse Result" type="VARCHAR2(200)"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_PK_RI_CM_DOCUMENT_RECORD_ID">
+    <addPrimaryKey columnNames="DOCUMENT_RECORD_ID" constraintName="PK_RI_CM_DOCUMENT_RECORD_ID" tableName="T_RI_CM_DOCUMENT_RECORD"/>
+  </changeSet>
+  <changeSet author="generated" id="20160429_190002_FK_RI_CM_DOCUMENT_DOCUMENT_ID">
+    <addForeignKeyConstraint baseColumnNames="DOCUMENT_ID" baseTableName="T_RI_CM_DOCUMENT_RECORD" constraintName="FK_RI_CM_DOCUMENT_DOCUMENT_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="DOCUMENT_ID" referencedTableName="T_RI_CM_DOCUMENT"/>
+  </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="201605251800_t_dd_busi_code_table.data">
+		<sql>
+			CREATE OR REPLACE VIEW V_RI_CURRENCY_EQUIVALENT AS
+			SELECT CURRENCY_CODE,CURRENCY_NAME,SYMBOL,PEPORTING_CURRENCY,GL_CURRENCY
+			FROM T_RI_CURRENCY
+			UNION
+			SELECT 'USD EQUIVALENT','USD EQUIVALENT',NULL,NULL,NULL FROM DUAL;
+
+		</sql>
+	</changeSet>
+
+</databaseChangeLog>

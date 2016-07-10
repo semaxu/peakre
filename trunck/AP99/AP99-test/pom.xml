@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>AP99-test</artifactId>
+	<packaging>jar</packaging>
+	<name>AP99-test</name>
+	<url>http://www.ebaotech.com</url>
+	<parent>
+		<artifactId>AP99-parent</artifactId>
+		<groupId>com.ebao.unicorn.AP99</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../AP99-parent</relativePath>
+	</parent>
+	<properties>
+
+	</properties>
+	<dependencies>
+<!-- 		<dependency>
+			<groupId>com.ebao.unicorn</groupId>
+			<artifactId>unicorn-test-base</artifactId>
+		</dependency> -->
+		
+	</dependencies>
+</project>

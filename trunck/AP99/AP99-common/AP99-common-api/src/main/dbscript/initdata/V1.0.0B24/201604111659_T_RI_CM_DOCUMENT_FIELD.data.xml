@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    
+ <changeSet author="generated" id="201604051735_T_RI_CM_DOCUMENT_FIELD.data">
+     <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="59"/>
+      <column name="FIELD_NAME" value="revaluationAmountUSD"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="58"/>
+      <column name="FIELD_NAME" value="currentAmountUSD"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="57"/>
+      <column name="FIELD_NAME" value="currentRate"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="56"/>
+      <column name="FIELD_NAME" value="amountUSD"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="55"/>
+      <column name="FIELD_NAME" value="originalRate"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="54"/>
+      <column name="FIELD_NAME" value="amountOC"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="53"/>
+      <column name="FIELD_NAME" value="currencyOC"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="52"/>
+      <column name="FIELD_NAME" value="entryItem"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="51"/>
+      <column name="FIELD_NAME" value="entryCode"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_FIELD">
+      <column name="DOCUMENT_FIELD_ID" valueNumeric="50"/>
+      <column name="FIELD_NAME" value="contractID"/>
+      <column name="FIELD_NULLABLE" value="0"/>
+      <column name="FIELD_MAXLENGTH" valueNumeric="-1"/>
+      <column name="FIELD_TYPE" value="2"/>
+      <column name="DOCUMENT_RULE_ID" valueNumeric="9"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+    </insert>
+</changeSet>
+    
+</databaseChangeLog>

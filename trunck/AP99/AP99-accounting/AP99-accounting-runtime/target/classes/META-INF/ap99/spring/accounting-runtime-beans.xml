@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+              http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<bean id="SoaDao" class="com.ebao.ap99.accounting.dao.SoaDao" />
+	<bean id="SoaCurrencyDao" class="com.ebao.ap99.accounting.dao.SoaCurrencyDao" />
+	<bean id="SoaSectionDao" class="com.ebao.ap99.accounting.dao.SoaSectionDao" />
+	<bean id="SoaSectionItemDao" class="com.ebao.ap99.accounting.dao.SoaSectionItemDao" />
+	<bean id="RevaluateDao" class="com.ebao.ap99.accounting.dao.RevaluateDao" />
+	<bean id="RevaluationJob" class="com.ebao.ap99.accounting.batch.RevaluationJob" />
+	<bean id="ExceptionReportJob" class="com.ebao.ap99.accounting.batch.ExceptionReportJob" />
+	
+	<bean id="IbnrConvertor" class="com.ebao.ap99.accounting.convertor.IbnrConvertor" />
+	<bean id="EstimateModelConvertor" class="com.ebao.ap99.accounting.convertor.EstimateModelConvertor" />
+	
+	<bean id="SoaBuilderImpl" class="com.ebao.ap99.accounting.util.SoaBuilderImpl" />
+	<bean id="SoaModelBuilderImpl" class="com.ebao.ap99.accounting.util.SoaModelBuilderImpl" />
+	<bean id="SoaBizServiceImpl" class="com.ebao.ap99.accounting.service.impl.SoaBizServiceImpl" />
+	<bean id="ChooseSectionBizServiceImpl" class="com.ebao.ap99.accounting.service.impl.ChooseSectionBizServiceImpl" />
+	<bean id="RevaluationReportServiceImpl" class="com.ebao.ap99.accounting.service.impl.RevaluationReportServiceImpl" />
+
+	<bean id="IBNRrecordDao" class="com.ebao.ap99.accounting.dao.IBNRrecordDao" />
+	<bean id="ActualizationInfoDao" class="com.ebao.ap99.accounting.dao.ActualizationInfoDao" />
+	<bean id="TRiAcctSegmentDao" class="com.ebao.ap99.accounting.dao.TRiAcctSegmentDao" />
+	<bean id="TRiAcctQuarterClosingDao" class="com.ebao.ap99.accounting.dao.TRiAcctQuarterClosingDao" />
+	<bean id="TRiAcctEstimateDao" class="com.ebao.ap99.accounting.dao.TRiAcctEstimateDao" />
+	<bean id="TRiAcctEstimateItemDao" class="com.ebao.ap99.accounting.dao.TRiAcctEstimateItemDao" />
+	<bean id="TRiAcctEstimateItemHisDao" class="com.ebao.ap99.accounting.dao.TRiAcctEstimateItemHisDao" />
+	<bean id="TRiAcctEstimateTransDao" class="com.ebao.ap99.accounting.dao.TRiAcctEstimateTransDao" />
+	<bean id="TRiAcctFeeDao" class="com.ebao.ap99.accounting.dao.TRiAcctFeeDao" />
+	<bean id="TRiAcctFeeDetailDao" class="com.ebao.ap99.accounting.dao.TRiAcctFeeDetailDao" />
+	<bean id="TRiAcctRecalForecastDao" class="com.ebao.ap99.accounting.dao.TRiAcctRecalForecastDao" />
+	<bean id="TRiAcctIbnrInfoDao" class="com.ebao.ap99.accounting.dao.TRiAcctIbnrInfoDao" />
+	
+	<bean id="QuarterClosingDSImpl" class="com.ebao.ap99.accounting.service.impl.QuarterClosingDSImpl" />
+	<bean id="SegmentDSImpl" class="com.ebao.ap99.accounting.service.impl.SegmentDSImpl" />
+	<bean id="EstimateDSImpl" class="com.ebao.ap99.accounting.service.impl.EstimateDSImpl" />
+	<bean id="AccountingServiceImpl" class="com.ebao.ap99.accounting.service.impl.AccountingServiceImpl" />
+	<bean id="EstimateDocServiceImpl" class="com.ebao.ap99.accounting.service.impl.EstimateDocServiceImpl" />
+	
+	<bean id="SegmentRestfulService" class="com.ebao.ap99.accounting.restful.SegmentRestfulService" />
+	<bean id="ClosingRestfulService" class="com.ebao.ap99.accounting.restful.ClosingRestfulService" />
+	<bean id="EstimateRestfulService" class="com.ebao.ap99.accounting.restful.EstimateRestfulService" />
+	<bean id="EstimateCalculator" class="com.ebao.ap99.accounting.estimation.EstimateCalculator" />
+	<bean id="ActualizationRestfulService" class="com.ebao.ap99.accounting.restful.ActualizationRestfulService" />
+	
+	<bean id="CutoffJob" class="com.ebao.ap99.accounting.batch.CutoffJob" />
+	
+	<bean id="ExeceptionContractBizServiceImpl" class="com.ebao.ap99.accounting.service.impl.ExeceptionContractBizServiceImpl" />
+	<bean id="ExceptionContractDao" class="com.ebao.ap99.accounting.dao.ExceptionContractDao" />
+
+
+	<bean id="SoaUploadingService" class="com.ebao.ap99.accounting.service.impl.SoaUploadingServiceImpl" />
+	
+	
+	<beans profile="web">
+		<bean id="com.ebao.ap99.accounting.restful.SoaInfoRestfulService"
+			class="com.ebao.ap99.accounting.restful.SoaInfoRestfulService" />
+	</beans>
+	
+	
+</beans>

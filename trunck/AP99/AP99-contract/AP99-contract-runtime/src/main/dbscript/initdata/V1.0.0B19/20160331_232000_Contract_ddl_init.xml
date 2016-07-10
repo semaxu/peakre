@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016033102_T_RI_CONTRACT_STRUCTURE">
+        <addColumn tableName="T_RI_CONTRACT_STRUCTURE">
+            <column defaultValue="N" name="IS_WITHDRAW" type="CHAR(1)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="generated" id="2016033102_T_RI_CONT_PREMIUM_ITEM">
+        <addColumn tableName="T_RI_CONT_PREMIUM_ITEM">
+            <column defaultValue="N" name="POST_SOA" type="CHAR(1)"/>
+        </addColumn>
+    </changeSet>
+    
+</databaseChangeLog>

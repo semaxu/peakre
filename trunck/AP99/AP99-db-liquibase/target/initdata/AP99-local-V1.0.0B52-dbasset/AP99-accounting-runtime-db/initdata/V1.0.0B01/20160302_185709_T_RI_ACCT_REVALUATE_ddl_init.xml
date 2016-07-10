@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185709_T_RI_ACCT_REVALUATE">
+        <createTable remarks="Revaluation transaction" tableName="T_RI_ACCT_REVALUATE">
+            <column name="REVALUATION_ID" remarks="primary key;" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FN_QUARTER" remarks="financial quarter;" type="CHAR(8)"/>
+            <column name="POST_DATA" remarks="post data;" type="date"/>
+            <column name="STATUS" remarks="1:VALID;  2:REVERSED;" type="CHAR(1)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_ACCT_REVALUATE_ID">
+        <addPrimaryKey columnNames="REVALUATION_ID" constraintName="PK_T_RI_ACCT_REVALUATE_ID" tableName="T_RI_ACCT_REVALUATE"/>
+    </changeSet>
+</databaseChangeLog>

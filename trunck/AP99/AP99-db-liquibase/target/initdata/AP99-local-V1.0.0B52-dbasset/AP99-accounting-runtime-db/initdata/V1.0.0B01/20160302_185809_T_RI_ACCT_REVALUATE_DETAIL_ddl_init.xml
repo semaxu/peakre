@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185809_T_RI_ACCT_REVALUATE_DETAIL">
+        <createTable remarks="Revaluation items" tableName="T_RI_ACCT_REVALUATE_DETAIL">
+            <column name="REVALUATION_DETAIL_ID" remarks="primary key;" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REVALUATION_ID" remarks="foreign key;" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BIZ_ID" remarks="the business's number;" type="NUMBER(10, 0)"/>
+            <column name="CURRENCY_CODE" remarks="CURRENCY CODE;" type="CHAR(3)"/>
+            <column name="BALANCE" remarks="BALANCE;" type="NUMBER(20, 2)"/>
+            <column name="ITEM_TYPE" remarks="1:ARAP; 2:Reserve; 3:Suspense;" type="VARCHAR2(10)"/>
+            <column name="SIGN" remarks="SIGN;" type="NUMBER(1, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TRANS_DATE" remarks="post data;" type="date"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_ACCT_REVALUATE_DETAIL">
+        <addPrimaryKey columnNames="REVALUATION_DETAIL_ID" constraintName="PK_T_RI_ACCT_REVALUATE_DETAIL" tableName="T_RI_ACCT_REVALUATE_DETAIL"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_ACCT_REVALUATE_DETAILID">
+        <addForeignKeyConstraint baseColumnNames="REVALUATION_ID" baseTableName="T_RI_ACCT_REVALUATE_DETAIL" constraintName="FK_RI_ACCT_REVALUATE_DETAILID" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="REVALUATION_ID" referencedTableName="T_RI_ACCT_REVALUATE"/>
+    </changeSet>
+</databaseChangeLog>

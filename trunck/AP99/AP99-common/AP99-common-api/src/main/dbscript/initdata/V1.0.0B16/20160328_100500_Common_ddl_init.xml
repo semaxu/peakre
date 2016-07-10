@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160328_100500_T_RI_MENUS">
+        <dropTable tableName="T_RI_MENUS" />
+    </changeSet>
+
+    <changeSet author="generated" id="20160328_100501_T_RI_MENUS">
+        <createTable tableName="T_RI_MENUS">
+            <column name="MENU_ID" type="NUMBER(10, 0)"/>
+            <column name="MENU_NAME" type="VARCHAR2(100)"/>
+            <column name="DESCRIPTION" type="VARCHAR2(200)"/>
+            <column name="PARENT_ID" type="NUMBER(10, 0)"/>
+            <column name="ICON" type="VARCHAR2(100)"/>
+            <column name="URL" type="VARCHAR2(100)"/>
+            <column name="PERMISSION_CODE" type="VARCHAR2(100)"/>
+            <column name="SORT_NO" type="NUMBER(2, 0)"/>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date"/>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(10, 0)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="generated" id="20160328_100502_T_RI_MENUS.DATA">
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="32"/>
+            <column name="MENU_NAME" value="General Ledger Query"/>
+            <column name="DESCRIPTION" value="General Ledger Query"/>
+            <column name="PARENT_ID" valueNumeric="7"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.gl.generalLedgerQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="73"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="33"/>
+            <column name="MENU_NAME" value="Sub Ledger Query"/>
+            <column name="DESCRIPTION" value="Sub Ledger Query"/>
+            <column name="PARENT_ID" valueNumeric="7"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.gl.subLedgerQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="74"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="1"/>
+            <column name="MENU_NAME" value="Contract Management"/>
+            <column name="DESCRIPTION" value="Contract Management"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="tasks"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE" value="Contract Authority"/>
+            <column name="SORT_NO" valueNumeric="1"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="2"/>
+            <column name="MENU_NAME" value="Contract Management"/>
+            <column name="DESCRIPTION" value="Contract Management"/>
+            <column name="PARENT_ID" valueNumeric="1"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.contract.management"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="11"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="3"/>
+            <column name="MENU_NAME" value="Pricing Estimate"/>
+            <column name="DESCRIPTION" value="Pricing Estimate"/>
+            <column name="PARENT_ID" valueNumeric="1"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.contract.pricing"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="12"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="4"/>
+            <column name="MENU_NAME" value="Claim"/>
+            <column name="DESCRIPTION" value="Claim"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="car"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="2"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="5"/>
+            <column name="MENU_NAME" value="Loss Adjustment"/>
+            <column name="DESCRIPTION" value="Loss Adjustment"/>
+            <column name="PARENT_ID" valueNumeric="4"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.claim.claimQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="21"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="6"/>
+            <column name="MENU_NAME" value="Event Management"/>
+            <column name="DESCRIPTION" value="Event Management"/>
+            <column name="PARENT_ID" valueNumeric="4"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.claim.eventSearch"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="22"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="30"/>
+            <column name="MENU_NAME" value="Business Partner Maintenance"/>
+            <column name="DESCRIPTION" value="Business Partner Maintenance"/>
+            <column name="PARENT_ID" valueNumeric="28"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.partner.search"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="31"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="7"/>
+            <column name="MENU_NAME" value="General Query"/>
+            <column name="DESCRIPTION" value="General Query"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="search"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="7"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="8"/>
+            <column name="MENU_NAME" value="Contract Query"/>
+            <column name="DESCRIPTION" value="Contract Query"/>
+            <column name="PARENT_ID" valueNumeric="7"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.queryView.search"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="71"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="9"/>
+            <column name="MENU_NAME" value="GL Data Query"/>
+            <column name="DESCRIPTION" value="GL Data Query"/>
+            <column name="PARENT_ID" valueNumeric="7"/>
+            <column name="ICON"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="72"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="10"/>
+            <column name="MENU_NAME" value="Technical Accounting"/>
+            <column name="DESCRIPTION" value="Technical Accounting"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="calculator"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="4"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="11"/>
+            <column name="MENU_NAME" value="Statement Management"/>
+            <column name="DESCRIPTION" value="Statement Management"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.statementQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="41"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="12"/>
+            <column name="MENU_NAME" value="Account Summary"/>
+            <column name="DESCRIPTION" value="Account Summary"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.accountSummaryQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="42"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="13"/>
+            <column name="MENU_NAME" value="Actualization"/>
+            <column name="DESCRIPTION" value="Actualization"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.actualization"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="43"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="14"/>
+            <column name="MENU_NAME" value="IBNR Management"/>
+            <column name="DESCRIPTION" value="IBNR Management"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.segmentQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="44"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="15"/>
+            <column name="MENU_NAME" value="Closing Setup"/>
+            <column name="DESCRIPTION" value="Closing Setup"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.closingSetting"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="45"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="16"/>
+            <column name="MENU_NAME" value="Exception Report"/>
+            <column name="DESCRIPTION" value="Exception Report"/>
+            <column name="PARENT_ID" valueNumeric="10"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.accounting.exceptionReport"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="46"/>
+           	<column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="17"/>
+            <column name="MENU_NAME" value="ARAP"/>
+            <column name="DESCRIPTION" value="ARAP"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="money"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="5"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="18"/>
+            <column name="MENU_NAME" value="Collection"/>
+            <column name="DESCRIPTION" value="Collection"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.collection"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="51"/>
+          	<column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="19"/>
+            <column name="MENU_NAME" value="Payment"/>
+            <column name="DESCRIPTION" value="Payment"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.payment"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="52"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="20"/>
+            <column name="MENU_NAME" value="Internal Offset"/>
+            <column name="DESCRIPTION" value="Internal Offset"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.internalOffset"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="53"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="22"/>
+            <column name="MENU_NAME" value="Transaction Reversal"/>
+            <column name="DESCRIPTION" value="Transaction Reversal"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.transactionReversal"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="54"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="23"/>
+            <column name="MENU_NAME" value="Transaction Query"/>
+            <column name="DESCRIPTION" value="Transaction Query"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.transactionQuery"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="55"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="24"/>
+            <column name="MENU_NAME" value="Bank Account Management"/>
+            <column name="DESCRIPTION" value="Bank Account Management"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.bankAccountManagement"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="56"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="25"/>
+            <column name="MENU_NAME" value="Exchange Rate Management"/>
+            <column name="DESCRIPTION" value="Exchange Rate Management"/>
+            <column name="PARENT_ID" valueNumeric="17"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.payment.exchangeRateManagement"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="57"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="26"/>
+            <column name="MENU_NAME" value="System Admin"/>
+            <column name="DESCRIPTION" value="System Admin"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="cogs"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="6"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="27"/>
+            <column name="MENU_NAME" value="User Maintenance"/>
+            <column name="DESCRIPTION" value="Maintenance Center"/>
+            <column name="PARENT_ID" valueNumeric="26"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.system.maintenance"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="61"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="28"/>
+            <column name="MENU_NAME" value="Business Partner"/>
+            <column name="DESCRIPTION" value="Business Partner Maintenance"/>
+            <column name="PARENT_ID"/>
+            <column name="ICON" value="users"/>
+            <column name="URL"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="3"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="31"/>
+            <column name="MENU_NAME" value="SUPI Adjustment"/>
+            <column name="DESCRIPTION" value="SUPI Adjustment"/>
+            <column name="PARENT_ID" valueNumeric="1"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.contract.supi"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="13"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+        <insert tableName="T_RI_MENUS">
+            <column name="MENU_ID" valueNumeric="29"/>
+            <column name="MENU_NAME" value="Spring Batch"/>
+            <column name="DESCRIPTION" value="Spring Batch"/>
+            <column name="PARENT_ID" valueNumeric="26"/>
+            <column name="ICON"/>
+            <column name="URL" value="ui.batch.maintenance"/>
+            <column name="PERMISSION_CODE"/>
+            <column name="SORT_NO" valueNumeric="63"/>
+            <column name="INSERT_BY" valueNumeric="-11"/>
+            <column name="UPDATE_BY" valueNumeric="-11"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

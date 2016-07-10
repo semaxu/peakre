@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016050103_T_RI_CONT_SUB_COB_TYPE.DATA">
+  <sql>
+insert into t_ri_contract_status values (5,'Cancelled');
+UPDATE t_dd_busi_code_table SET DATA_SOURCE = 'T_RI_CONT_CLAIM_LIMIT_TYPE' WHERE code_table_id = '810006';
+update t_dd_busi_code_table set condition_fields = '[&quot;PARENT_ID&quot;,&quot;COUNTRY_LEVEL&quot;]' where code_table_id = 800019;
+  </sql>
+</changeSet>
+</databaseChangeLog>

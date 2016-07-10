@@ -1,0 +1,5 @@
+#auto create by ebao-opts-maven-plugin:productinfo
+#Thu May 26 17:40:19 CST 2016
+version=V1.0.0B52
+dependOn=platform
+product=AP99

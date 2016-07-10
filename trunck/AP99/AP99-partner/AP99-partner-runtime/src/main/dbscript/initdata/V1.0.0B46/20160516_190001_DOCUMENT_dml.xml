@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160429_190001_DOCUMENT_ddl">
+  <sql>
+update t_ri_cm_document_type set type_name = 'Statement' where document_type = 12;
+INSERT INTO t_ri_cm_document_type (document_type, type_name,business_type) VALUES (26, 'Premium adjustment',7);
+  </sql>
+  </changeSet>
+</databaseChangeLog>

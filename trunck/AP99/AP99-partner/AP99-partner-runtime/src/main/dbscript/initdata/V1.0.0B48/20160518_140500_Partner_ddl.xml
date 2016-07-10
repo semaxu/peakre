@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160518_140500_Partner_ddl">
+		<addColumn tableName="T_RI_BP_BROKER_AML_CHECK">
+			<column name="IS_DIRECTOR_TERRORIST" remarks="IS_DIRECTOR_TERRORIST" type="VARCHAR2(1)"/>
+		</addColumn>
+		<addColumn tableName="T_RI_BP_MGA_AML_CHECK">
+			<column name="IS_DIRECTOR_TERRORIST" remarks="IS_DIRECTOR_TERRORIST" type="VARCHAR2(1)"/>
+		</addColumn>
+  </changeSet>
+</databaseChangeLog>

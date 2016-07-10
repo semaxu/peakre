@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="2016031401_T_RI_CONT_LIMIT_ITEM">
+		<dropColumn tableName="T_RI_CONT_LIMIT_ITEM" columnName="LIMIT_LAYER" />
+		<dropColumn tableName="T_RI_CONT_LIMIT_ITEM" columnName="NO_OF_LINES" />
+		<addColumn tableName="T_RI_CONT_LIMIT_ITEM">
+			<column name="LIMIT_LAYER" remarks="Limit  100%" type="NUMBER(12, 2)"/>
+			<column name="NO_OF_LINES" remarks="No. of Lines" type="NUMBER(5)"/>
+		</addColumn>
+	</changeSet>
+	<changeSet author="generated" id="2016031401_T_RI_CONT_LIMIT_ITEM_LOG">
+		<dropColumn tableName="T_RI_CONT_LIMIT_ITEM_LOG" columnName="LIMIT_LAYER" />
+		<dropColumn tableName="T_RI_CONT_LIMIT_ITEM_LOG" columnName="NO_OF_LINES" />
+		<addColumn tableName="T_RI_CONT_LIMIT_ITEM_LOG">
+			<column name="LIMIT_LAYER" type="NUMBER(12, 2)"/>
+			<column name="NO_OF_LINES" type="NUMBER(5)"/>
+		</addColumn>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_RESERVE_CLAIM_20160225_134000">
+         <createTable remarks="claim reserve information" tableName="T_RI_CLAIM_RESERVE">
+            <column name="RESERVE_ID" remarks="id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REF_ID" remarks="claim id/event id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SECTION_ID" remarks="section id" type="NUMBER(10, 0)"/>
+            <column name="BUSINESS_DIRECTION" remarks="1.financial,2.retrocession" type="VARCHAR2(10)"/>
+            <column name="RESERVE_TYPE" remarks="1.Loss(Indemnity),2.Expense,3.Additional case reserve,4.Reinstatement provision,5.Tax,6.Others" type="VARCHAR2(10)"/>
+            <column name="ORIGINAL_CURRENCY" remarks="CURRENCY type" type="VARCHAR2(10)"/>
+            <column name="AMOUNT_OC" remarks="last entered ORIGINAL CURRENCY AMOUNT" type="NUMBER(20, 2)"/>
+            <column name="AMOUNT_USD" remarks="usd amount" type="NUMBER(20, 2)"/>
+            <column name="EXCHANGE_RATE" remarks="EXCHANGE RATE" type="NUMBER(10, 9)"/>
+            <column name="CEDENT_REFER" remarks="CEDENT REFER" type="VARCHAR2(200)"/>
+            <column name="BROKER_REFER" remarks="BROKER REFER" type="VARCHAR2(200)"/>
+            <column name="POSTING_FLAG" remarks="POSTING FLAG" type="VARCHAR2(2)"/>
+            <column name="STATUS" remarks="0.new,1.submitted" type="VARCHAR2(2)"/>
+            <column name="REMARK" remarks="REMARK" type="VARCHAR2(4000)"/>
+            <column name="FRONTING_FLAG" remarks="FRONTING FLAG" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" remarks="INSERT BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" remarks="UPDATE BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" remarks="INSERT TIME" type="date"/>
+            <column name="UPDATE_TIME" remarks="UPDATE TIME" type="date"/>
+            <column name="ORG_AMOUNT_OC" remarks="submitted ORIGINAL CURRENCY AMOUNT" type="NUMBER(20, 2)"/>
+            <column name="ORG_POSTING_FLAG" remarks="submitted  POSTING FLAG" type="VARCHAR2(2)"/>
+            <column name="ORG_AMOUNT_USD" remarks="submitted usd amount" type="NUMBER(20, 2)"/>
+            <column name="REF_TYPE" remarks="1.claim,2.event" type="VARCHAR2(2)"/>
+            <column name="RETRO_REF_SECTION_ID" remarks="related financial section id" type="NUMBER(10, 0)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_CLAIM_RESERVE">
+        <addPrimaryKey columnNames="RESERVE_ID" constraintName="PK_T_RI_CLAIM_RESERVE" tableName="T_RI_CLAIM_RESERVE"/>
+    </changeSet>
+</databaseChangeLog>

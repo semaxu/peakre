@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160415_190002_Code_ddl">
+  <sql>
+update t_dd_busi_code_table t
+set t.id_field='BUSINESS_PARTNER_ID' ,
+t.code_field='BUSINESS_PARTNER_ID',
+t.sort_field='BUSINESS_PARTNER_ID'
+where t.code_table_id between 800000 and 800003;
+  </sql>
+  </changeSet>
+</databaseChangeLog>

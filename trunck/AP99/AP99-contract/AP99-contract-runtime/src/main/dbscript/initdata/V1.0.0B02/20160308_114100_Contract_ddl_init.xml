@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+<changeSet author="generated" id="2016030801_T_RI_CONTRACT_INFO">
+  <addColumn tableName="T_RI_CONTRACT_INFO">
+    <column name="DOCUMENT_ID" remarks="uploading document's id" type="NUMBER(10, 0)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONTRACT_INFO_LOG">
+  <addColumn tableName="T_RI_CONTRACT_INFO_LOG">
+    <column name="DOCUMENT_ID" type="NUMBER(10, 0)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_LIMIT_EVENT">
+  <dropColumn tableName="T_RI_CONT_LIMIT_EVENT" columnName="LIMITE_SHARE"/>
+  <addColumn tableName="T_RI_CONT_LIMIT_EVENT">
+    <column name="LIMIT_SHARE" remarks="Limit Our Signed Share" type="NUMBER(12, 2)"/>
+    <column name="LIABILITY_SIGNED_SHARE" remarks="Liability Our Signed Share" type="NUMBER(12, 2)"/>
+    <column name="LIABILITY_WRITTEN_SHARE" remarks="Liability Our Written Share" type="NUMBER(12, 2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_LIMIT_EVENT_LOG">
+  <dropColumn tableName="T_RI_CONT_LIMIT_EVENT_LOG" columnName="OUR_SHARE"/>
+  <addColumn tableName="T_RI_CONT_LIMIT_EVENT_LOG">
+    <column name="LIABILITY_SIGNED_SHARE" remarks="Liability Our Signed Share" type="NUMBER(12, 2)"/>
+    <column name="LIABILITY_WRITTEN_SHARE" remarks="Liability Our Written Share" type="NUMBER(12, 2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_LIMIT_ITEM">
+  <dropColumn tableName="T_RI_CONT_LIMIT_ITEM" columnName="OUR_SHARE"/>
+  <addColumn tableName="T_RI_CONT_LIMIT_ITEM">
+    <column name="LIABILITY_SIGNED_SHARE" remarks="Liability Our Signed Share" type="NUMBER(12, 2)"/>
+    <column name="LIABILITY_WRITTEN_SHARE" remarks="Liability Our Written Share" type="NUMBER(12, 2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_LIMIT_ITEM_LOG">
+  <dropColumn tableName="T_RI_CONT_LIMIT_ITEM_LOG" columnName="OUR_SHARE"/>
+  <addColumn tableName="T_RI_CONT_LIMIT_ITEM_LOG">
+    <column name="LIABILITY_SIGNED_SHARE" type="NUMBER(12, 2)"/>
+    <column name="LIABILITY_WRITTEN_SHARE" type="NUMBER(12, 2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_PREMIUM_ITEM">
+  <addColumn tableName="T_RI_CONT_PREMIUM_ITEM">
+    <column name="OUR_SIGNED_SHARE" remarks="Amount Our Signed Share" type="NUMBER(20, 2)"/>
+    <column name="OUR_WRITTEN_SHARE" remarks="Amount Our Written Share" type="NUMBER(20, 2)"/>
+    <column name="PERCENTAGE" remarks="Percentage" type="NUMBER(5, 2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_PREMIUM_ITEM_LOG">
+  <dropColumn tableName="T_RI_CONT_PREMIUM_ITEM_LOG" columnName="DEFINED_ID"/>
+  <addColumn tableName="T_RI_CONT_PREMIUM_ITEM_LOG">
+    <column name="DEFINED_IN" type="VARCHAR2(2)"/>
+    <column name="OUR_SIGNED_SHARE" type="NUMBER(20, 2)"/>
+    <column name="OUR_WRITTEN_SHARE" type="NUMBER(20, 2)"/>
+    <column name="PERCENTAGE" type="NUMBER(5, 2)"/>
+  </addColumn>
+</changeSet>
+<changeSet author="generated" id="2016030801_T_RI_CONT_REINSTATE_LOG">
+  <dropColumn tableName="T_RI_CONT_REINSTATE_LOG" columnName="REIN_CURRENCY"/>
+  <addColumn tableName="T_RI_CONT_REINSTATE_LOG">
+    <column name="REIN_CURRENCY" type="VARCHAR2(5)"/>
+  </addColumn>
+</changeSet>
+</databaseChangeLog>

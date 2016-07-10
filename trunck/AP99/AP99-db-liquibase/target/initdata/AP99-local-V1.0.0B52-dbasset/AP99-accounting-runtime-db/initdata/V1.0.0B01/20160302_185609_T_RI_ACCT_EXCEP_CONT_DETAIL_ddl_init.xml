@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_185609_T_RI_ACCT_EXCEP_CONT_DETAIL">
+        <createTable remarks="Exception report details" tableName="T_RI_ACCT_EXCEP_CONT_DETAIL">
+            <column name="EXCEPTION_DETAIL_ID" remarks="primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="EXCEPTION_ID" remarks="foreign key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_COMP_ID" remarks="contract id" type="NUMBER(10, 0)"/>
+            <column name="CONTRACT_ID" remarks="contract code" type="VARCHAR2(10)"/>
+            <column name="FN_YEAR" remarks="contract's financial year" type="NUMBER(4, 0)"/>
+            <column name="FN_QUARTER" remarks="contract's financial quarter" type="CHAR(8)"/>
+            <column name="REVIEWED_FLAG" remarks="1:not reviewed; 2:reviewed" type="CHAR(1)"/>
+            <column name="STATUS" type="CHAR(1)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="UPDATE_TIME" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_ACCT_EXCEP_DETAIL_ID">
+        <addPrimaryKey columnNames="EXCEPTION_DETAIL_ID" constraintName="PK_RI_ACCT_EXCEP_DETAIL_ID" tableName="T_RI_ACCT_EXCEP_CONT_DETAIL"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_ACCT_EXCEP_DETAIL">
+        <addForeignKeyConstraint baseColumnNames="EXCEPTION_ID" baseTableName="T_RI_ACCT_EXCEP_CONT_DETAIL" constraintName="FK_RI_ACCT_EXCEP_DETAIL" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="EXCEPTION_ID" referencedTableName="T_RI_ACCT_EXCEP_CONT"/>
+    </changeSet>
+</databaseChangeLog>

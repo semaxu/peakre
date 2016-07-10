@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201605121453_T_RI_ENTRY_CODE.DATA">
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="EP01"/>
+      <column name="ENTRY_CODE_NAME" value="EP Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="EP02"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="EP02"/>
+      <column name="ENTRY_CODE_NAME" value="EP Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="EP02"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

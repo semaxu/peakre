@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+              http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+              http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+              http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+              http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository.xsd">
+
+	<beans profile="web">
+		<bean id="com.ebao.ap99.file.restful.fileResource"  class="com.ebao.ap99.file.restful.FileResource" />
+		<bean id="com.ebao.ap99.file.restful.documentResource"  class="com.ebao.ap99.file.restful.DocumentResource" />
+ 	    <bean id="com.ebao.ap99.file.service.impl.DocumentService" class="com.ebao.ap99.file.service.impl.DocumentServiceImpl" />
+		<bean id="documentDao" class="com.ebao.ap99.file.dao.DocumentDao" />
+		<bean id="documentRuleDao" class="com.ebao.ap99.file.dao.DocumentRuleDao" />
+		<bean id="documentRecordDao" class="com.ebao.ap99.file.dao.DocumentRecordDao" />
+		<bean id="documentTypeDao" class="com.ebao.ap99.file.dao.DocumentTypeDao" />
+		<bean id="TRiMenusDao" class="com.ebao.ap99.common.dao.TRiMenusDao" />
+ 	    <bean id="MenusRestfulService" class="com.ebao.ap99.common.restful.MenusRestfulService" />
+ 	   
+		<bean id="com.ebao.ap99.file.service.impl.PrintService" class="com.ebao.ap99.file.service.impl.PrintServiceImpl" />
+		<bean id="com.ebao.ap99.file.service.FileService" class="com.ebao.ap99.file.service.impl.FileServiceImpl" />
+		
+	</beans>
+
+</beans>

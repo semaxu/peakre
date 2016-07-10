@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CLAIM_LOSS_CAUSE.DATA_CLAIM_20160225_134000">
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="BUFR"/>
+            <column name="NAME" value="Bush Fire/Wildfire"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="BORD"/>
+            <column name="NAME" value="Bordereau"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="AVAL"/>
+            <column name="NAME" value="Avalanch"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="ARSN"/>
+            <column name="NAME" value="Arson"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="CAPS"/>
+            <column name="NAME" value="Capsizing"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="CLOS"/>
+            <column name="NAME" value="Cargo loss/damage"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="COLL"/>
+            <column name="NAME" value="Collapse"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="COLS"/>
+            <column name="NAME" value="Collision"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="DERA"/>
+            <column name="NAME" value="Derailment"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="DROT"/>
+            <column name="NAME" value="Drought"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="EARTH"/>
+            <column name="NAME" value="Earthquake"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="ENV"/>
+            <column name="NAME" value="Environmental Pollution"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="EXPL"/>
+            <column name="NAME" value="Explosion"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="FDES"/>
+            <column name="NAME" value="Faulty Design"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="FIRE"/>
+            <column name="NAME" value="Fire"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="FLOOD"/>
+            <column name="NAME" value="Flood"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="HAIL"/>
+            <column name="NAME" value="Hail"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="HIPI"/>
+            <column name="NAME" value="Hijack/Piracy"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="HUM"/>
+            <column name="NAME" value="Human Error"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="LDSL"/>
+            <column name="NAME" value="Landslide"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="LIGT"/>
+            <column name="NAME" value="Lightning"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="MACH"/>
+            <column name="NAME" value="Machinery Breakdown"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="MEDM"/>
+            <column name="NAME" value="Medical Malpractice"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="NATUR"/>
+            <column name="NAME" value="Natural Disaster"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="OILC"/>
+            <column name="NAME" value="Oil contamination (cargo)"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="OTHR"/>
+            <column name="NAME" value="Others"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="PAND"/>
+            <column name="NAME" value="Pandemic"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="PIA"/>
+            <column name="NAME" value="Personal Injury/Fatal Injury"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="POLL"/>
+            <column name="NAME" value="Pollution"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="STRM"/>
+            <column name="NAME" value="Rainstorm"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="RIOT"/>
+            <column name="NAME" value="Riot/ Strike"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="ROBB"/>
+            <column name="NAME" value="Robbery"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="INFI"/>
+            <column name="NAME" value="Staff/director infidelity"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="TECH"/>
+            <column name="NAME" value="Technical Failure"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="TERR"/>
+            <column name="NAME" value="Terrorism"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="THEFT"/>
+            <column name="NAME" value="Theft / Robbery"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="TORN"/>
+            <column name="NAME" value="Tornado"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="TFAC"/>
+            <column name="NAME" value="Traffic accident"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="TSUN"/>
+            <column name="NAME" value="Tsunami"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="UNKNO"/>
+            <column name="NAME" value="Unknown"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="VAND"/>
+            <column name="NAME" value="Vandalism / Malicious Damage"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="GROU"/>
+            <column name="NAME" value="Vessel Grounded / Stranded"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="VULC"/>
+            <column name="NAME" value="Vulcanic Eruption"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="TROP"/>
+            <column name="NAME" value="Windstorm"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="WSTR"/>
+            <column name="NAME" value="Winter Storm"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+        <insert tableName="T_RI_CLAIM_LOSS_CAUSE">
+            <column name="CODE" value="WINJ"/>
+            <column name="NAME" value="Work Injury"/>
+            <column name="IFUSE" value="1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

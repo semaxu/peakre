@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+ 
+    <changeSet author="generated" id="2016032101_T_RI_CONT_ACCOUNT">
+		 <addColumn tableName="T_RI_CONT_ACCOUNT">
+            <column name="OUTSTANDING_LOSSES_1" type="NUMBER(10,9)"/>
+            <column name="OUTSTANDING_LOSSES_2" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_1" type="NUMBER(10,9)"/>
+            <column name="FPREMIUM_2" type="NUMBER(10,9)"/>
+            <column name="ACCOUNT_REMARK" type="VARCHAR2(4000)"/>
+            <column name="ACCOUNT_DAYS" type="NUMBER(4)"/>
+            <column name="SETTLEMENT_DAYS" type="NUMBER(4)"/>
+        </addColumn>
+      </changeSet>
+       <changeSet author="generated" id="2016032101_T_RI_CONT_ACCOUNT_LOG">
+		 <addColumn tableName="T_RI_CONT_ACCOUNT_LOG">
+            <column name="OUTSTANDING_LOSSES_1" type="NUMBER(10,9)"/>
+            <column name="OUTSTANDING_LOSSES_2" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_1" type="NUMBER(10,9)"/>
+            <column name="FPREMIUM_2" type="NUMBER(10,9)"/>
+            <column name="ACCOUNT_REMARK" type="VARCHAR2(4000)"/>
+            <column name="ACCOUNT_DAYS" type="NUMBER(4)"/>
+            <column name="SETTLEMENT_DAYS" type="NUMBER(4)"/>
+        </addColumn>
+      </changeSet>
+	
+</databaseChangeLog>

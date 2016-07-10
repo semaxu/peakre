@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    
+ <changeSet author="generated" id="201604051735_T_RI_MENU.data">
+     <insert tableName="T_RI_MENUS">
+      <column name="MENU_ID" valueNumeric="34"/>
+      <column name="MENU_NAME" value="Revaluation Batch Job"/>
+      <column name="DESCRIPTION" value="Revaluation Batch Job"/>
+      <column name="PARENT_ID" valueNumeric="10"/>
+      <column name="ICON"/>
+      <column name="URL" value="ui.accounting.revaluationBatchJob"/>
+      <column name="PERMISSION_CODE"/>
+      <column name="SORT_NO" valueNumeric="47"/>
+      <column name="INSERT_BY" valueNumeric="401"/>
+      <column name="UPDATE_BY" valueNumeric="401"/>
+    </insert>  
+</changeSet>
+    
+</databaseChangeLog>

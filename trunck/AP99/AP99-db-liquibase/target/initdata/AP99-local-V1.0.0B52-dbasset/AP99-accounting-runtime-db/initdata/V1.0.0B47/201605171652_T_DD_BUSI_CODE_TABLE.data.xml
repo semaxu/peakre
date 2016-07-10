@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605171654_T_DD_BUSI_CODE_TABLE.data">
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="STATEMENT_TYPE LIKE '%3%'" type="VARCHAR2(4000)"/>
+             <column name="name" value="PORTFOLIO TRANSFER OUT" type="VARCHAR2(100)"/>
+        	<where>CODE_TABLE_ID =	800021</where>
+        </update>
+    </changeSet>
+     <changeSet author="generated" id="201605171655_T_DD_BUSI_CODE_TABLE.data">
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="STATEMENT_TYPE LIKE '%1%'" type="VARCHAR2(4000)"/>
+             <column name="name" value="PORTFOLIO TRANSFER OUT" type="VARCHAR2(100)"/>
+        	<where>CODE_TABLE_ID =	800004</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd"
+    default-autowire="byName">
+    
+    <bean id="onlinePrintPolicy" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="onlinePrintPolicyQueue" />
+    </bean>
+  
+    <bean id="onlineReplyPrintPolicy" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="onlineReplyPrintPolicyQueue" />
+    </bean>
+    
+    <bean id="onlinePrintPolicyServer" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="onlinePrintPolicyServerQueue" />
+    </bean>
+    
+    <bean id="onlineReplyPrintPolicyServer" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="onlineReplyPrintPolicyServerQueue" />
+    </bean>
+    
+    <!-- 请求队列 -->
+    <bean id="emailSend" class="org.apache.activemq.command.ActiveMQQueue">
+        <!-- 设置消息队列的名字 -->
+        <constructor-arg index="0" value="emailSendQueue" />
+    </bean>
+    
+    <!-- 返回队列队列 -->
+    <bean id="emailReplySend" class="org.apache.activemq.command.ActiveMQQueue">
+        <!-- 设置消息队列的名字 -->
+        <constructor-arg index="0" value="emailReplySendQueue" />
+    </bean>
+    
+    <!-- DMS 相关 -->
+    <bean id="documentBulkImport" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentBulkImportQueue" />
+    </bean>
+    
+    <bean id="documentReplyBulkImport" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyBulkImportQueue" />
+    </bean>
+    
+    <bean id="documentDelete" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentDeleteQueue" />
+    </bean>
+    
+     <bean id="documentReplyDelete" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyDeleteQueue" />
+    </bean>
+    
+     <bean id="documentRename" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentRenameQueue" />
+    </bean>
+    
+     <bean id="documentReplyRename" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyRenameQueue" />
+    </bean>
+    
+     <bean id="documentMove" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentMoveQueue" />
+    </bean>
+    
+     <bean id="documentReplyMove" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyMoveQueue" />
+    </bean>
+    
+     <bean id="documentCopy" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentCopyQueue" />
+    </bean>
+    
+     <bean id="documentReplyCopy" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyCopyQueue" />
+    </bean>
+    
+     <bean id="documentInfo" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentInfoQueue" />
+    </bean>
+    <bean id="documentReplyInfo" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyInfoQueue" />
+    </bean>
+    
+    <bean id="documentSearch" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentSearchQueue" />
+    </bean>
+    <bean id="documentReplySearch" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplySearchQueue" />
+    </bean>
+    <bean id="documentCheckin" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentCheckinQueue" />
+    </bean>
+    <bean id="documentReplyCheckin" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyCheckinQueue" />
+    </bean>
+    
+    <bean id="documentCheckout" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentCheckoutQueue" />
+    </bean>
+    <bean id="documentReplyCheckout" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyCheckoutQueue" />
+    </bean>
+    
+    <bean id="documentCancelCheckout" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentCancelCheckoutQueue" />
+    </bean>
+    <bean id="documentReplyCancelCheckout" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="documentReplyCancelCheckoutQueue" />
+    </bean>
+    <!-- DMS 相关 -->
+    
+    <!-- sms相关 -->
+    <bean id="smsSend" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="smsSendQueue" />
+    </bean>
+    <bean id="smsReplySend" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="smsReplySendQueue" />
+    </bean>
+    <!-- sms相关 -->
+    
+    <!-- cliam相关 -->
+    <bean id="claimConverter" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="claimconverterQueue" />
+    </bean>
+    <bean id="claimConverterServer" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="claimconverterServerQueue" />
+    </bean>
+    <bean id="claimConverterReplyServer" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="claimconverterReplyServerQueue" />
+    </bean>
+    <bean id="claimConverterReply" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="claimconverterReplyQueue" />
+    </bean>
+    <!-- clian相关 -->
+     
+    <bean id="postFee" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="postFeeQueue" />
+    </bean>
+    
+    <bean id="replyPostFee" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="replyPostFeeQueue" />
+    </bean>
+    
+    <!-- GLFee -->
+    <bean id="financeGLFee" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="financeGLFeeQueue" />
+    </bean>
+    
+    <bean id="financeGLVoucher" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="financeGLVoucherQueue" />
+    </bean>
+    
+    <bean id="createUserNotify" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="createUserNotifyQueue" />
+    </bean>
+    
+    <bean id="changePasswordNotify" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="changePasswordNotifyQueue" />
+    </bean>
+    
+    <bean id="resetPasswordNotify" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="resetPasswordNotifyQueue" />
+    </bean>
+    
+    <bean id="enableUserNotify" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="enableUserNotifyQueue" />
+    </bean>
+    
+    <bean id="disableUserNotify" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg index="0" value="disableUserNotifyQueue" />
+    </bean>
+     
+    <bean id="destinationHolder" class="com.ebao.unicorn.integration.client.mq.impl.SpringMqDestinationHolder">
+    	<property name="responseMap">
+    		<map>
+    			<entry key="onlinePrintPolicy">
+    				<ref bean="onlineReplyPrintPolicy"/>
+    			</entry>
+    			<entry key="emailSend">
+    				<ref bean="emailReplySend"/>
+    			</entry>
+    			<!-- DMS相关 -->
+    			<entry key="documentBulkImport">
+    				<ref bean="documentReplyBulkImport"/>
+    			</entry>
+    			<entry key="documentDelete">
+    				<ref bean="documentReplyDelete"/>
+    			</entry>
+    			<entry key="documentRename">
+    				<ref bean="documentReplyRename"/>
+    			</entry>
+    			<entry key="documentMove">
+    				<ref bean="documentReplyMove"/>
+    			</entry>
+    			<entry key="documentCopy">
+    				<ref bean="documentReplyCopy"/>
+    			</entry>
+    			<entry key="documentInfo">
+    				<ref bean="documentReplyInfo"/>
+    			</entry>
+    			<entry key="documentSearch">
+    				<ref bean="documentReplySearch"/>
+    			</entry>
+    			<entry key="documentCheckin">
+    				<ref bean="documentReplyCheckin"/>
+    			</entry>
+    			<entry key="documentCheckout">
+    				<ref bean="documentReplyCheckout"/>
+    			</entry>
+    			<entry key="documentCancelCheckout">
+    				<ref bean="documentReplyCancelCheckout"/>
+    			</entry>
+    			<!-- DMS相关 -->
+    			
+    			<!-- sms -->
+    			<entry key="smsSend">
+    				<ref bean="smsReplySend"/>
+    			</entry>
+    			<!-- sms -->
+    			<!-- 理赔 -->
+    			<entry key="claimConverter">
+    				<ref bean="claimConverterReply"/>
+    			</entry>
+    			<!-- 理赔 -->
+    		</map>
+    	</property>
+    	
+    	<property name="replyMap">
+    		<map>
+    			<entry key="onlinePrintPolicyServer">
+    				<ref bean="onlineReplyPrintPolicyServer"/>
+    			</entry>
+    			<entry key="postFee">
+    				<ref bean="replyPostFee"/>
+    			</entry>
+    			<entry key="claimConverterServer">
+    				<ref bean="claimConverterReplyServer"></ref>
+    			</entry>
+    		</map>
+    	</property>
+    </bean>
+    
+    <!-- property resolver -->
+    <bean id="propertyResolver" class="com.ebao.unicorn.integration.client.mq.impl.DefaultIntegrationPointPropertyResolver">
+    	<property name="transactionalIntegrations">
+    		<list>
+    			
+    		</list>
+    	</property>
+    </bean>
+</beans>

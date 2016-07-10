@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="20160504_T_RI_LOCK">
+    <createTable remarks="country" tableName="T_RI_LOCK">
+      <column name="LOCK_ID" type="NUMBER(10, 0)">
+        <constraints nullable="false"/>
+      </column>
+      <column name="RESOURCE_TYPE" type="NUMBER"/>
+      <column name="RESOURCE_ID" type="NUMBER(10, 0)"/>
+      <column name="LOCKUSER_ID" type="NUMBER(10, 0)"/>
+      <column name="LOCK_TIME" type="date"/>
+      <column name="INSERT_BY" type="NUMBER(10, 0)"/>
+      <column name="UPDATE_BY" type="NUMBER(10, 0)"/>
+      <column name="INSERT_TIME" type="date"/>
+      <column name="UPDATE_TIME" type="date"/>
+      <column name="UNLOCK_TIME" type="date"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="T_RI_LOCK">
+    <addPrimaryKey columnNames="LOCK_ID" constraintName="T_RI_LOCK" tableName="T_RI_LOCK"/>
+  </changeSet>
+
+</databaseChangeLog>

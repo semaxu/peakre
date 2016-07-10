@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016050102_T_RI_CONTRACT_CODE_TABLE">
+  <sql>
+  create table T_RI_CONT_ACCOUNT_FRE_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_ACCOUNT_FRE_TYPE';
+create table T_RI_CONT_ENDORSEMENT_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_ENDORSEMENT_TYPE';
+create table T_RI_CONT_PROTECTION_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_PROTECTION_TYPE';
+create table T_RI_CONT_TERMINATION_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_TERMINATION_TYPE';
+create table T_RI_CONTRACT_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONTRACT_TYPE';
+create table T_RI_CONT_COMMISSION_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_COMMISSION_TYPE';
+create table T_RI_CONT_LIMIT_EVENT_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_LIMIT_EVENT_TYPE';
+create table T_RI_CONT_ACCOUNT_WRITTEN_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_ACCOUNT_WRITTEN_TYPE';
+create table T_RI_CONT_EPI_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_EPI_TYPE';
+create table T_RI_CONT_LIMIT_RISKEVENT_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_LIMIT_RISKEVENT_TYPE';
+create table T_RI_CONT_SHARE_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_SHARE_TYPE';
+create table T_RI_CONT_CLAIM_WEATHER_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_CLAIM_WEATHER_TYPE';
+create table T_RI_CONT_CLAIM_BASIS_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_CLAIM_BASIS_TYPE';
+create table T_RI_CONT_CLAIM_PRICING_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_CLAIM_PRICING_TYPE';
+create table T_RI_CONT_SHARE_DEFINED_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_SHARE_DEFINED_TYPE';
+create table T_RI_CONTRACT_CATEGORY_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONTRACT_CATEGORY_TYPE';
+create table T_RI_CONT_ACCOUNT_EARNING_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_ACCOUNT_EARNING_TYPE';
+create table T_RI_CONT_CLAIM_LIMIT_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_CLAIM_LIMIT_CATE_TYPE';
+create table T_RI_CONT_DEDUCTION_ITEM_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_DEDUCTION_ITEM_TYPE';
+create table T_RI_CONTRACT_NATURE_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONTRACT_NATURE_TYPE';
+create table T_RI_CONT_ACCOUNT_BASIS_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_ACCOUNT_BASIS_TYPE';
+create table T_RI_CONT_EXCHANGE_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_EXCHANGE_TYPE';
+create table T_RI_CONT_PREMIUM_CALC_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_PREMIUM_CALC_TYPE';
+create table T_RI_CONT_PREMIUM_DEFINED_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_PREMIUM_DEFINED_TYPE';
+create table T_RI_CONT_SHARE_CATE_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_SHARE_CATE_TYPE';
+create table T_RI_CONTRACT_PERIL_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONTRACT_PERIL_TYPE';
+create table T_RI_CONT_UW_COMPANY_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CONT_UW_COMPANY_TYPE';
+create table T_RI_CLAUSE_REQUIRED_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CLAUSE_REQUIRED_TYPE';
+create table CLAUSE_RECOMMEND_TYPE as select code as type, code_name as description from t_ri_contract_code_table where code_type = 'CLAUSE_RECOMMEND_TYPE';
+CREATE TABLE T_RI_CONTRACT_SUBCOB_TYPE (
+TYPE VARCHAR2(3),
+DESCRIPTION VARCHAR2(500),
+COB_ID VARCHAR2(3)
+);
+</sql>
+</changeSet>
+</databaseChangeLog>

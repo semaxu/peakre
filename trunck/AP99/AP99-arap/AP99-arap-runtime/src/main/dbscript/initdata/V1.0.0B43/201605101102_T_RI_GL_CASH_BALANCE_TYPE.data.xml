@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201605101102_T_RI_GL_CASH_BALANCE_TYPE.data">
+    <insert tableName="T_RI_GL_CASH_BALANCE_TYPE">
+      <column name="CB_TYPE" valueNumeric="0"/>
+      <column name="DESCRIPTION" value="ARAP"/>
+    </insert>
+    <insert tableName="T_RI_GL_CASH_BALANCE_TYPE">
+      <column name="CB_TYPE" valueNumeric="1"/>
+      <column name="DESCRIPTION" value="Payment, Collection"/>
+    </insert>
+    <insert tableName="T_RI_GL_CASH_BALANCE_TYPE">
+      <column name="CB_TYPE" valueNumeric="2"/>
+      <column name="DESCRIPTION" value="Internal Offset"/>
+    </insert>
+    <insert tableName="T_RI_GL_CASH_BALANCE_TYPE">
+      <column name="CB_TYPE" valueNumeric="3"/>
+      <column name="DESCRIPTION" value="Balance Generation"/>
+    </insert>
+    <insert tableName="T_RI_GL_CASH_BALANCE_TYPE">
+      <column name="CB_TYPE" valueNumeric="4"/>
+      <column name="DESCRIPTION" value="Balance Refund"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

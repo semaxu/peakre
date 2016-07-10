@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+	<changeSet author="generated" id="2016030901_CLAIM_T_RI_CLAIM_MESSAGE">
+		<addColumn tableName="T_RI_CLAIM_MESSAGE">
+			<column name="REF_ID" remarks="claimid/eventid" type="NUMBER(10)" />
+			<column name="REF_TYPE" remarks="1.claim 2.event" type="CHAR(1)" />
+			<column name="SECTION_ID" remarks="section id" type="NUMBER(10)" />
+			<column name="FLAG" remarks="if check" type="CHAR(1)" />
+		</addColumn>
+	</changeSet>
+</databaseChangeLog>

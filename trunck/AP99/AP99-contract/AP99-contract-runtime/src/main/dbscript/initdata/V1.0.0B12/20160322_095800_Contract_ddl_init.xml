@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+ 
+    <changeSet author="generated" id="2016032201_T_RI_CONT_ACCOUNT">
+		 <dropColumn tableName="T_RI_CONT_ACCOUNT">
+            <column name="OUTSTANDING_LOSSES_1" type="NUMBER(10,9)"/>
+            <column name="OUTSTANDING_LOSSES_2" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_1" type="NUMBER(10,9)"/>
+            <column name="FPREMIUM_2" type="NUMBER(10,9)"/>            
+        </dropColumn>
+           <addColumn tableName="T_RI_CONT_ACCOUNT">
+            <column name="OUTSTANDING_LOSSES_IN" type="NUMBER(10,9)"/>
+            <column name="OUTSTANDING_LOSSES_OUT" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_IN" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_OUT" type="NUMBER(10,9)"/>
+        </addColumn>
+      </changeSet>
+       <changeSet author="generated" id="2016032201_T_RI_CONT_ACCOUNT_LOG">
+		 <dropColumn tableName="T_RI_CONT_ACCOUNT_LOG">
+            <column name="OUTSTANDING_LOSSES_1" type="NUMBER(10,9)"/>
+            <column name="OUTSTANDING_LOSSES_2" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_1" type="NUMBER(10,9)"/>
+            <column name="FPREMIUM_2" type="NUMBER(10,9)"/>
+        </dropColumn>
+         <addColumn tableName="T_RI_CONT_ACCOUNT_LOG">
+            <column name="OUTSTANDING_LOSSES_IN" type="NUMBER(10,9)"/>
+            <column name="OUTSTANDING_LOSSES_OUT" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_IN" type="NUMBER(10,9)"/>
+            <column name="PREMIUM_OUT" type="NUMBER(10,9)"/>
+        </addColumn>
+      </changeSet>
+      <changeSet author="generated" id="2016032201_T_RI_CONTRACT_INFO">
+         <addColumn tableName="T_RI_CONTRACT_INFO">
+            <column name="LEADER_NAME" type="VARCHAR2(100)"/>
+            <column name="PORTFOLIO_TRANSFER" type="VARCHAR2(10)"/>
+            <column name="REJECT_REASON" type="VARCHAR2(2000)"/>
+        </addColumn>
+      </changeSet>
+      <changeSet author="generated" id="2016032201_T_RI_CONTRACT_INFO_LOG">
+         <addColumn tableName="T_RI_CONTRACT_INFO_LOG">
+            <column name="LEADER_NAME" type="VARCHAR2(100)"/>
+            <column name="PORTFOLIO_TRANSFER" type="VARCHAR2(10)"/>
+            <column name="REJECT_REASON" type="VARCHAR2(2000)"/>
+        </addColumn>
+      </changeSet>
+	
+</databaseChangeLog>

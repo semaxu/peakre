@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+	<property name="client.mq.url" catalog="mq">
+		<description>active mq url</description>
+		<value>tcp://localhost:61616</value>
+	</property>
+	
+	<property name="client.mq.username" catalog="mq">
+		<description>active mq user name</description>
+		<value>admin</value>
+	</property>
+	
+	<property name="client.mq.password" catalog="mq">
+		<description>active mq user password</description>
+		<value>admin</value>
+	</property>
+	
+	<property name="client.maxConnections" catalog="mq">
+		<description>clint max connections</description>
+		<value>10</value>
+	</property>
+	
+	<property name="client.idleTimeout" catalog="mq">
+		<description>client idel timeout</description>
+		<value>30000</value>
+	</property>
+	
+	<property name="client.maximumActive" catalog="mq">
+		<description>client max active</description>
+		<value>50</value>
+	</property>
+	
+	<property name="client.concurrentConsumers" catalog="mq">
+		<description>client concurrent consumers</description>
+		<value>6</value>
+	</property>
+	
+	<property name="client.maxConcurrentConsumers" catalog="mq">
+		<description>client max concurrent consumers</description>
+		<value>50</value>
+	</property>
+	
+	<property name="client.maxMessagesPerTask" catalog="mq">
+		<description>client max messages per task</description>
+		<value>-1</value>
+	</property>
+	
+	<property name="client.listenTimeout" catalog="mq">
+		<description>client listen timeout,ms</description>
+		<value>3000</value>
+	</property>
+	
+
+	<property name="client.receiveTimeout" catalog="mq">
+		<description>client receive timeout,ms</description>
+		<value>30000</value>
+	</property>
+	
+	<property name="client.timeToLive" catalog="mq">
+		<description>client time to live</description>
+		<value>86400000</value>
+	</property>
+	
+	<property name="client.requestTimeout" catalog="mq">
+		<description>client request timeout</description>
+		<value>60000</value>
+	</property>
+</properties>

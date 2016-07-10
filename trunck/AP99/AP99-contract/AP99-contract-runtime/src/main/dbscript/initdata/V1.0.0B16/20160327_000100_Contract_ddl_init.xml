@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="2016032701_T_RI_CONT_ADJUSTMENT">
+        <createTable tableName="T_RI_CONT_ADJUSTMENT">
+            <column name="ADJUSTMENT_ID" remarks="primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_COMP_ID" remarks="contract's id" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="REMARK" remarks="remark" type="VARCHAR2(4000)"/>
+            <column defaultValue="Y" name="IS_ACTIVE" remarks="Y:active, N:deleted" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="2016032701_T_RI_CONT_ADJUSTMENT_ITEM">
+        <createTable tableName="T_RI_CONT_ADJUSTMENT_ITEM">
+            <column name="ITEM_ID" remarks="Primary key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ADJUSTMENT_ID" remarks="Foreign key" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_COMP_ID" remarks="section's id" type="NUMBER(10, 0)"/>
+            <column name="ADJUSTMENT_DATE" remarks="Date of Adjustment" type="date"/>
+            <column name="USER_BY" remarks="By User" type="NUMBER(10, 0)"/>
+            <column name="CURRENCY" remarks="Currency" type="CHAR(3)"/>
+            <column name="AMOUNT" remarks="Amount" type="NUMBER(20, 2)"/>
+            <column defaultValue="Y" name="IS_ACTIVE" remarks="Y:active, N:deleted" type="VARCHAR2(2)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="2016032701_T_RI_CONT_ADJUSTMENT_ITEM_LOG">
+        <createTable tableName="T_RI_CONT_ADJUSTMENT_ITEM_LOG">
+            <column name="LOG_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="OPERATE_ID" type="NUMBER(10, 0)"/>
+            <column name="ITEM_ID" type="NUMBER(10, 0)"/>
+            <column name="ADJUSTMENT_ID" type="NUMBER(10, 0)"/>
+            <column name="CONT_COMP_ID" type="NUMBER(10, 0)"/>
+            <column name="ADJUSTMENT_DATE" type="date"/>
+            <column name="USER_BY" type="NUMBER(10, 0)"/>
+            <column name="CURRENCY" type="CHAR(3)"/>
+            <column name="AMOUNT" type="NUMBER(20, 2)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="2016032701_T_RI_CONT_ADJUSTMENT_LOG">
+        <createTable tableName="T_RI_CONT_ADJUSTMENT_LOG">
+            <column name="LOG_ID" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="OPERATE_ID" type="NUMBER(10, 0)"/>
+            <column name="ADJUSTMENT_ID" type="NUMBER(10, 0)"/>
+            <column name="CONT_COMP_ID" type="NUMBER(10, 0)"/>
+            <column name="REMARK" type="VARCHAR2(4000)"/>
+            <column name="INSERT_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_BY" type="NUMBER(10, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739270">
+        <addPrimaryKey columnNames="ADJUSTMENT_ID" constraintName="SYS_C00739270" tableName="T_RI_CONT_ADJUSTMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739284">
+        <addPrimaryKey columnNames="LOG_ID" constraintName="SYS_C00739284" tableName="T_RI_CONT_ADJUSTMENT_LOG"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739312">
+        <addPrimaryKey columnNames="ITEM_ID" constraintName="SYS_C00739312" tableName="T_RI_CONT_ADJUSTMENT_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739319">
+        <addPrimaryKey columnNames="LOG_ID" constraintName="SYS_C00739319" tableName="T_RI_CONT_ADJUSTMENT_ITEM_LOG"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739285">
+        <addForeignKeyConstraint baseColumnNames="ADJUSTMENT_ID" baseTableName="T_RI_CONT_ADJUSTMENT_LOG" constraintName="SYS_C00739285" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ADJUSTMENT_ID" referencedTableName="T_RI_CONT_ADJUSTMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739313">
+        <addForeignKeyConstraint baseColumnNames="ADJUSTMENT_ID" baseTableName="T_RI_CONT_ADJUSTMENT_ITEM" constraintName="SYS_C00739313" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ADJUSTMENT_ID" referencedTableName="T_RI_CONT_ADJUSTMENT"/>
+    </changeSet>
+    <changeSet author="generated" id="SYS_C00739320">
+        <addForeignKeyConstraint baseColumnNames="ITEM_ID" baseTableName="T_RI_CONT_ADJUSTMENT_ITEM_LOG" constraintName="SYS_C00739320" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="ITEM_ID" referencedTableName="T_RI_CONT_ADJUSTMENT_ITEM"/>
+    </changeSet>
+</databaseChangeLog>

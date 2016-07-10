@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+	<changeSet author="generated" id="2016051918_T_RI_CONT_MODIFY_TYPE">
+		<sql>
+		alter table T_RI_CONT_LIMIT_EVENT MODIFY(LIABILITY number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT MODIFY(WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT MODIFY(OUR_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT MODIFY(LIMIT_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT MODIFY(LIABILITY_SIGNED_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT MODIFY(LIABILITY_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(LIMIT_TOTAL_AMOUNT number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(LIABILITY number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(LIMIT_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(DESIGNED_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(LIABILITY_SIGNED_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_EVENT_LOG MODIFY(LIABILITY_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(DEDUCTIBLE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(AAD number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(AAL number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LAYER_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LIMIT_MIN number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LIMIT_MAX number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(RETENTE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LIABILITY number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(SUM_INSURED number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(AAL_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LAYER_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(AAL_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LIABILITY_SIGNED_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LIABILITY_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM MODIFY(LIMIT_LAYER number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(DEDUCTIBLE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(AAD number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(AAL number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LAYER_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(AAL_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LIMIT_MIN number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LIMIT_MAX number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(RETENTE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LIABILITY number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(SUM_INSURED number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LAYER_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(AAL_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LIABILITY_SIGNED_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LIABILITY_WRITTEN_SHARE number(20,2));
+alter table T_RI_CONT_LIMIT_ITEM_LOG MODIFY(LIMIT_LAYER number(20,2));
+alter table T_RI_CONT_SHARE MODIFY(WRITTEN_SHARE3 number(20,2));
+alter table T_RI_CONT_SHARE MODIFY(SIGNED_SHARES3 number(20,2));
+alter table T_RI_CONT_SHARE_LOG MODIFY(WRITTEN_SHARE3 number(20,2));
+alter table T_RI_CONT_SHARE_LOG MODIFY(SIGNED_SHARES3 number(20,2));
+			
+		</sql>
+	</changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="20160517_140500_Partner_dml">
+  	<sql>
+  		delete T_RI_CM_DOCUMENT_RULE;
+  	</sql>
+  </changeSet>
+  <changeSet author="generated" id="20160517_140501_Partner_dml">
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="1"/>
+      <column name="PARSE_CLASS"/>
+      <column name="PARSE_SERVICE"/>
+      <column name="PARSE_TYPE"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Partner Document: Attachments"/>
+      <column name="PROCESS_TYPE" value="1"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="10"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.ClaimRecordsExcelModel"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.RiEventService"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="claimRecord.xlsx"/>
+      <column name="DESCRIPTION" value="Claim: Download claim details"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="11"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.RevaluationDetailModel"/>
+      <column name="PARSE_SERVICE" value="RevaluationReportServiceImpl"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="revaluation.xlsx"/>
+      <column name="DESCRIPTION" value="Accounting: Export revaluation detail"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="13"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractPDFVOList"/>
+      <column name="PARSE_SERVICE" value="ContractPDFPrintService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="non-Proportional.rptdesign"/>
+      <column name="DESCRIPTION" value="Contract: Print Contract Summary(Non-Proportional)"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="14"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractPDFVOList"/>
+      <column name="PARSE_SERVICE" value="ContractPDFPrintService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="proportional.rptdesign"/>
+      <column name="DESCRIPTION" value="Contract: Print Contract Summary(Proportional)"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="15"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.partner.model.AmlCheckPDFVOList"/>
+      <column name="PARSE_SERVICE" value="com.ebao.ap99.partner.service.AmlService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="complianceCheckCedent.rptdesign"/>
+      <column name="DESCRIPTION" value="Partner: Print AML check form (Cedant)"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="16"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.ExceptionReportDetailModel"/>
+      <column name="PARSE_SERVICE" value="ExeceptionContractBizServiceImpl"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="exceptionReport.xlsx"/>
+      <column name="DESCRIPTION" value="Accounting: Generate Exception Reports"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="17"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.partner.model.BrokerAmlCheckPDFVOList"/>
+      <column name="PARSE_SERVICE" value="com.ebao.ap99.partner.service.BrokerAmlService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="complianceCheckBroker.rptdesign"/>
+      <column name="DESCRIPTION" value="Partner: Print AML check form (Broker)"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="18"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.ClaimExcelModel"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.ClaimQueryService"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="event.xlsx"/>
+      <column name="DESCRIPTION" value="Claim: Download event information"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="19"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.SoaExportExcelModel"/>
+      <column name="PARSE_SERVICE" value="SoaBizServiceImpl"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="statementSummary.xlsx"/>
+      <column name="DESCRIPTION" value="Accounting: SOA summary"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="2"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.model.BusinessModel.ContractBOList"/>
+      <column name="PARSE_SERVICE" value="ContractUploadingService"/>
+      <column name="PARSE_TYPE" value="XML"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Contract: Parse contract by uploading xml file"/>
+      <column name="PROCESS_TYPE" value="2"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="21"/>
+      <column name="PARSE_CLASS"/>
+      <column name="PARSE_SERVICE"/>
+      <column name="PARSE_TYPE"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Contract: Attachments"/>
+      <column name="PROCESS_TYPE" value="1"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="22"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.ClaimBoList"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.ClaimUploadingService"/>
+      <column name="PARSE_TYPE" value="XML"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Claim:upload"/>
+      <column name="PROCESS_TYPE" value="2"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="23"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.EventBoList"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.EventUploadingService"/>
+      <column name="PARSE_TYPE" value="XML"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Event:upload"/>
+      <column name="PROCESS_TYPE" value="2"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="24"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.partner.model.RetroAmlCheckPDFVOList"/>
+      <column name="PARSE_SERVICE" value="com.ebao.ap99.partner.service.RetroAmlService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="complianceCheckCedent.rptdesign"/>
+      <column name="DESCRIPTION" value="Partner: Print AML check form (Cedant)"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="25"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.partner.model.MgaAmlCheckPDFVOList"/>
+      <column name="PARSE_SERVICE" value="com.ebao.ap99.partner.service.MgaAmlService"/>
+      <column name="PARSE_TYPE" value="PDF"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="complianceCheckBroker.rptdesign"/>
+      <column name="DESCRIPTION" value="Partner: Print AML check form (Broker)"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="3"/>
+      <column name="PARSE_CLASS"/>
+      <column name="PARSE_SERVICE"/>
+      <column name="PARSE_TYPE"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Claim: Attachments"/>
+      <column name="PROCESS_TYPE" value="1"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="4"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.arap.entity.CurrencyExchangeRate"/>
+      <column name="PARSE_SERVICE" value="currencyExchangeDataService"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="BCP: Upload exchange rate"/>
+      <column name="PROCESS_TYPE" value="2"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="5"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.contract.entity.TRiContDeductionsAttach"/>
+      <column name="PARSE_SERVICE" value="BusinessConditionUploadService"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Contract: Upload commission rate"/>
+      <column name="PROCESS_TYPE" value="2"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="6"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.accounting.model.IBNRUploadModel"/>
+      <column name="PARSE_SERVICE" value="SegmentDSImpl"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Accounting: Upload IBNR"/>
+      <column name="PROCESS_TYPE" value="2"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="7"/>
+      <column name="PARSE_CLASS"/>
+      <column name="PARSE_SERVICE"/>
+      <column name="PARSE_TYPE"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE"/>
+      <column name="DESCRIPTION" value="Accouting: SOA Attachments"/>
+      <column name="PROCESS_TYPE" value="1"/>
+    </insert>
+    <insert tableName="T_RI_CM_DOCUMENT_RULE">
+      <column name="BUSINESS_TYPE" value="9"/>
+      <column name="PARSE_CLASS" value="com.ebao.ap99.claim.model.ClaimExcelModel"/>
+      <column name="PARSE_SERVICE" value="claim.service.impl.RiClaiminfoService"/>
+      <column name="PARSE_TYPE" value="EXCEL"/>
+      <column name="INSERT_TIME"/>
+      <column name="INSERT_BY"/>
+      <column name="UPDATE_TIME"/>
+      <column name="UPDATE_BY"/>
+      <column name="TEMPLATE" value="claim.xlsx"/>
+      <column name="DESCRIPTION" value="Claim: Download claim information"/>
+      <column name="PROCESS_TYPE" value="3"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

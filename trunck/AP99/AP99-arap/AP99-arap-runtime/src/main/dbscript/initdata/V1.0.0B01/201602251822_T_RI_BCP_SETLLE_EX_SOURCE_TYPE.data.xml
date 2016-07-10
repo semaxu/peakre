@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201602251822_T_RI_BCP_SETLLE_EX_SOURCE_TYPE.data">
+        <insert tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" valueNumeric="1"/>
+            <column name="SOURCE_NAME" value="Settlement detail markoff amount"/>
+        </insert>
+        <insert tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" valueNumeric="2"/>
+            <column name="SOURCE_NAME" value="Settlement detail settle amount"/>
+        </insert>
+        <insert tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" valueNumeric="3"/>
+            <column name="SOURCE_NAME" value="Settlement detail gain loss"/>
+        </insert>
+        <insert tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" valueNumeric="4"/>
+            <column name="SOURCE_NAME" value="Settlement detail gain loss difference"/>
+        </insert>
+        <insert tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" valueNumeric="5"/>
+            <column name="SOURCE_NAME" value="Settlement detail suspense balance"/>
+        </insert>
+        <insert tableName="T_RI_BCP_SETLLE_EX_SOURCE_TYPE">
+            <column name="SOURCE_TYPE" valueNumeric="6"/>
+            <column name="SOURCE_NAME" value="Settlement detail settle difference"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

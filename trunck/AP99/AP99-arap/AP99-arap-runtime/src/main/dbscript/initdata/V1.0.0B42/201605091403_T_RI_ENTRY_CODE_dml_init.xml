@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201605091401_T_RI_ENTRY_CODE.DATA">
+  	<sql>
+  		alter table T_RI_GL_ACCOUNT_MAPPING_DEF disable constraint FK_GL_ACC_MAP_ENTRY_CODE;
+		  alter table T_RI_BCP_FEE disable constraint FK_RI_BCP_FEE_ENTRY_CODE;
+		  delete T_RI_ENTRY_CODE;
+  	</sql>
+  </changeSet>
+  <changeSet author="generated" id="201605091404_T_RI_ENTRY_CODE.DATA">
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="1000"/>
+      <column name="ENTRY_CODE_NAME" value="Premium prop"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="1010"/>
+      <column name="ENTRY_CODE_NAME" value="XoL Premium"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="1011"/>
+      <column name="ENTRY_CODE_NAME" value="XoL Premium Adjustment"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="1020"/>
+      <column name="ENTRY_CODE_NAME" value="Reinstatement Premium"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="1050"/>
+      <column name="ENTRY_CODE_NAME" value="EPI"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="1060"/>
+      <column name="ENTRY_CODE_NAME" value="GNPI"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2000"/>
+      <column name="ENTRY_CODE_NAME" value="Commission"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2010"/>
+      <column name="ENTRY_CODE_NAME" value="Provisonal Commission"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2020"/>
+      <column name="ENTRY_CODE_NAME" value="Sliding Scale Commission"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2030"/>
+      <column name="ENTRY_CODE_NAME" value="Profit Commission"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2040"/>
+      <column name="ENTRY_CODE_NAME" value="Overriding Commission"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2050"/>
+      <column name="ENTRY_CODE_NAME" value="Acquisition Costs"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2060"/>
+      <column name="ENTRY_CODE_NAME" value="Administrative Expensins"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2070"/>
+      <column name="ENTRY_CODE_NAME" value="Fire Brigade Tax"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2071"/>
+      <column name="ENTRY_CODE_NAME" value="Tax Others"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2072"/>
+      <column name="ENTRY_CODE_NAME" value="Other Expenses"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2073"/>
+      <column name="ENTRY_CODE_NAME" value="Reinsurance Premium Costs"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2075"/>
+      <column name="ENTRY_CODE_NAME" value="Interests on Accounts"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2080"/>
+      <column name="ENTRY_CODE_NAME" value="No Claims Bonus"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="2090"/>
+      <column name="ENTRY_CODE_NAME" value="Brokerage"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="3000"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Paid"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="3020"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Participation"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="3030"/>
+      <column name="ENTRY_CODE_NAME" value="LAE Paid (Loss Adj. Expenses)"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="3040"/>
+      <column name="ENTRY_CODE_NAME" value="Cash Call Payment"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="3041"/>
+      <column name="ENTRY_CODE_NAME" value="Cash Call Offsetting Entry"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4011"/>
+      <column name="ENTRY_CODE_NAME" value="UPR Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4012"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4012"/>
+      <column name="ENTRY_CODE_NAME" value="UPR Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4012"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4015"/>
+      <column name="ENTRY_CODE_NAME" value="DAC Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4016"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4016"/>
+      <column name="ENTRY_CODE_NAME" value="DAC Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4016"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4021"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4022"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4022"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4022"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4023"/>
+      <column name="ENTRY_CODE_NAME" value="Large Loss Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4024"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4024"/>
+      <column name="ENTRY_CODE_NAME" value="Large Loss Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4024"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4025"/>
+      <column name="ENTRY_CODE_NAME" value="Additional Loss Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4026"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4026"/>
+      <column name="ENTRY_CODE_NAME" value="Additional Loss Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4026"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4041"/>
+      <column name="ENTRY_CODE_NAME" value="LAE Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4042"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4042"/>
+      <column name="ENTRY_CODE_NAME" value="LAE Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4042"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4051"/>
+      <column name="ENTRY_CODE_NAME" value="Provision Sliding Scale Comm. Openening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4052"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4052"/>
+      <column name="ENTRY_CODE_NAME" value="Provision Sliding Scale Comm. Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4052"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4053"/>
+      <column name="ENTRY_CODE_NAME" value="Provision Profit Commission Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4054"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4054"/>
+      <column name="ENTRY_CODE_NAME" value="Provision Profit Commission Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4054"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4055"/>
+      <column name="ENTRY_CODE_NAME" value="Provision Loss Participation Openening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4056"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4056"/>
+      <column name="ENTRY_CODE_NAME" value="Provision Loss Participation Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4056"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4061"/>
+      <column name="ENTRY_CODE_NAME" value="IBNR Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4062"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4062"/>
+      <column name="ENTRY_CODE_NAME" value="IBNR Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="0"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4062"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4111"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS UPR Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4112"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4112"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS UPR Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4112"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4115"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS DAC Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4116"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4116"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS DAC Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4116"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4121"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Loss Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4122"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4122"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Loss Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4122"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4123"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Large Loss Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4124"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4124"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Large Loss Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4124"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4125"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Additional Loss Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4126"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4126"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Additional Loss Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4126"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4141"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS LAE Reserve Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4142"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4142"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS LAE Reserve Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4142"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4151"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Provision Sliding Scale Comm. Open."/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4152"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Provision Sliding Scale Comm. Clos."/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4153"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Provision Profit Commission Open."/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4154"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Provision Profit Commission Clos."/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4155"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Provision Loss Participation Open."/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4156"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Provision Loss Participation  Clos."/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4161"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS IBNR Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4162"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4162"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS IBNR Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4162"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4171"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS PDR Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4172"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4172"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS PDR Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4172"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4181"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Math Res Opening"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4182"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="4182"/>
+      <column name="ENTRY_CODE_NAME" value="HKAS Math Res Closing"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="0"/>
+      <column name="ESTIMATE_GROUP" value="4182"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5010"/>
+      <column name="ENTRY_CODE_NAME" value="Premium Ptf In"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5011"/>
+      <column name="ENTRY_CODE_NAME" value="Premium Ptf Out"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5020"/>
+      <column name="ENTRY_CODE_NAME" value="Commission Ptf In"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5021"/>
+      <column name="ENTRY_CODE_NAME" value="Commission Ptf Out"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5030"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Paid Ptf In"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5031"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Paid Ptf Out"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5040"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Reserve Ptf In"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="5041"/>
+      <column name="ENTRY_CODE_NAME" value="Loss Reserve Ptf Out"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="6111"/>
+      <column name="ENTRY_CODE_NAME" value="Premium Reserve Withheld"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="-1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="6112"/>
+      <column name="ENTRY_CODE_NAME" value="Premium Reserve Release"/>
+      <column name="DESCRIPTION"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN" valueNumeric="1"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="ENTRY_CODE_BALANCE"/>
+      <column name="ENTRY_CODE_NAME" value="Balance"/>
+      <column name="DESCRIPTION" value="GL posting for cash collection/payment/refund"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="ENTRY_CODE_GAIN_LOSS"/>
+      <column name="ENTRY_CODE_NAME" value="Exchange Gain/Loss"/>
+      <column name="DESCRIPTION" value="GL posting for cash collection/payment/refund"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="ENTRY_CODE_REVALUATION"/>
+      <column name="ENTRY_CODE_NAME" value="Revaluation Difference"/>
+      <column name="DESCRIPTION" value="GL posting for cash collection/payment/refund"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+    <insert tableName="T_RI_ENTRY_CODE">
+      <column name="ENTRY_CODE" value="ENTRY_CODE_SETTLE_DIFF"/>
+      <column name="ENTRY_CODE_NAME" value="Settlement Difference"/>
+      <column name="DESCRIPTION" value="GL posting for cash collection/payment/refund"/>
+      <column name="NEED_POST" valueNumeric="1"/>
+      <column name="SIGN"/>
+      <column name="CASH_BALANCE" valueNumeric="1"/>
+      <column name="ESTIMATE_GROUP"/>
+    </insert>
+  </changeSet>
+  
+    <changeSet author="generated" id="201605091409_T_RI_ENTRY_CODE.DATA">
+  	<sql>
+  		alter table T_RI_GL_ACCOUNT_MAPPING_DEF enable constraint FK_GL_ACC_MAP_ENTRY_CODE;
+		  alter table T_RI_BCP_FEE enable constraint FK_RI_BCP_FEE_ENTRY_CODE;
+  	</sql>
+  </changeSet>
+</databaseChangeLog>

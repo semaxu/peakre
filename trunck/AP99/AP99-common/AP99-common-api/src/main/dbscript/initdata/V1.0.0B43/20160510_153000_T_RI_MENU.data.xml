@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605101530_T_RI_MENUS.data">
+    	<sql>
+       update t_pub_permission_type set name = 'Operation Authority' where id = '4';
+delete t_pub_permission where id in (9901,9902,9903,9904);
+insert into t_pub_permission values (9901, 'Contract Management Menu','Contract Management Menu',null,1,null,'9901');
+insert into t_pub_permission values (9902, 'Claim Menu','Claim Menu',null,1,null, '9902');
+insert into t_pub_permission values (9903,'Accounting Menu', 'Accounting Menu',null,1,null,'9903');
+insert into t_pub_permission values (9904,'ARAP Menu', 'ARAP Menu',null,1,null,'9904');
+insert into t_pub_permission values (9905,'General Query Menu', 'General Query Menu',null,1,null,'9905');
+insert into t_pub_permission values (9906,'Business Partner Menu', 'Business Partner Maintenance Menu',null,1,null,'9906');
+insert into t_pub_permission values (45,'Batch Menu','Batch Menu','System Admin menu',1,null,'Batch');
+
+update t_ri_menus set permission_code = '9901' where menu_id = 1;
+update t_ri_menus set permission_code = '9902' where menu_id = 4;
+update t_ri_menus set permission_code = '9903' where menu_id = 10;
+update t_ri_menus set permission_code = '9904' where menu_id = 17;
+update t_ri_menus set permission_code = '9905' where menu_id = 7;
+update t_ri_menus set permission_code = '9906' where menu_id = 28;
+update t_ri_menus set permission_code = 'System Admin menu' where menu_id = 26;
+update t_ri_menus set permission_code = 'MC' where menu_id = 27;
+update t_ri_menus set permission_code = 'Batch' where menu_id = 29;
+
+insert into t_pub_permission values (9907, 'Contract Management','Contract Management','9901',1,null,9907);
+insert into t_pub_permission values (9908, 'Pricing Estimate','Pricing Estimate','9901',1,null,9908);
+insert into t_pub_permission values (9909, 'SUPI Adjustment','SUPI Adjustment','9901',1,null,9909);
+update t_ri_menus set permission_code = '9907' where menu_id = 2;
+update t_ri_menus set permission_code = '9908' where menu_id = 3;
+update t_ri_menus set permission_code = '9909' where menu_id = 31;
+
+insert into t_pub_permission values (9910, 'Loss Adjustment', 'Loss Adjustment','9902',1,null,9910);
+insert into t_pub_permission values (9911, 'Event Management', 'Event Management','9902',1,null,9911);
+update t_ri_menus set permission_code = '9910' where menu_id = 5;
+update t_ri_menus set permission_code = '9911' where menu_id = 6;
+
+insert into t_pub_permission values (9912,'Statement Management','Statement Management','9903',1,null,9912);
+insert into t_pub_permission values (9913,'Account Summary','Account Summary','9903',1,null,9913);
+insert into t_pub_permission values (9914,'Actualization','Actualization','9903',1,null,9914);
+insert into t_pub_permission values (9915,'IBNR Management','IBNR Management','9903',1,null,9915);
+insert into t_pub_permission values (9916,'Closing Setup','Closing Setup','9903',1,null,9916);
+insert into t_pub_permission values (9917,'Exception Report','Exception Report','9903',1,null,9917);
+insert into t_pub_permission values (9918,'Revaluation Batch Job','Revaluation Batch Job','9903',1,null,9918);
+update t_ri_menus set permission_code = '9912' where menu_id = 11;
+update t_ri_menus set permission_code = '9913' where menu_id = 12;
+update t_ri_menus set permission_code = '9914' where menu_id = 13;
+update t_ri_menus set permission_code = '9915' where menu_id = 14;
+update t_ri_menus set permission_code = '9916' where menu_id = 15;
+update t_ri_menus set permission_code = '9918' where menu_id = 34;
+
+insert into t_pub_permission values (9919,'Collection','Collection',9904,1,null,9919);
+insert into t_pub_permission values (9920,'Payment','Payment',9904,1,null,9920);
+insert into t_pub_permission values (9921,'Internal Offset','Internal Offset',9904,1,null,9921);
+insert into t_pub_permission values (9922,'Reversal','Reversal',9904,1,null,9922);
+insert into t_pub_permission values (9923,'Transation Query','Transation Query',9904,1,null,9923);
+insert into t_pub_permission values (9924,'Bank Account Management','Bank Account Management',9904,1,null,9924);
+insert into t_pub_permission values (9925,'Exchange Rate Management','Exchange Rate Management',9904,1,null,9925);
+update t_ri_menus set permission_code=9919 where menu_id = 18;
+update t_ri_menus set permission_code=9920 where menu_id = 19;
+update t_ri_menus set permission_code=9921 where menu_id = 20;
+update t_ri_menus set permission_code=9922 where menu_id = 22;
+update t_ri_menus set permission_code=9923 where menu_id = 23;
+update t_ri_menus set permission_code=9924 where menu_id = 24;
+update t_ri_menus set permission_code=9925 where menu_id = 25;
+</sql>
+    </changeSet>
+</databaseChangeLog>

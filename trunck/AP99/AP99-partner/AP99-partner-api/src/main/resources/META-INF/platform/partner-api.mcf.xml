@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module  parent="configframework">
+	<spring>
+		<include relative-path="/spring/partner-api-beans.xml" />
+	</spring>
+</module>
+

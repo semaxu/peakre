@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <include file="t_ri_entry_code/T_RI_ENTRY_CODE.data.xml"/>
+  <include file="AP99-local-V1.0.0B52-dbasset/V1.0.0B53/20160527_110001_T_RI_SOA_ddl_init.xml"/>
+  <include file="AP99-local-V1.0.0B52-dbasset/V1.0.0B53/20160527_153100_SOA_ddl_init.xml"/>
+  <include file="AP99-local-V1.0.0B52-dbasset/V1.0.0B53/201605301959_T_DD_BUSI_CODE_TABLE.data.xml"/>
+</databaseChangeLog>

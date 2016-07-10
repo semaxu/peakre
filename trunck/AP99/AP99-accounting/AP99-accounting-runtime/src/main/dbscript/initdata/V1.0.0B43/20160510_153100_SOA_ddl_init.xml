@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+ 
+  
+    <changeSet author="generated" id="201605101534_T_RI_SOA">    	
+       <addColumn tableName="T_RI_SOA">
+            <column name="STATEMENT_TYPE" remarks="1:Quarterly statement and others; 2:Portfolio transfer in; 3:Portfolio transfer out" type="CHAR(1)"/>           
+       </addColumn>
+       
+    </changeSet>
+    
+      <changeSet author="generated" id="201605101535_T_RI_SOA_SECTION">    	
+       <addColumn tableName="T_RI_SOA_SECTION">
+            <column name="IS_FULLY_TRANSFER" remarks="0: not fully transfer; 1: fully transfer" type="CHAR(1)"/>           
+       </addColumn>
+       
+    </changeSet>
+
+</databaseChangeLog>

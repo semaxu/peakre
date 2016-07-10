@@ -1,0 +1,84 @@
+1540306748 com.ebao.unicorn.AP99:AP99-accounting-runtime:jar:V1.0.0B52
+-818080968 com.ebao.unicorn.AP99:AP99-test:jar:V1.0.0B52:test
+1574626434 com.ebao.unicorn.AP99:AP99-parent-runtime:jar:V1.0.0B52:compile
+1622356489 com.ebao.unicorn.AP99:AP99-accounting-api:jar:V1.0.0B52:compile
+-822565248 com.ebao.unicorn.AP99:AP99-contract-api:jar:V1.0.0B52:compile
+401584042 com.ebao.unicorn.AP99:AP99-arap-api:jar:V1.0.0B52:compile
+-1028842386 com.ebao.unicorn.AP99:AP99-partner-api:jar:V1.0.0B52:compile
+-282992054 com.ebao.unicorn.AP99:AP99-claim-api:jar:V1.0.0B52:compile
+1665775627 com.ebao.unicorn.AP99:AP99-common-api:jar:V1.0.0B52:compile
+1382005627 com.ebao.unicorn:unicorn-technical-all:pom:4.0.2B27:compile
+308507319 com.ebao.unicorn:unicorn-datadictionary-management:jar:4.0.2B27:compile
+1413178480 com.ebao.unicorn:unicorn-datadictionary-runtime:jar:4.0.2B27:compile
+1187013118 com.ebao.unicorn:unicorn-dms-runtime:jar:4.0.2B27:compile
+886912776 com.ebao.unicorn:unicorn-integration-dms-runtime:jar:4.0.2B27:compile
+-1826311523 com.ebao.unicorn:unicorn-integration-ftp:jar:4.0.2B27:compile
+-899705073 com.ebao.unicorn:unicorn-integration-dms:jar:4.0.2B27:compile
+1281715729 com.ebao.unicorn:unicorn-integration-alfresco:jar:4.0.2B27:compile
+-264555294 com.ebao.unicorn:unicorn-integration-cmis:jar:4.0.2B27:compile
+-2114534415 com.ebao.unicorn:unicorn-dsl-runtime:jar:4.0.2B27:compile
+1703235779 com.ebao.unicorn:unicorn-edge-runtime:jar:4.0.2B27:compile
+637140566 com.ebao:org.restlet.ext.apispark:jar:jdk8:2.3.2:compile
+934381883 com.ebao.unicorn:unicorn-foundation-runtime:jar:4.0.2B27:compile
+-1042153172 com.ebao:com.ebao.config.core:jar:1.0-SNAPSHOT:compile
+-1534970333 com.ebao.unicorn:unicorn-foundation-ui:jar:4.0.2B27:compile
+-726693588 com.ebao.unicorn:unicorn-orchestration-runtime:jar:4.0.2B27:compile
+-1935353745 com.ebao.unicorn:unicorn-orchestration-api:jar:4.0.2B27:compile
+-1478551874 com.ebao.unicorn:unicorn-rule-api:jar:4.0.2B27:compile
+958034372 com.ebao.unicorn:unicorn-ratetable-runtime:jar:4.0.2B27:compile
+1460707104 com.ebao.unicorn:unicorn-rating-runtime:jar:4.0.2B27:compile
+259817939 com.ebao.unicorn:unicorn-rating-api:jar:4.0.2B27:compile
+481660697 com.ebao.unicorn:unicorn-resource-runtime:jar:4.0.2B27:compile
+217966905 com.ebao.unicorn:unicorn-resource-api:jar:4.0.2B27:compile
+-1678108916 com.ebao.unicorn:unicorn-rule-runtime:jar:4.0.2B27:compile
+-536333781 com.ebao.unicorn:unicorn-scheduler-runtime:jar:4.0.2B27:compile
+-1431295658 com.ebao.unicorn:unicorn-urpmgmt-runtime:jar:4.0.2B27:compile
+-1783962923 com.ebao.unicorn:unicorn-workflow-runtime:jar:4.0.2B27:compile
+-1765192501 com.ebao.unicorn:unicorn-loggermgmt-runtime:jar:4.0.2B27:compile
+244552528 com.ebao.unicorn:unicorn-search-runtime:jar:4.0.2B27:compile
+1617491240 com.ebao.unicorn:unicorn-integration-framework:jar:4.0.2B27:compile
+-356532893 com.ebao.unicorn:unicorn-integration-client:jar:4.0.2B27:compile
+134821562 com.ebao.unicorn:unicorn-integration-client-config:jar:4.0.2B27:compile
+1481304859 com.ebao.unicorn:unicorn-integration-foundation:jar:4.0.2B27:compile
+#
+1540306748 -818080968 test
+1540306748 1574626434 compile
+1540306748 1622356489 compile
+1540306748 -822565248 compile
+1540306748 401584042 compile
+1540306748 -1028842386 compile
+1540306748 -282992054 compile
+1540306748 1665775627 compile
+308507319 1413178480 compile
+1382005627 308507319 compile
+-1826311523 -899705073 compile
+886912776 -1826311523 compile
+1281715729 -264555294 compile
+886912776 1281715729 compile
+1187013118 886912776 compile
+1382005627 1187013118 compile
+1382005627 -2114534415 compile
+1703235779 637140566 compile
+1382005627 1703235779 compile
+934381883 -1042153172 compile
+1382005627 934381883 compile
+1382005627 -1534970333 compile
+-726693588 -1935353745 compile
+-726693588 -1478551874 compile
+1382005627 -726693588 compile
+1382005627 958034372 compile
+1460707104 259817939 compile
+1382005627 1460707104 compile
+481660697 217966905 compile
+1382005627 481660697 compile
+1382005627 -1678108916 compile
+1382005627 -536333781 compile
+1382005627 -1431295658 compile
+1382005627 -1783962923 compile
+1382005627 -1765192501 compile
+1382005627 244552528 compile
+1382005627 1617491240 compile
+1382005627 -356532893 compile
+1382005627 134821562 compile
+1382005627 1481304859 compile
+1540306748 1382005627 compile

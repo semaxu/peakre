@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016050103_T_RI_CONT_SUB_COB_TYPE.DATA">
+  <sql>
+alter table T_RI_CONTRACT_INFO modify  ANALYTICS_RESP varchar2(10);
+alter table T_RI_CONTRACT_INFO modify  MARKET_RESP varchar2(10);
+alter table T_RI_CONTRACT_INFO_LOG modify  ANALYTICS_RESP varchar2(10);
+alter table T_RI_CONTRACT_INFO_LOG modify  MARKET_RESP varchar2(10);
+alter table T_RI_CONT_SECTION_INFO modify  COVERED varchar2(2000);
+alter table T_RI_CONT_SECTION_INFO_LOG modify  COVERED varchar2(2000);
+alter table T_RI_CONT_SUBSECTION_INFO modify  COVERED varchar2(2000);
+alter table T_RI_CONT_SUBSECTION_INFO_LOG modify  COVERED varchar2(2000);
+  </sql>
+</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+   
+     <changeSet author="generated" id="201605301956_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="" type="VARCHAR2(20)"/>
+        	<where>entry_code not in ('5010')</where>
+        </update>
+    </changeSet>
+    <changeSet author="generated" id="201605301957_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="1," type="VARCHAR2(20)"/>
+        	<where>entry_code in ('1000',
+                    '1010',
+                    '1011',
+                    '1020',
+                    '1100',
+                    '1102',
+                    '1105',
+                    '1106',
+                    '1201',
+                    '1202',
+                    '1205',
+                    '1206',
+                    '1301',
+                    '1302',
+                    '1305',
+                    '1306',
+                    '1401',
+                    '1402',
+                    '1411',
+                    '1412',
+                    '1421',
+                    '1422',
+                    '1431',
+                    '1432',
+                    '1451',
+                    '1452',
+                    '1471',
+                    '1472',
+                    '1701',
+                    '1702',
+                    '1703',
+                    '1704',
+                    '1705',
+                    '1708',
+                    '1709',
+                    '1710',
+                    '1730',
+                    '2000',
+                    '2010',
+                    '2020',
+                    '2030',
+                    '2040',
+                    '2050',
+                    '2060',
+                    '2070',
+                    '2071',
+                    '2072',
+                    '2073',
+                    '2075',
+                    '2080',
+                    '2090',
+                    '2100',
+                    '2101',
+                    '2103',
+                    '2116',
+                    '2120',
+                    '2130',
+                    '2301',
+                    '2306',
+                    '2308',
+                    '2309',
+                    '2310',
+                    '2311',
+                    '2320',
+                    '2501',
+                    '2502',
+                    '2509',
+                    '2510',
+                    '2700',
+                    '2710',
+                    '2901',
+                    '3000',
+                    '3002',
+                    '3020',
+                    '3030',
+                    '3040',
+                    '3041',
+                    '3100',
+                    '3102',
+                    '3103',
+                    '3104',
+                    '3111',
+                    '3200',
+                    '3902',
+                    '3903',
+                    '3908',
+                    '4103',
+                    '4104',
+                    '4122',
+                    '4124',
+                    '4126',
+                    '4142',
+                    '4152',
+                    '4154',
+                    '4156',
+                    '4172',
+                    '4182',
+                    '5111',
+                    '5112',
+                    '5116',
+                    '6111',
+                    '6112',
+                    '6121',
+                    '6122',
+                    '6131',
+                    '6132',
+                    '6140',
+                    '6141',
+                    '6142',
+                    '6146',
+                    '6161',
+                    '6162',
+                    '6171')</where>
+        </update>
+    </changeSet>
+    <changeSet author="generated" id="201605301958_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="2," type="VARCHAR2(20)"/>
+        	<where>entry_code in ('5010','5020','5030','5040')</where>
+        </update>
+    </changeSet>
+    <changeSet author="generated" id="201605301959_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="3," type="VARCHAR2(20)"/>
+        	<where>entry_code in ('5011','5021','5031','5041')</where>
+        </update>
+    </changeSet>
+     <changeSet author="generated" id="201605301654_T_DD_BUSI_CODE_TABLE.data">
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="STATEMENT_TYPE LIKE '%3,%'" type="VARCHAR2(4000)"/>
+        	<where>CODE_TABLE_ID =	800021</where>
+        </update>
+    </changeSet>
+     <changeSet author="generated" id="201605301655_T_DD_BUSI_CODE_TABLE.data">
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="STATEMENT_TYPE LIKE '%2,%'" type="VARCHAR2(4000)"/>
+        	<where>CODE_TABLE_ID =	800020</where>
+        </update>
+    </changeSet>
+     <changeSet author="generated" id="201605301656_T_DD_BUSI_CODE_TABLE.data">
+        <update tableName="T_DD_BUSI_CODE_TABLE">
+            <column name="PREDICATE" value="STATEMENT_TYPE LIKE '%1,%'" type="VARCHAR2(4000)"/>
+        	<where>CODE_TABLE_ID =	800004</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

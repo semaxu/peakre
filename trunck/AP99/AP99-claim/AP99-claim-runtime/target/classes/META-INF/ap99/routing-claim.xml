@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routings>
+
+	<!-- claim action  -->
+	<routing type="action">
+		<resourceName>claimInfo_save</resourceName>
+		<value>direct:claimInfo/Save</value>
+	</routing>
+
+	
+	<!-- claim service  -->
+	<routing type="service">
+		<resourceName>claimInfo/modelToEntity</resourceName>
+		<value>bean:claim.convertor.ClaimInfoConvertor?method=modelToEntityCascade
+		</value>
+	</routing>
+	<routing type="service">
+		<resourceName>claimInfo/saveData</resourceName>
+		<value>bean:claim.service.impl.RiClaiminfoService?method=updateClaimInfo
+		</value>
+	</routing>
+	<routing type="service">
+		<resourceName>claimInfo/loadClaimEntity</resourceName>
+		<value>bean:claim.service.impl.RiClaiminfoService?method=getClaimInfoWithPendingSettlement
+		</value>
+	</routing>
+	<routing type="service">
+		<resourceName>claimInfo/entityToModel</resourceName>
+		<value>bean:claim.convertor.ClaimInfoConvertor?method=entityToModelCascade
+		</value>
+	</routing>
+
+</routings>

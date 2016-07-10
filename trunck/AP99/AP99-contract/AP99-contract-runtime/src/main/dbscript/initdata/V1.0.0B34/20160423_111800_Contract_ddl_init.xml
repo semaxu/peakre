@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+  <changeSet author="generated" id="2016042301_T_RI_COUNTRY">
+    <createTable remarks="country" tableName="T_RI_COUNTRY">
+      <column name="COUNTRY_ID" type="NUMBER">
+        <constraints nullable="false"/>
+      </column>
+      <column name="COUNTRY_NAME" type="VARCHAR2(100)"/>
+      <column name="COUNTRY_LEVEL" type="CHAR(1)"/>
+      <column name="IF_USE" type="CHAR(1)"/>
+      <column name="PARENT_ID" type="NUMBER"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="generated" id="PK_T_RI_COUNTRY">
+    <addPrimaryKey columnNames="COUNTRY_ID" constraintName="PK_T_RI_COUNTRY" tableName="T_RI_COUNTRY"/>
+  </changeSet>
+    
+</databaseChangeLog>

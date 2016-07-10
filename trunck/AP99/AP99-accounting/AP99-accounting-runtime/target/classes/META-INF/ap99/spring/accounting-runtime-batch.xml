@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd 
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd 
+		">
+	<!-- tasklet -->
+	<bean id="cutoffTasklet" class="com.ebao.ap99.accounting.batch.CutoffTasklet">
+	</bean>
+	
+	<bean id="exceptionReportTasklet"
+		class="com.ebao.ap99.accounting.batch.ExceptionReportTasklet">
+	</bean>
+	
+	<bean id="revaluationTasklet"
+		class="com.ebao.ap99.accounting.batch.RevaluationTasklet">
+	</bean>
+	
+
+	<!-- batch job -->
+	<batch:job id="cutoffJob">
+		<batch:step id="cutoffJobStep1">
+			<batch:tasklet ref="cutoffTasklet" />
+		</batch:step>
+	</batch:job>
+	
+	<batch:job id="exceptionReportMappingJob">
+		<batch:step id="exceptionReportMappingJobStep1">
+			<batch:tasklet ref="exceptionReportTasklet" />
+		</batch:step>
+	</batch:job>
+	
+	<batch:job id="revaluationMappingJob">
+		<batch:step id="revaluationMappingJobStep1">
+			<batch:tasklet ref="revaluationTasklet" />
+		</batch:step>
+	</batch:job>
+	<batch:job id="revaluationTaskJob">
+		<batch:step id="revaluationTaskJobStep1">
+			<batch:tasklet ref="revaluationTasklet" />
+		</batch:step>
+	</batch:job>
+		
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+  <changeSet author="generated" id="201604111603_T_PUB_JOB_DEFINATION.data">
+    <insert tableName="T_PUB_JOB_DEFINATION">
+      <column name="ID" valueNumeric="1"/>
+      <column name="APPLICATION" value="peakre"/>
+      <column name="CONTEXT"/>
+      <column name="DESCRIPTION" value="ARAP sub ledger generation job"/>
+      <column name="MESSAGE_CHANNEL" value="peakre_batch_MQ_channel"/>
+      <column name="NAME" value="subLedgerMappingJob"/>
+      <column name="LAST_EXECUTE_ID"/>
+      <column name="TRIGGER_DEFINATION_ID" valueNumeric="1"/>
+    </insert>
+    <insert tableName="T_PUB_JOB_DEFINATION">
+      <column name="ID" valueNumeric="2"/>
+      <column name="APPLICATION" value="peakre"/>
+      <column name="CONTEXT"/>
+      <column name="DESCRIPTION" value="ARAP general ledger generation job"/>
+      <column name="MESSAGE_CHANNEL" value="peakre_batch_MQ_channel"/>
+      <column name="NAME" value="generalLedgerGenerationJob"/>
+      <column name="LAST_EXECUTE_ID"/>
+      <column name="TRIGGER_DEFINATION_ID" valueNumeric="1"/>
+    </insert>
+    <insert tableName="T_PUB_JOB_DEFINATION">
+      <column name="ID" valueNumeric="3"/>
+      <column name="APPLICATION" value="peakre"/>
+      <column name="CONTEXT"/>
+      <column name="DESCRIPTION" value="Exception Report generation job"/>
+      <column name="MESSAGE_CHANNEL" value="peakre_batch_MQ_channel"/>
+      <column name="NAME" value="exceptionReportMappingJob"/>
+      <column name="LAST_EXECUTE_ID"/>
+      <column name="TRIGGER_DEFINATION_ID" valueNumeric="2"/>
+    </insert>
+    <insert tableName="T_PUB_JOB_DEFINATION">
+      <column name="ID" valueNumeric="4"/>
+      <column name="APPLICATION" value="peakre"/>
+      <column name="CONTEXT"/>
+      <column name="DESCRIPTION" value="Revaluation generation job"/>
+      <column name="MESSAGE_CHANNEL" value="peakre_batch_MQ_channel"/>
+      <column name="NAME" value="revaluationMappingJob"/>
+      <column name="LAST_EXECUTE_ID"/>
+      <column name="TRIGGER_DEFINATION_ID" valueNumeric="3"/>
+    </insert>
+    <insert tableName="T_PUB_JOB_DEFINATION">
+      <column name="ID" valueNumeric="5"/>
+      <column name="APPLICATION" value="peakre"/>
+      <column name="CONTEXT"/>
+      <column name="DESCRIPTION" value="Cut-off job"/>
+      <column name="MESSAGE_CHANNEL" value="peakre_batch_MQ_channel"/>
+      <column name="NAME" value="cutoffMappingJob"/>
+      <column name="LAST_EXECUTE_ID"/>
+      <column name="TRIGGER_DEFINATION_ID" valueNumeric="4"/>
+    </insert>
+  </changeSet>
+</databaseChangeLog>

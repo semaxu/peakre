@@ -1,0 +1,16 @@
+
+<html>
+	<head>
+		<title>
+			Underwriting Data Update Request
+		</title>
+	</head>
+	<body><p style="font-family:Calibri;font-size:16">
+		Dear Technical Underwriter,<br>
+		<br>
+		Contract $contractCode under UY$uwYear failed in the UW Review. Please go to <a href="$url" target="blank">Contract Management page</a> to update information.<br>
+		<br>
+		This e-mail is an automated notification, please do not reply. 
+	</p>
+	</body>
+</html>

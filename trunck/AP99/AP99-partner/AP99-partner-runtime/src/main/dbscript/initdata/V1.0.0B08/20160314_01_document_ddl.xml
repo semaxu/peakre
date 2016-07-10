@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160314_01_DOCUMENT_DDL.INIT">
+        <createTable tableName="T_RI_BP_MGA_AML_CHECK">
+            <column name="AML_CHECK_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AML_CHECK" type="VARCHAR2(1)"/>
+            <column name="CHECK_DATE" type="date"/>
+            <column name="AML_CHECK_RESULT" type="VARCHAR2(1)"/>
+            <column name="PARTNER_ID" type="NUMBER"/>
+            <column name="COMPANY_NAME" type="VARCHAR2(50)"/>
+            <column name="COUNTRY_INCORPORATION" type="VARCHAR2(50)"/>
+            <column name="SANCTIONED_COUNTRY" type="VARCHAR2(50)"/>
+            <column name="INSURANCE_BODY" type="VARCHAR2(50)"/>
+            <column name="BROKER_ASSOCIATION" type="VARCHAR2(1)"/>
+            <column name="LLOYD_BROKER" type="VARCHAR2(1)"/>
+            <column name="COMMENTS" type="VARCHAR2(200)"/>
+            <column name="CERTIFICATE_INCORPORATION" type="VARCHAR2(50)"/>
+            <column name="OWNERSHIP_STRUCTURE" type="VARCHAR2(50)"/>
+            <column name="NAMES_OWNERS" type="VARCHAR2(50)"/>
+            <column name="NAMES_DIRECTORS" type="VARCHAR2(50)"/>
+            <column name="NAMES_SENIOR_MANAGEMENTS" type="VARCHAR2(50)"/>
+            <column name="IS_BROKER_SANCTIONED" type="VARCHAR2(1)"/>
+            <column name="IS_OWNER_TERRORIST" type="VARCHAR2(1)"/>
+            <column name="IS_MANAGEMENT_TERRORIST" type="VARCHAR2(1)"/>
+            <column name="REMARKS" type="VARCHAR2(200)"/>
+            <column name="CHECK_BY" type="NUMBER"/>
+            <column name="APPROVED_BY" type="NUMBER"/>
+            <column name="CHECK_REMARKS" type="VARCHAR2(200)"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECK_YEAR" type="VARCHAR2(4)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_BP_RETRO_AML_CHECK">
+        <createTable tableName="T_RI_BP_RETRO_AML_CHECK">
+            <column name="AML_CHECK_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AML_CHECK" type="VARCHAR2(1)"/>
+            <column name="CHECK_DATE" type="date"/>
+            <column name="AML_CHECK_RESULT" type="VARCHAR2(1)"/>
+            <column name="AMBEST" type="VARCHAR2(1)"/>
+            <column name="COMPANY_NAME" type="VARCHAR2(50)"/>
+            <column name="COUNTRY_INCORPORATION" type="VARCHAR2(50)"/>
+            <column name="SANCTIONEDCOUNTRY" type="VARCHAR2(50)"/>
+            <column name="SP" type="VARCHAR2(1)"/>
+            <column name="SP_TEXT" type="VARCHAR2(50)"/>
+            <column name="AMBEST_TEXT" type="VARCHAR2(50)"/>
+            <column name="FITCH" type="VARCHAR2(1)"/>
+            <column name="FITCH_TEXT" type="VARCHAR2(50)"/>
+            <column name="MOODYS" type="VARCHAR2(1)"/>
+            <column name="MOODYS_TEXT" type="VARCHAR2(50)"/>
+            <column name="LICENSED" type="VARCHAR2(50)"/>
+            <column name="COMMENTS" type="VARCHAR2(200)"/>
+            <column name="CHECK_BY" type="NUMBER"/>
+            <column name="APPROVED_BY" type="NUMBER"/>
+            <column name="REMARKS" type="VARCHAR2(200)"/>
+            <column name="PARTNER_ID" type="NUMBER"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CHECK_YEAR" type="VARCHAR2(4)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CM_DOCUMENT_FIELD">
+        <createTable tableName="T_RI_CM_DOCUMENT_FIELD">
+            <column name="DOCUMENT_FIELD_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FIELD_NAME" type="VARCHAR2(200)"/>
+            <column name="FIELD_NULLABLE" type="VARCHAR2(1)"/>
+            <column name="FIELD_MAXLENGTH" type="NUMBER"/>
+            <column name="FIELD_TYPE" type="VARCHAR2(200)"/>
+            <column name="DOCUMENT_RULE_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="INSERT_BY" type="NUMBER"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CM_DOCUMENT_RULE">
+        <createTable tableName="T_RI_CM_DOCUMENT_RULE">
+            <column name="DOCUMENT_RULE_ID" type="NUMBER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BUSINESS_TYPE" type="VARCHAR2(50)"/>
+            <column name="PARSE_CLASS" type="VARCHAR2(200)"/>
+            <column name="PARSE_SERVICE" type="VARCHAR2(200)"/>
+            <column name="PARSE_TYPE" type="VARCHAR2(50)"/>
+            <column name="INSERT_TIME" type="date"/>
+            <column name="INSERT_BY" type="NUMBER"/>
+            <column name="UPDATE_TIME" type="date"/>
+            <column name="UPDATE_BY" type="NUMBER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_BP_RETOR_AML_CHECK">
+        <addPrimaryKey columnNames="AML_CHECK_ID" constraintName="PK_RI_BP_RETOR_AML_CHECK" tableName="T_RI_BP_RETRO_AML_CHECK"/>
+    </changeSet>
+    <changeSet author="generated" id="PK_RI_MGA_AML_CHECK">
+        <addPrimaryKey columnNames="AML_CHECK_ID" constraintName="PK_RI_MGA_AML_CHECK" tableName="T_RI_BP_MGA_AML_CHECK"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RETOR_AML_CHECK_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_RETRO_AML_CHECK" constraintName="FK_RETOR_AML_CHECK_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_RI_MGA_PARTNER_ID">
+        <addForeignKeyConstraint baseColumnNames="PARTNER_ID" baseTableName="T_RI_BP_MGA_AML_CHECK" constraintName="FK_RI_MGA_PARTNER_ID" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="RESTRICT" referencedColumnNames="PARTNER_ID" referencedTableName="T_RI_BP_PARTNER"/>
+    </changeSet>
+</databaseChangeLog>

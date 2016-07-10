@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="20160302_164205_T_RI_ACCT_FEE_DETAIL">
+        <createTable tableName="T_RI_ACCT_FEE_DETAIL">
+            <column name="DETAIL_ID" remarks="detail id" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FEE_ID" remarks="fee id" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CONT_COMP_ID" remarks="contract id" type="NUMBER(12, 0)"/>
+            <column name="BUSI_ID" remarks="business id" type="NUMBER(12, 0)"/>
+            <column name="ENTRY_CODE" remarks="entry code" type="CHAR(4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" remarks="amount" type="NUMBER(20, 2)"/>
+            <column name="CURRENCY" remarks="currency" type="CHAR(3)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="POSTING_DATE" remarks="posting date" type="date"/>
+            <column defaultValueComputed="-11" name="INSERT_BY" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="-11" name="UPDATE_BY" type="NUMBER(12, 0)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="INSERT_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueComputed="sysdate" name="UPDATE_TIME" type="date">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="generated" id="PK_T_RI_ACCT_FEE_DETAIL">
+        <addPrimaryKey columnNames="DETAIL_ID" constraintName="PK_T_RI_ACCT_FEE_DETAIL" tableName="T_RI_ACCT_FEE_DETAIL"/>
+    </changeSet>
+    <changeSet author="generated" id="FK_T_RI_ACCT_FEE_DETAIL">
+        <addForeignKeyConstraint baseColumnNames="FEE_ID" baseTableName="T_RI_ACCT_FEE_DETAIL" constraintName="FK_T_RI_ACCT_FEE_DETAIL" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="FEE_ID" referencedTableName="T_RI_ACCT_FEE"/>
+    </changeSet>
+</databaseChangeLog>

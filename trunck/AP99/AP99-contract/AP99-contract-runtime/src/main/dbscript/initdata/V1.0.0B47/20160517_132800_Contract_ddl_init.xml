@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <changeSet author="generated" id="2016051703_T_RI_CONT_LIMIT_ITEM">
+        <modifyDataType columnName="QS"
+        	newDataType="NUMBER(10,9)"
+        	tableName="T_RI_CONT_LIMIT_ITEM"/>
+    </changeSet>
+    <changeSet author="generated" id="2016051704_T_RI_CONT_LIMIT_ITEM_LOG">
+        <modifyDataType columnName="QS"
+        	newDataType="NUMBER(10,9)"
+        	tableName="T_RI_CONT_LIMIT_ITEM_LOG"/>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016051801_T_RI_CONTRACT_INFO">
+        <addColumn tableName="T_RI_CONTRACT_INFO">
+            <column name="MAIN_COVER_AREA" remarks="Main Cover Area" type="VARCHAR2(10)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="generated" id="2016051802_T_RI_CONTRACT_INFO_LOG">
+        <addColumn tableName="T_RI_CONTRACT_INFO_LOG">
+            <column name="MAIN_COVER_AREA" type="VARCHAR2(10)"/>
+        </addColumn>
+    </changeSet>
+    
+    <changeSet author="generated" id="2016051805_T_RI_CONT_CLAIM">
+        <modifyDataType columnName="NO_OF_DAY"
+        	newDataType="NUMBER(4)"
+        	tableName="T_RI_CONT_CLAIM"/>
+    </changeSet>
+    <changeSet author="generated" id="2016051806_T_RI_CONT_CLAIM_LOG">
+        <modifyDataType columnName="NO_OF_DAY"
+        	newDataType="NUMBER(4)"
+        	tableName="T_RI_CONT_CLAIM_LOG"/>
+    </changeSet>
+    
+</databaseChangeLog>

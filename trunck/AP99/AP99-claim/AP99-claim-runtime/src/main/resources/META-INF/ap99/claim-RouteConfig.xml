@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<routeContext id="serviceCamelContext-claim" xmlns="http://camel.apache.org/schema/spring">
+	
+	<route>
+		<from uri="direct:claimInfo/Save" />
+		<to uri="service:claimInfo/modelToEntity?out=claimEntity" />
+		<to uri="service:claimInfo/saveData?in=claimEntity@1&amp;out=claimId" />
+		<to uri="service:claimInfo/loadClaimEntity?in=claimId@1&amp;out=returnClaimEntity" />
+		<to uri="service:claimInfo/entityToModel?in=returnClaimEntity@1" />
+	</route>
+	
+</routeContext>
+

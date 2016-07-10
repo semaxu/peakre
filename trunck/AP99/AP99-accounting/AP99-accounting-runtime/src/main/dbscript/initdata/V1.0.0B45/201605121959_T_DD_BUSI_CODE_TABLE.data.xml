@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605121957_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="1" type="VARCHAR2(20)"/>
+        	<where>entry_code not in ('4012','4016','4011','4015','4021','4023','4025','4041','4051','4053','4055','4061','4111','4112','4115','4116','4121','4123','4125','4141','4161','4171','4181')</where>
+        </update>
+    </changeSet>
+    <changeSet author="generated" id="201605121958_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="1,2" type="VARCHAR2(20)"/>
+        	<where>entry_code in ('5010','5020','5030','5040')</where>
+        </update>
+    </changeSet>
+    <changeSet author="generated" id="201605121959_T_RI_ENTRY_CODE.data">
+        <update tableName="T_RI_ENTRY_CODE">
+            <column name="STATEMENT_TYPE" value="1,3" type="VARCHAR2(20)"/>
+        	<where>entry_code in ('5011','5021','5031','5041')</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<beans profile="web">
+
+	<bean id="RestServiceComponent"
+		class="com.ebao.unicorn.platform.edge.component.RestServiceComponent">
+		<property name="applicationScanMap">
+			<map>
+				<!-- <entry key="rating" value-ref="JaxRsResourceScanner" />
+				<entry key="product" value-ref="JaxRsResourceScanner" />
+				<entry key="process" value-ref="JaxRsResourceScanner" />
+				<entry key="pa" value-ref="JaxRsResourceScanner" />
+				<entry key="form" value-ref="JaxRsResourceScanner" />-->
+				<entry key="system" value-ref="JaxRsResourceScanner" /> 
+				<entry key="public" value-ref="JaxRsResourceScanner" />
+				<entry key="claim" value-ref="JaxRsResourceScanner" />
+				<entry key="bcp" value-ref="JaxRsResourceScanner" />
+				<entry key="contract" value-ref="JaxRsResourceScanner" />
+				<entry key="arap" value-ref="JaxRsResourceScanner" />
+				<entry key="accounting" value-ref="JaxRsResourceScanner" />
+				<entry key="partner" value-ref="JaxRsResourceScanner" />
+				<entry key="common" value-ref="JaxRsResourceScanner" />
+			</map>
+		</property>
+	</bean>
+	</beans>
+</beans>

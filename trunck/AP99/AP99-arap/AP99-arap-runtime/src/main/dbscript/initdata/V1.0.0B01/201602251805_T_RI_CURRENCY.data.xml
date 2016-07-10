@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201602251805_T_RI_CURRENCY.data">
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="AUD"/>
+            <column name="CURRENCY_NAME" value="AUD"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="CHF"/>
+            <column name="CURRENCY_NAME" value="CHF"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="CNY"/>
+            <column name="CURRENCY_NAME" value="CNY"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="EUR"/>
+            <column name="CURRENCY_NAME" value="EUR"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="HKD"/>
+            <column name="CURRENCY_NAME" value="HKD"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="JPY"/>
+            <column name="CURRENCY_NAME" value="JPY"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="NZD"/>
+            <column name="CURRENCY_NAME" value="NZD"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="SGD"/>
+            <column name="CURRENCY_NAME" value="SGD"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+        <insert tableName="T_RI_CURRENCY">
+            <column name="CURRENCY_CODE" value="USD"/>
+            <column name="CURRENCY_NAME" value="USD"/>
+            <column name="SYMBOL"/>
+            <column name="PEPORTING_CURRENCY"/>
+            <column name="GL_CURRENCY"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

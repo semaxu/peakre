@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="201605301238_T_RI_GL_SUB_LEDGER_DDL">
+    	<sql>
+    		alter table T_RI_GL_ACCOUNT_MAPPING_DEF enable constraint FK_GL_ACC_MAP_ENTRY_CODE;
+    		alter table T_RI_GL_SUB_LEDGER rename column DATA_SOURCE_TYPE to BIZ_TRANS_TYPE;
+				alter table T_RI_GL_SUB_LEDGER add SETTLE_SOURCE_TYPE number(2);
+				comment on column T_RI_GL_SUB_LEDGER.SETTLE_SOURCE_TYPE is 'T_RI_BCP_SETLLE_EX_SOURCE_TYPE';
+    	</sql>
+    </changeSet>
+</databaseChangeLog>

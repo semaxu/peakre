@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+    <changeSet author="generated" id="T_RI_CONT_OPERATE_TYPE.DATA_2016030801">
+        <insert tableName="T_RI_CONT_OPERATE_TYPE">
+            <column name="TYPE_ID" value="1"/>
+            <column name="TYPE_DESC"/>
+            <column name="NEXT_STEP_ID" value="2"/>
+        </insert>
+        <insert tableName="T_RI_CONT_OPERATE_TYPE">
+            <column name="TYPE_ID" value="2"/>
+            <column name="TYPE_DESC" value="uw review"/>
+            <column name="NEXT_STEP_ID" value="4"/>
+        </insert>
+        <insert tableName="T_RI_CONT_OPERATE_TYPE">
+            <column name="TYPE_ID" value="3"/>
+            <column name="TYPE_DESC"/>
+            <column name="NEXT_STEP_ID" value="2"/>
+        </insert>
+        <insert tableName="T_RI_CONT_OPERATE_TYPE">
+            <column name="TYPE_ID" value="4"/>
+            <column name="TYPE_DESC" value="endorsement"/>
+            <column name="NEXT_STEP_ID" value="3"/>
+        </insert>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CONTRACT_STATUS.DATA_2016030801">
+        <insert tableName="T_RI_CONTRACT_STATUS">
+            <column name="TYPE_ID" value="1"/>
+            <column name="TYPE_DESC" value="Data Input"/>
+        </insert>
+        <insert tableName="T_RI_CONTRACT_STATUS">
+            <column name="TYPE_ID" value="2"/>
+            <column name="TYPE_DESC" value="UW Review"/>
+        </insert>
+        <insert tableName="T_RI_CONTRACT_STATUS">
+            <column name="TYPE_ID" value="3"/>
+            <column name="TYPE_DESC" value="Data Update"/>
+        </insert>
+        <insert tableName="T_RI_CONTRACT_STATUS">
+            <column name="TYPE_ID" value="4"/>
+            <column name="TYPE_DESC" value="In Force"/>
+        </insert>
+    </changeSet>
+    <changeSet author="generated" id="T_RI_CONT_PREMIUM_ITEM_TYPE.DATA_2016030801">
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="1"/>
+            <column name="TYPE_NAME" value="epi"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="2"/>
+            <column name="TYPE_NAME" value="terrorism"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="3"/>
+            <column name="TYPE_NAME" value="supi"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="4"/>
+            <column name="TYPE_NAME" value="flat"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="5"/>
+            <column name="TYPE_NAME" value="fixed"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="6"/>
+            <column name="TYPE_NAME" value="swing"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="7"/>
+            <column name="TYPE_NAME" value="mini"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="8"/>
+            <column name="TYPE_NAME" value="deposit_premium"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="9"/>
+            <column name="TYPE_NAME" value="deposit_shedule"/>
+        </insert>
+        <insert tableName="T_RI_CONT_PREMIUM_ITEM_TYPE">
+            <column name="TYPE_ID" value="10"/>
+            <column name="TYPE_NAME" value="payment_shedule"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
