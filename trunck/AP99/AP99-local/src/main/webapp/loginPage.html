@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome UNICORN</title>
+</head>
+<body>
+	<form id="loginForm" action="/unicorn/j_spring_security_check" method="post">
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+		<table class="inputView">
+			<tr>
+				<td>User Name:</td>
+				<td><input type='text' name='username' class="required" /></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type='password' name='password' class="required" /></td>
+			</tr>
+			<tr>
+				<td colspan='2'><input value="login" type="submit" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

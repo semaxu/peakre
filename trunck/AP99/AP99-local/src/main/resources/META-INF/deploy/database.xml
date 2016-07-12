@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties>
+	<property name="jdbc.url"  catalog="database">
+		<description>the database connection url,such as jdbc:oracle:thin:@172.25.14.22:1521:g22u1</description>
+	</property>
+	
+	<property name="jdbc.user"  catalog="database">
+		<description>the user name of database</description>
+	</property>
+	
+	<property name="jdbc.password"  catalog="database">
+		<description>the password of database</description>
+	</property>
+	
+	<property name="jdbc.driver" catalog="database">
+		<description>the jdbc driver</description>
+		<option useAsDefault="true" value="com.mysql.jdbc.Driver"></option> 
+		<!-- <option useAsDefault="true" value="oracle.jdbc.xa.client.OracleXADataSource"></option> -->
+		<option value="com.mysql.jdbc.Driver" />
+		<option value="oracle.jdbc.driver.OracleDriver"/>
+		<option value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<option value="net.sourceforge.jtds.jdbc.Driver"></option>
+	</property>
+	
+	<!-- 
+		===================== hibernate ================================
+	 -->
+	<property name="hibernate.dialect" catalog="hibernate">
+		<description>the dialect class name</description>
+		<option useAsDefault="true" value="org.hibernate.dialect.MySQL5Dialect"></option>
+		<!-- <option useAsDefault="true" value="org.hibernate.dialect.Oracle10gDialect"></option> -->
+		<option value="org.hibernate.dialect.SQLServer2012Dialect"></option>
+		<option value="org.hibernate.dialect.MySQL5InnoDBDialect"></option>
+	</property>
+	
+	<property name="hibernate.transaction.jta.platform" catalog="hibernate">
+		<description>the jta platform class name</description>
+		<option useAsDefault="true" value="com.atomikos.icatch.jta.hibernate4.AtomikosPlatform"></option>
+	</property>
+		
+	<property name="HibernateJpaVendorAdapter.databasePlatform" catalog="hibernate">
+		<description>the database platform class implement</description>
+		
+		<option useAsDefault="true" value="org.hibernate.dialect.MySQL5Dialect"></option>
+	 <!-- <option useAsDefault="true" value="com.ebao.unicorn.platform.foundation.dao.Oracle10gDialectEx"></option>  -->
+	</property>
+	
+	<property name="HibernateJpaVendorAdapter.database" catalog="hibernate">
+		<description>the database vendor,when change database,should change it,see org.springframework.orm.jpa.vendor.Database</description>
+		<option useAsDefault="true" value="MYSQL"></option>
+		<!-- <option useAsDefault="true" value="ORACLE"></option> -->
+		<option value="MYSQL"></option>
+		<option value="SQL_SERVER"></option>
+	</property>
+	
+
+</properties>

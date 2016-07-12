@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module parent="ap99">
+	<spring>
+		<include relative-path="/spring/spring-jpa.xml" />
+	</spring>
+	<env>
+		<include relative-path="database.xml" />
+	</env>
+</module>
